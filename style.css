@@ -1,0 +1,273 @@
+
+body{
+ background-color: rgba(210, 189, 148) 
+  
+}
+.c{
+    background-color: red;
+    background-image: url(./images/tunuhomes5.PNG);
+    height: 200px;
+}
+.d{
+
+    /* background-color: rgba(210, 189, 148) */
+    /* rgba(255, 0, 0, 0.463) */
+    /* ; */
+    text-align: center;
+}
+.e{
+    background-color: rgba(255, 0, 0, 0.92);
+    width: 50%;
+    height: auto;
+    
+}
+
+.ee{
+    background-color: rgba(255, 0, 0, 0);
+    width: 50%;
+    height: auto;
+    /* text-align: left; */
+    text-align:start;
+}
+
+.col-5, .col-7{
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    /* left: 3rem; */
+    left: 1rem;
+    margin: 1rem;
+}
+/* on test */
+.first-div{
+    margin-bottom: 10px;
+    display: block;
+    bottom: 1000px;
+    background-color: rgb(210, 189, 189);
+    
+    
+}
+.first-image{
+    width: 100%;
+    margin: 0px;
+}
+
+
+/* .fix{
+    position: fixed;
+    bottom: 400rem;
+    background-image: url(./images/tunu1.PNG);
+    position: cover;
+    width: 100%;
+    z-index: 2;
+    height: 100px;
+    background-color: #fff;
+} */
+
+.row{
+    display: flex;
+    text-align: center;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    transition: 2s;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+/* cards outline */
+.children{
+    display: inline-block;
+}
+.content {
+    margin: 0px;
+  }
+
+  .projects div {
+    /* margin: 20px; */
+    width: 250px;
+
+}
+
+
+.projects h3 {
+    text-transform: uppercase;
+}
+.cards-all {
+    /* display: flex; */
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0px 0px 0px;
+    list-style: none;}
+
+    .cards-all li {
+        position: relative;
+        /* right: 90px; */
+        overflow: hidden;
+    }
+
+   
+    .cards-all li img {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        transition: 2s;
+        position: relative;
+        right: 0rem;
+    }
+    .card-content {
+        margin: 20px;
+      }
+
+/* hovers      */
+.cards li:hover img {
+    transform: scale(1.5);
+   
+  }
+
+  .cards li:hover h4 {
+    margin-top: 50px;
+  }
+
+/* h1:hover {
+    margin-top: 50px;
+    transform: scale(1.5);
+    text-transform: uppercase;
+    font-style: italic;
+    color: darkred;
+  } */
+  
+  .cards li h4 {
+    text-transform: uppercase;
+  }
+
+  
+  .cards-all li:hover img {
+    transform: scale(1.5);
+    
+  }
+  .cards-all li:hover h4 {
+    margin-top: 50px;
+  }
+  
+  .cards-all li h4 {
+    text-transform: uppercase;
+  }
+
+/* top container  and  navigation butts*/
+.bottomy-container{
+    background-color: rgba(255, 255, 0, 0.353);
+    width: 220px;
+    height: 220px;
+    display: inline-block;
+    /* position: relative; */
+    /* right: auto; */
+    /* bottom: 3500px; */
+    /* bottom: 3900px; */
+    /* left:auto; */
+    margin:3rem 0rem 0rem 3rem;
+    border-radius:100%;
+    text-transform: capitalize;
+    line-height: 10.5px;
+    /* z-index: -3; */
+
+}
+
+/* tunu */
+p{
+background-color:rgba(0, 0, 139, 0.389); color: white; line-height: 20px; margin-bottom: 0px;
+}
+.tunu{
+    font-size:85px;
+    padding-top: 0px;
+}
+
+#land-color{
+    text-transform: uppercase;
+    font-style: oblique;
+    color: blueviolet;
+}
+
+.p{
+    font-size: 20px;
+   padding: 0;
+   margin: 0; 
+   color:rgb(5, 5, 5);
+}
+
+.notwo{
+   font-size: 40px;
+   /* color:rgb(227, 252, 7); */
+
+}
+.fami-btn { 
+    /* width: 55px; */
+    height: 55px;
+    border-radius: 15px;
+    border: 0px;
+    position: fixed;
+    top: 0px;
+    left: 10px;
+  text-align: center; 
+  margin: 2px 2px 0px 0px;
+  
+  }
+  button:hover {
+    background-color: rgb(188, 225, 24);
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in;
+}
+
+button {
+    height: 30px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px rgba(255, 0, 0, 0.018);
+    border: 0px;
+    background-color:red;
+    cursor: pointer; 
+    color: white; 
+    /* width: 5px; */
+    
+    background-color:rgb(62, 138, 138) ;cursor: pointer; color: white; width: 140px;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (min-width: 600px) {/* top container  and  navigation butts*/
+    .bottomy-container{
+        /* background-color: rgba(255, 255, 0, 0.353); */
+        
+        margin:5rem 0rem 0rem 16rem;
+        position: absolute;
+        left: 26rem;
+        line-height: 30.5px;
+
+    }
+    .tunu{
+        font-size:85px;
+        padding-top: 0px;
+    }
+    
+    /* #land-color{
+        text-transform: uppercase;
+        font-style: oblique;
+        color: blueviolet;
+    }
+    
+    .p{
+        font-size: 20px;
+       padding: 0;
+       margin: 0; 
+       color:rgb(5, 5, 5);
+    }
+    
+    .notwo{
+       font-size: 80px; */
+       /* color:rgb(227, 252, 7); */
+    
+    /* } */
+
+
+}

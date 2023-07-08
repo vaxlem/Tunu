@@ -1,0 +1,159 @@
+body{
+    background: url(./images/tunuhomes5.PNG) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.container{
+    width: auto;
+    box-shadow: 1px 1px 2px rgba(255, 0, 0, 0.018);
+    border: 1px solid greenyellow;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 3rem;
+    margin: 0px 10px;
+    text-align: center;
+    height: auto;
+    flex: auto;
+    background-color: #ffffffc4;
+
+
+}
+
+
+#top, #bottom, img{
+width: 100%;
+/* border: 1px solid red; */
+height: 50%;
+}
+
+#bottom{
+    margin: 100px 0px; 
+}
+#navigation{
+    width: auto;
+    text-align: center;
+    margin: 0 auto;
+    height: auto;
+    background-color: #17add4;
+    margin: 36px 0px 0px 0px;
+
+}
+
+
+
+/* designs of tittle */
+.bottomy-container{
+    background-color: rgba(255, 255, 0, 0.781);
+    width: 220px;
+    height: 220px;
+    display: inline-block;
+    /* position: relative; */
+    /* right: auto; */
+    /* bottom: 3500px; */
+    /* bottom: 3900px; */
+    /* left:auto; */
+    margin:3rem 0rem 0rem 3rem;
+    border-radius:100%;
+    text-transform: capitalize;
+    line-height: 50.5px;
+    /* z-index: -3; */
+
+}
+
+/* tunu */
+p{
+/* background-color:rgba(0, 0, 139, 0.389); color: white; line-height: 20px; margin-bottom: 0px; */
+}
+.tunu{
+    font-size:85px;
+    padding-top: 0px;
+}
+
+#land-color{
+    text-transform: uppercase;
+    font-style: oblique;
+    color: blueviolet;
+}
+
+.p{
+    font-size: 20px;
+   padding: 10px;
+   margin: 1px; 
+   color:rgb(5, 5, 5);
+}
+
+.notwo{
+   font-size: 40px;
+   /* color:rgb(227, 252, 7); */
+
+}
+
+button:hover {
+    background-color: rgb(188, 225, 24);
+    transform: scale(1.1);
+    background-image: -webkit-linear-gradient(top, #17add4, #01191a);
+    transition: transform 0.5s ease-in;
+}
+
+button {
+    height: 30px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px rgba(255, 0, 0, 0.018);
+    border: 0px;
+    margin: 0 auto;
+    background-color:red;
+    cursor: pointer; 
+    color: white; 
+    /* width: 5px; */
+    
+    background-color:rgb(62, 138, 138) ;cursor: pointer; color: white; width: 140px;
+}
+
+#landHistory{
+    background-color: white;
+    margin: 0px 30px 25px 30px; 
+    border: 1px solid rgb(131, 131, 236); 
+    box-shadow: 1px 1px 1px 1px rgba(255, 0, 0, 0.506);
+    border-radius: 0.5rem;
+    visibility:visible;
+    scrollbar-gutter:initial;
+    scroll-behavior:smooth;
+    overflow-y:scroll ;
+    height:10rem ;
+    background-image: -webkit-linear-gradient(top, white, rgb(249, 18, 18));
+    -moz-background-image: linear-gradient(top, white, rgb(249, 18, 18));
+    -ms-background-image: linear-gradient(top, white, rgb(249, 18, 18));
+    -o-background-image: linear-gradient(top, white, rgb(249, 18, 18));
+  }
+
+#footer {
+    text-decoration: none;
+    background-color: navy;
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 3rem;
+    
+    text-align:center;
+    color: #fff;
+    font-size: 14px;
+    font-family: montserrat-black;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    margin: 0rem;
+
+  }
+ 
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (min-width: 600px) {/* top container  and  navigation butts*/
+    .bottomy-container{
+        /* background-color: rgba(255, 255, 0, 0.353); */
+        
+        /* margin:5rem 0rem 0rem 16rem;
+        position: absolute;
+        left: 26rem;
+        line-height: 30.5px;
+
+    }
+    .tunu{
+        font-size:85px;
+        padding-top: 0px;
+    }} */
+}
