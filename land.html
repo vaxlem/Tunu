@@ -16,12 +16,14 @@
 <div>
 
 <div id="landHistory">
-    <div ><span class="fren-fontsize"> Tunu township belives the mangroves is their Cocoa, they grow it, and when the bush matured they cut it into uniform lengths and died them. When the logs are drenched off water, they then would tie a considerable volume and place a monitary value on a bundle. The one beauty of the business is that each bundle appeared to be same in volume after they are tied. people from far buys the bundles and used them for cooking or other fires.it is a hard but lucretive business.</span>
-    <button style="position: absolute;top: 49rem; right: 3rem; height: 3rem;" class="button" onclick="speak('Tunu township belives the mangroves is their Cocoa, they grow it, and when the bush matured they cut it into uniform lengths and died them. When the logs are drenched off water, they then would tie a considerable volume and place a monitary value on a bundle. The one beauty of the business is that each bundle appeared to be same in volume after they are tied. people from far buys the bundles and used them for cooking or other fires.it is a hard but lucretive business.')">
-        <h2><i class="fa fa-volume-up" aria-hidden="true"></i>read aloud</h2>
+    <div ><span class="fren-fontsize"> Tunu township belives the mangroves is their Cocoa, they grow it, and when the bush matured they cut it into uniform lengths and died them. When the logs are drenched off water, they then would tie a considerable volume and place a monitary value on a bundle. The one beauty of the business is that each bundle appeared to be same in volume after they are tied. People from far buys the bundles and used them for cooking or other fires. It is a hard but lucretive business.</span>
+    <button id="playPause" onclick="togglePlayPause()" style="position: absolute;top: 49rem; right: 3rem; height: 3rem;" class="button" onclick="speak('Tunu township belives the mangroves is their Cocoa, they grow it, and when the bush matured they cut it into uniform lengths and died them. When the logs are drenched off water, they then would tie a considerable volume and place a monitary value on a bundle. The one beauty of the business is that each bundle appeared to be same in volume after they are tied. People from far buys the bundles and used them for cooking or other fires. It is a hard but lucretive business.')">
+        <h2><i class="fa fa-volume-up" aria-hidden="true"></i>Play/Pause</h2>
       </button>
     
-        <a href="#"><h3 style="float: right; padding-right:27px; " class="button" onclick="speak('Tunu township belives the mangroves is their Cocoa, they grow it, and when the bush matured they cut it into uniform lengths and died them. When the logs are drenched off water, they then would tie a considerable volume and place a monitary value on a bundle. The one beauty of the business is that each bundle appeared to be same in volume after they are tied. people from far buys the bundles and used them for cooking or other fires.it is a hard but lucretive business.')"> <i class="fa fa-arrow-left"></i> READ ALOUD</h3></a>
+
+    
+        <a href="#playPause" onclick="togglePlayPause()"><h3 style="float: right; padding-right:27px; " class="button" onclick="speak('Tunu township belives the mangroves is their Cocoa, they grow it, and when the bush matured they cut it into uniform lengths and died them. When the logs are drenched off water, they then would tie a considerable volume and place a monitary value on a bundle. The one beauty of the business is that each bundle appeared to be same in volume after they are tied. people from far buys the bundles and used them for cooking or other fires.it is a hard but lucretive business.')"> <i class="fa fa-arrow-left"></i> READ ALOUD</h3></a>
         </div>
 </div>
 </div>
@@ -51,23 +53,24 @@
     }
   </script>  -->
 
+<!-- play/pause scrpt -->
   <script>
     let utterance; // Define the utterance variable globally
-    let isPlaying = false; // Track the current state of the speech synthesis
-  
+    let isSpeaking = false; // Variable to track if speech synthesis is currently playing
+
     function speak(word) {
       utterance = new SpeechSynthesisUtterance(word);
       speechSynthesis.speak(utterance);
-      isPlaying = true; // Update the state to indicate it's playing
+      isSpeaking = true;
     }
-  
-    function togglePlayback() {
-      if (isPlaying) {
+
+    function togglePlayPause() {
+      if (isSpeaking) {
         speechSynthesis.pause(); // Pause the speech synthesis
-        isPlaying = false; // Update the state to indicate it's paused
+        isSpeaking = false;
       } else {
         speechSynthesis.resume(); // Resume the speech synthesis
-        isPlaying = true; // Update the state to indicate it's playing
+        isSpeaking = true;
       }
     }
   </script>
