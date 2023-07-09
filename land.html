@@ -44,12 +44,33 @@
     </div>
 </nav>
 <script src="./app.js"></script>
-<script>
+<!-- <script>
     function speak(word) {
       const utterance = new SpeechSynthesisUtterance(word);
       speechSynthesis.speak(utterance);
     }
-  </script> 
+  </script>  -->
 
+  <script>
+    let utterance; // Define the utterance variable globally
+    let isPlaying = false; // Track the current state of the speech synthesis
+  
+    function speak(word) {
+      utterance = new SpeechSynthesisUtterance(word);
+      speechSynthesis.speak(utterance);
+      isPlaying = true; // Update the state to indicate it's playing
+    }
+  
+    function togglePlayback() {
+      if (isPlaying) {
+        speechSynthesis.pause(); // Pause the speech synthesis
+        isPlaying = false; // Update the state to indicate it's paused
+      } else {
+        speechSynthesis.resume(); // Resume the speech synthesis
+        isPlaying = true; // Update the state to indicate it's playing
+      }
+    }
+  </script>
+  
 </body>
 </html>
