@@ -16,6 +16,10 @@ height: 45px;
 
 }
 
+#navbarCollapse{
+    float: right;
+}
+
 .nav li{
     color: rgba(255, 255, 255, 0.558);
     font-size: 19px;
@@ -38,6 +42,12 @@ height: 45px;
     text-align: center;margin: 0;
     padding: 10px;
     letter-spacing: 5.5px;
+}
+/* color of land */
+.landColor{
+    color: rgba(255, 228, 196, 0.882);
+    letter-spacing: 5.5px;
+
 }
 /* limit the width of the icons section */
 .container{
@@ -88,7 +98,7 @@ height: 45px;
     text-align: center;
     margin-top: 30px;
 }
-.btn{
+.btn {
     background-color: #e0e70e;
     border: none;
     border-radius: 10px;
@@ -106,9 +116,10 @@ height: 45px;
     color: rgba(245, 245, 245, 0.663);
     border: 1px solid white;
 }
-
+/* nav list */
 .container ul, li a{
-    color: rgba(255, 255, 255, 0.558);
+    /* color: rgba(255, 255, 255, 0.558); */
+    color: whitesmoke;
     font-size: 19px;
     margin: 20px 0;
     /* float: left; */
@@ -127,5 +138,15 @@ height: 45px;
 @media (max-width:768px) {
     .body-image{
         height: 70px;
+    }
+    
+    /* navbarCollapse list */
+    #navbarCollapse ul, li a{
+        float:inline-start;
+        color: red;
+    }
+    .colorOf{
+        color: rgb(7, 7, 0);
+
     }
 }
