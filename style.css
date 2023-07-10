@@ -280,8 +280,9 @@ button {
 
     
     .notice{
-        margin: 33.3rem 0 0 2.5rem;
+        margin: 33.3rem 0 0 0.1rem;
         width:23rem ;
+        font-size: 14px;
     }
     
 
