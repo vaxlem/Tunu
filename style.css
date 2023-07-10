@@ -233,7 +233,33 @@ button {
     
     background-color:rgb(62, 138, 138) ;cursor: pointer; color: white; width: 140px;
 }
+/* notice about the childre in a nav */
+.notice{
+    border: 1px solid skyblue;
+    border-radius: 1rem;
+    margin: 5rem auto;
+    padding: 0 1rem;
+    width: 10rem;
+    float: left;
+    position: fixed;
+    background-image: linear-gradient(rgba(255, 225, 0.868), white, blue);
+    background-image: -ms-linear-gradient(rgba(255, 225, 0.868), white, blue);
+    background-image: -webkit-linear-gradient(rgba(255, 225, 0.868), white, blue);
+    background-image: -moz-linear-gradient(rgba(255, 225, 0.868), white, blue);
+    
+}
+/* tunu logo */
+.logo{
+    height: 45px;
+    width: 100px;
+    margin: 0 10px 10px 1px;
+    border-radius: 10px;
+    padding: auto 10px;
+}
 
+.clear{
+    clear: both;
+}
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (min-width: 600px) {/* top container  and  navigation butts*/
     .bottomy-container{
@@ -249,25 +275,15 @@ button {
         font-size:85px;
         padding-top: 0px;
     }
+}
+    @media screen and (max-width: 600px) {
+
     
-    /* #land-color{
-        text-transform: uppercase;
-        font-style: oblique;
-        color: blueviolet;
+    .notice{
+        margin: 33.3rem 0 0 2.5rem;
+        width:23rem ;
     }
     
-    .p{
-        font-size: 20px;
-       padding: 0;
-       margin: 0; 
-       color:rgb(5, 5, 5);
-    }
-    
-    .notwo{
-       font-size: 80px; */
-       /* color:rgb(227, 252, 7); */
-    
-    /* } */
 
 
 }

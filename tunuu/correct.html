@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css.css">
+
+<style>
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+         body {
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            font-size: 14px;
+            margin: 0px;
+            }
+
+.projects div {
+    margin: 20px;}
+
+.cards {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 10px;
+        list-style: none;
+      }
+.cards li {
+    position: relative;
+    overflow: hidden;
+  }
+
+.cards li img {
+    width: 290px;
+    height: 250px;
+    margin: 10px;
+    transition: 2s;
+  }  
+
+.cards li:hover img {
+    transform: scale(1.5);
+  }
+  .card-content {
+    margin: 20px;
+  }
+  .bottomy-container:hover{
+    text-transform: uppercase;
+    /* color: rgb(226, 134, 43); */
+    text-align: center;
+    margin-top: 50px;
+    transform: scale(1.5);
+    font-style: italic;
+    color: darkred;
+    position: relative;
+    overflow: hidden;
+    padding-right: 15px;
+  }
+  .tunu{
+    font-size:65px;
+    padding-top: 5px;
+}
+
+#land-color{
+  text-transform: uppercase;
+  font-style: oblique;
+  color: blueviolet;}
+
+.bottomy-li{
+  padding: 0px 20px 5px 20px;
+  text-align: center;
+  border-radius: 20%; 
+  text-transform: uppercase;
+}
+.ctoaction{
+  text-align: center ;
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  right: 30px;
+  display: flex;
+  justify-items: center;
+  
+  
+  
+/* }
+.actionmage{
+  width: 50px;
+  height: 10px; */
+}
+/* .button4h{
+  border-radius: 100%;
+} */
+
+.tunumap{
+  display: inline-block;
+  position: absolute;
+   left: 1080px;
+   bottom: 150px;
+  text-align: center;
+  background-color: rgb(206, 209, 29);
+  border-radius: 50%;
+  padding: 10px;
+ 
+}
+.tunumap:hover{
+  color: blueviolet;
+}
+/* .button-hover:hover{
+  color:powderblue;
+} */
+        }
+</style>
+</head>
+<body>
+  <DIV class="content" style="background-color: red;">
+    <section class="projects" style="background-color: yellow;">
+             <div style="background-color: green;">
+                <ul class="cards" style="background-color: black;">
+                    <li style="background-color: white;">
+                        <a href="./individuals7.html"><img src="./images/aku.png" alt="AKu TETTEY"></a>
+                        <section class="card-content" style="background-color: rgb(234, 234, 220);">
+                            <h4 style="text-align: center;">AKU TETTEY 
+                                [Tegbitor]
+                            </h4>
+
+                        </section>
+                    </li>
+        <li class="bottomy-li" style="background-color: yellow;">
+             <!-- <a href=""><img src="./image/feather.jpg" alt=""></a> -->
+            <section>
+                <div class="bottomy-container">
+                    <h1><span class="tunu"> tunu </span><br> a <span id="land-color"> land </span>of riches </h1>
+                    <p class="p">and the last <span class="notwo">2</span></p>
+                </div>
+                <!-- <h1>kofigo</h1> -->
+            </section>
+            <button><a href="tunu.html"> about</a></button>
+        </li>                
+                    <li style="background-color: white;">
+                        <a href="./individuals8.html"><img src="./images/detective.png" alt="BINA TETTEY"></a>
+                        <section style="background-color:rgb(234, 234, 220);">
+                            <h4 style="text-align: center;" >   BINA TETTEY</h4>
+                        </section>
+                    </li>
+                    <!-- call to action section -->
+                    <li style="background-color: white;">
+                        <a href="./fami.html"><img  class="actionmage" src="./images/vaXlem pic.jpg" alt="" ></a>
+                        <section class="ctoaction">
+                            <h4><button class="bottomy-container"> Here! Read About <br>
+                                the Place and the  People</button></h4>
+                        </section>
+                    </li>
+                </ul> 
+             </div>
+    </section>
+  </DIV>
+  <img src="./images/tunuhomes5.PNG" alt="" width="100%">
+  <div class="tunumap" ><a href="./tunu.html"><h2>click to enter township</h2></a></div>
+
+</body>
+</html>

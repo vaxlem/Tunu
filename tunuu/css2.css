@@ -1,0 +1,61 @@
+
+.projects div {
+    margin: 20px;}
+
+.cards {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 10px;
+        list-style: none;
+      }
+.cards li {
+    position: relative;
+    overflow: hidden;
+  }
+
+.cards li img {
+    width: 290px;
+    height: 250px;
+    margin: 10px;
+    transition: 2s;
+  }  
+
+.cards li:hover img {
+    transform: scale(1.5);
+  }
+  
+.card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    list-style: none;
+  }
+  .card li {
+    position: relative;
+    overflow: hidden;}
+
+  .card li img {
+    width: 130px;
+    height: 120px;
+    margin: 10px;
+    transition: 2s;
+  }  
+
+.card li:hover img {
+    transform: scale(1.5);
+  }
+  button {
+    width: 250px;
+    height: 55px;
+    border-radius: 15px;
+    border: 0px;}
+  .h4{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgba(0, 0, 0, 0.692);
+
+  }
+  .lakle{
+    color: rgba(128, 255, 0, 0.903);
+  }
