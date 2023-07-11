@@ -53,16 +53,7 @@ body{
 }
 
 
-/* .fix{
-    position: fixed;
-    bottom: 400rem;
-    background-image: url(./images/tunu1.PNG);
-    position: cover;
-    width: 100%;
-    z-index: 2;
-    height: 100px;
-    background-color: #fff;
-} */
+
 
 .row{
     display: flex;
@@ -176,7 +167,7 @@ img{
 
 }
 
-/* tunu */
+/* tunu in round details*/
 p{
 background-color:rgba(0, 0, 139, 0.389); color: white; line-height: 20px; margin-bottom: 0px;
 }
@@ -281,10 +272,18 @@ button {
     
     .notice{
         margin: 33.3rem 0 0 0.1rem;
-        width:23rem ;
+        width:18rem ;
         font-size: 14px;
     }
     
+
+/* tunu land color details */
+#land-color{
+    font-size: 18px;
+    /* font-size: 38px; */
+    line-height: 30.5px;
+    padding-top:1px;
+}
 
 
 }
