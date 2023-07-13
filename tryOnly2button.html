@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Button Example</title>
+  <style>
+    #myAudio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="background-color: beige;" id="textToRead">I am TAY Lakle. your great great grandfather. My father is called EHA ASHIAPIM - 1st (Priest Eha Ashiapim l). (DO YOU KNOW MY REAL NAME?) OH! Ok. My real name is TAY EHA.</h2>
+
+  <audio id="myAudio">
+    <source src="audio_file.mp3" type="audio/mpeg">
+  </audio>
+
+  <button onclick="playAudio()">Play</button>
+  <button onclick="pauseAudio()">Pause</button>
+
+  <script>
+    var audio = document.getElementById("myAudio");
+    var textToRead = document.getElementById("textToRead").innerText;
+    var isPaused = true;
+    var resumePosition = 0;
+
+    function playAudio() {
+      if (audio.ended || audio.paused) {
+        speakText();
+        audio.currentTime = 0;
+        audio.play();
+        isPaused = false;
+      }
+    }
+
+    function pauseAudio() {
+      if (!audio.paused) {
+        audio.pause();
+        isPaused = true;
+      }
+    }
+
+    audio.onended = function() {
+      isPaused = true;
+    };
+
+    function speakText() {
+      const message = new SpeechSynthesisUtterance(textToRead);
+      window.speechSynthesis.speak(message);
+    }
+  </script>
+</body>
+</html>

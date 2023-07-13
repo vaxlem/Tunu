@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>button controls</title>
+</head>
+<body>
+    <button onclick="speakText()">Play</button>
+    <button onclick="pauseSpeech()">Pause</button>
+
+    <h2 style="background-color: beige;" id="textToRead">I am TAY Lakle. your great great grandfather. My father is called EHA ASHIAPIM - 1st (Priest Eha Ashiapim l). (DO YOU KNOW MY REAL NAME?) OH! Ok. My real name is TAY EHA.</h2>
+    
+    <audio id="audioElement" src="./RECORD20210107203253.3gpp" preload="auto"></audio>
+
+.............
+
+<!-- 3rd btn adds -->
+    <button onclick="speakText()">Play/Resume</button>
+    <button onclick="pauseSpeech()">Pause</button>
+    <button onclick="stopSpeech()">Stop</button>
+
+    <h2 style="background-color: beige;" id="textToRead">I am TAY Lakle. your great great grandfather. My father is called EHA ASHIAPIM - 1st (Priest Eha Ashiapim l). (DO YOU KNOW MY REAL NAME?) OH! Ok. My real name is TAY EHA.</h2>
+    
+    <audio id="audioElement" src="path/to/audiofile.mp3" preload="auto"></audio>
+
+    <!-- scripts -->
+
+    <script>
+        var speech = new SpeechSynthesisUtterance();
+        var isPaused = false;
+        var audioElement = document.getElementById("audioElement");
+        
+        function speakText() {
+            var text = document.getElementById("textToRead").innerHTML;
+            speech.text = text;
+            
+            if (isPaused) {
+                window.speechSynthesis.resume();
+                isPaused = false;
+            } else {
+                window.speechSynthesis.speak(speech);
+            }
+            
+            audioElement.play();
+        }
+        
+        function pauseSpeech() {
+            if (window.speechSynthesis.speaking) {
+                window.speechSynthesis.pause();
+                isPaused = true;
+            }
+            
+            audioElement.pause();
+        }
+    </script>
+
+3rd button add.
+<!-- 3rd btn adds -->
+
+    <script>
+        var speech = new SpeechSynthesisUtterance();
+        var isPaused = false;
+        var audioElement = document.getElementById("audioElement");
+        
+        function speakText() {
+            var text = document.getElementById("textToRead").innerHTML;
+            speech.text = text;
+            
+            if (isPaused) {
+                window.speechSynthesis.resume();
+                isPaused = false;
+            } else {
+                window.speechSynthesis.speak(speech);
+            }
+            
+            audioElement.play();
+        }
+        
+        function pauseSpeech() {
+            if (window.speechSynthesis.speaking) {
+                window.speechSynthesis.pause();
+                isPaused = true;
+            }
+            
+            audioElement.pause();
+        }
+        
+        function stopSpeech() {
+            window.speechSynthesis.cancel();
+            audioElement.pause();
+            audioElement.currentTime = 0;
+            isPaused = false;
+        }
+    </script>
+
+</body>
+</html>

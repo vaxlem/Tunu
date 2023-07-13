@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Button Example</title>
+  <style>
+    #myAudio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="background-color: beige;">I am TAY Lakle. your great great grandfather. My father is called EHA ASHIAPIM - 1st (Priest Eha Ashiapim l) . (DO YOU KNOW MY REAL NAME?) OH! Ok. My real name is TAY EHA.</h2>
+
+  <audio id="myAudio">
+    <source src="./RECORD20210107203253.3gpp" type="audio/mpeg">
+  </audio>
+
+  <button onclick="toggleAudio()">Play / Pause</button>
+  
+
+  <!-- reading on both text and audio -->
+  
+  <h2 style="background-color: beige;" id="textToRead">I am TAY Lakle. your great great grandfather. My father is called EHA ASHIAPIM - 1st (Priest Eha Ashiapim l). (DO YOU KNOW MY REAL NAME?) OH! Ok. My real name is TAY EHA.</h2>
+
+  <audio id="myAudio">
+    <source src="audio_file.mp3" type="audio/mpeg">
+  </audio>
+
+  <button onclick="toggleAudio()">Play / Pause</button>
+
+  <!-- allow stop button with pause -->
+ 
+    <h2 style="background-color: beige;" id="textToRead">I am TAY Lakle. your great great grandfather. My father is called EHA ASHIAPIM - 1st (Priest Eha Ashiapim l). (DO YOU KNOW MY REAL NAME?) OH! Ok. My real name is TAY EHA.</h2>
+  
+    <audio id="myAudio">
+      <source src="./RECORD20210107203253.3gpp" type="audio/mpeg">
+    </audio>
+  
+    <button onclick="toggleAudio()">Play / Pause</button>
+    <button onclick="stopAudio()">Stop</button>
+
+...................................
+
+
+
+<!-- sto must wor now -->
+
+  <h2 style="background-color: beige;" id="textToRead">I am TAY Lakle. your great great grandfather. My father is called EHA ASHIAPIM - 1st (Priest Eha Ashiapim l). (DO YOU KNOW MY REAL NAME?) OH! Ok. My real name is TAY EHA.</h2>
+
+  <audio id="myAudio">
+    <source src="./RECORD20210107203253.3gpp" type="audio/mpeg">
+  </audio>
+
+  <button onclick="toggleAudio()">Play / Pause</button>
+  <button onclick="stopAudio()">Stop</button>
+<!-- both sounds together stop vversa -->
+
+  <h2 style="background-color: beige;" id="textToRead">I am TAY Lakle. your great great grandfather. My father is called EHA ASHIAPIM - 1st (Priest Eha Ashiapim l). (DO YOU KNOW MY REAL NAME?) OH! Ok. My real name is TAY EHA.</h2>
+
+  <audio id="myAudio">
+    <source src="./RECORD20210107203253.3gpp" type="audio/mpeg">
+  </audio>
+
+  <button onclick="toggleAudio()">Play / Pause</button>
+  <button onclick="stopAudio()">Stop</button>
+  <button onclick="resumeAudio()" disabled id="resumeButton">Resume</button>
+.........................................................
+<!-- finals atlas -->
+  <h2 style="background-color: beige;" id="textToRead">I am TAY Lakle. your great great grandfather. My father is called EHA ASHIAPIM - 1st (Priest Eha Ashiapim l). (DO YOU KNOW MY REAL NAME?) OH! Ok. My real name is TAY EHA.</h2>
+
+  <audio id="myAudio">
+    <source src="./RECORD20210107203253.3gpp" type="audio/mpeg">
+  </audio>
+
+  <button onclick="toggleAudio()">Play / Pause</button>
+  <button onclick="stopAudio()">Stop</button>
+  <button onclick="resumeAudio()" disabled id="resumeButton">Resume</button>
+
+<!-- sscripts -->
+  <script>
+    var audio = document.getElementById("myAudio");
+
+    function toggleAudio() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+
+    audio.onended = function() {
+      audio.currentTime = 0;
+      audio.play();
+    };
+  </script>
+  <!-- new bth read script -->
+  <script>
+    var audio = document.getElementById("myAudio");
+    var textToRead = document.getElementById("textToRead").innerText;
+
+    function toggleAudio() {
+      if (audio.paused) {
+        audio.play();
+        speakText();
+      } else {
+        audio.pause();
+      }
+    }
+
+    audio.onended = function() {
+      audio.currentTime = 0;
+      audio.play();
+      speakText();
+    };
+
+    function speakText() {
+      const message = new SpeechSynthesisUtterance(textToRead);
+      window.speechSynthesis.speak(message);
+    }
+  </script>
+
+  <!-- allow pause and stop btn -->
+ 
+
+  <script>
+    var audio = document.getElementById("myAudio");
+    var textToRead = document.getElementById("textToRead").innerText;
+    var isPaused = true;
+
+    function toggleAudio() {
+      if (audio.paused) {
+        if (isPaused) {
+          speakText();
+          isPaused = false;
+        }
+        audio.play();
+      } else {
+        audio.pause();
+        isPaused = true;
+      }
+    }
+
+    function stopAudio() {
+      audio.pause();
+      audio.currentTime = 0;
+      isPaused = true;
+    }
+
+    audio.onended = function() {
+      audio.currentTime = 0;
+      audio.play();
+      speakText();
+    };
+
+    function speakText() {
+      const message = new SpeechSynthesisUtterance(textToRead);
+      window.speechSynthesis.speak(message);
+    }
+  </script>
+
+<!-- stop must work now -->
+
+  <script>
+    var audio = document.getElementById("myAudio");
+    var textToRead = document.getElementById("textToRead").innerText;
+    var isPaused = true;
+
+    function toggleAudio() {
+      if (audio.paused) {
+        if (isPaused) {
+          speakText();
+          isPaused = false;
+        }
+        audio.play();
+      } else {
+        audio.pause();
+        isPaused = true;
+      }
+    }
+
+    function stopAudio() {
+      audio.pause();
+      audio.currentTime = 0;
+      isPaused = true;
+      speakText(); // Stop text-to-speech
+    }
+
+    audio.onended = function() {
+      audio.currentTime = 0;
+      audio.play();
+      speakText();
+    };
+
+    function speakText() {
+      const message = new SpeechSynthesisUtterance(textToRead);
+      window.speechSynthesis.cancel(); // Cancel any ongoing speech synthesis
+      window.speechSynthesis.speak(message);
+    }
+  </script>
+<!-- everyting sound stopping at same time vversa -->
+
+  <script>
+    var audio = document.getElementById("myAudio");
+    var textToRead = document.getElementById("textToRead").innerText;
+    var isPaused = true;
+
+    function toggleAudio() {
+      if (audio.paused) {
+        if (isPaused) {
+          speakText();
+          isPaused = false;
+        }
+        audio.play();
+        document.getElementById("resumeButton").disabled = true;
+      } else {
+        audio.pause();
+        isPaused = true;
+        document.getElementById("resumeButton").disabled = false;
+        stopTextToSpeech(); // Stop text-to-speech
+      }
+    }
+
+    function stopAudio() {
+      audio.pause();
+      audio.currentTime = 0;
+      isPaused = true;
+      document.getElementById("resumeButton").disabled = false;
+      stopTextToSpeech(); // Stop text-to-speech
+    }
+
+    function resumeAudio() {
+      audio.play();
+      document.getElementById("resumeButton").disabled = true;
+      speakText();
+    }
+
+    audio.onended = function() {
+      audio.currentTime = 0;
+      audio.play();
+      speakText();
+    };
+
+    function speakText() {
+      const message = new SpeechSynthesisUtterance(textToRead);
+      window.speechSynthesis.cancel(); // Cancel any ongoing speech synthesis
+      window.speechSynthesis.speak(message);
+    }
+    
+    function stopTextToSpeech() {
+      window.speechSynthesis.cancel(); // Cancel any ongoing speech synthesis
+    }
+  </script>
+<!-- final atlas -->
+
+  <script>
+    var audio = document.getElementById("myAudio");
+    var textToRead = document.getElementById("textToRead").innerText;
+    var isPaused = true;
+    var playbackPosition = 0;
+
+    function toggleAudio() {
+      if (audio.paused) {
+        if (isPaused) {
+          speakText();
+          isPaused = false;
+        }
+        audio.play();
+        document.getElementById("resumeButton").disabled = true;
+      } else {
+        audio.pause();
+        isPaused = true;
+        document.getElementById("resumeButton").disabled = false;
+        stopTextToSpeech(); // Stop text-to-speech
+      }
+    }
+
+    function stopAudio() {
+      audio.pause();
+      audio.currentTime = 0;
+      isPaused = true;
+      playbackPosition = 0;
+      document.getElementById("resumeButton").disabled = false;
+      stopTextToSpeech(); // Stop text-to-speech
+    }
+
+    function resumeAudio() {
+      audio.currentTime = playbackPosition;
+      audio.play();
+      document.getElementById("resumeButton").disabled = true;
+      speakText();
+    }
+
+    audio.onended = function() {
+      audio.currentTime = 0;
+      audio.play();
+      speakText();
+    };
+
+    audio.onpause = function() {
+      playbackPosition = audio.currentTime;
+    };
+
+    function speakText() {
+      const message = new SpeechSynthesisUtterance(textToRead);
+      window.speechSynthesis.cancel(); // Cancel any ongoing speech synthesis
+      window.speechSynthesis.speak(message);
+    }
+    
+    function stopTextToSpeech() {
+      window.speechSynthesis.cancel(); // Cancel any ongoing speech synthesis
+    }
+  </script>
+
+</body>
+</html>
