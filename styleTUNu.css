@@ -165,6 +165,143 @@ button {
     margin: 0rem;
 
   }
+  
+ /* carousel style */
+
+    .carousel {
+        width: 300px; /* Adjust the width according to your needs */
+        height: 200px; /* Adjust the height according to your needs */
+        overflow: hidden;
+        position: relative;
+        margin:  80px 40px 40px 40px;
+        z-index: -1;
+    }
+    /* carousel in accordion */
+    #z-index{}
+
+    .carousel ul {
+        width: 500%;
+        height: 100%;
+        position: relative;
+        list-style: none;
+        margin:  40px;
+        padding: 0;
+        animation: carousel-scroll 20s infinite linear;
+    }
+
+    .carousel li {
+        width: 20%;
+        height: 100%;
+        float: left;
+    }
+
+    .carousel img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @keyframes carousel-scroll {
+        0% { left: 0; }
+        20% { left: 0; }
+        25% { left: -100%; }
+        45% { left: -100%; }
+        50% { left: -200%; }
+        70% { left: -200%; }
+        75% { left: -300%; }
+        95% { left: -300%; }
+        100% { left: -400%; }
+    }
+
+/* button link play/pause */
+    #Pause{
+      z-index: 2;
+      /* margin-bottom: 10px; */
+      color: red; 
+      background-color: #180101ee; 
+      position: absolute;
+      top: 40rem; 
+      right: 23rem; 
+      height: 3rem;
+    }
+/* accordion ends*/
+.container-fluid{
+    text-align: center;
+    margin-top: 1rem;
+    background-color: rgb(46, 3, 3);
+    box-shadow: 0rem 2rem 2rem 7rem royalblue;
+    
+  }
+  
+  /* end of grid section */
+  
+  /* accordion */
+  .all {
+    background-image: url(./image/BEACH.jpg);
+    background-size: cover;
+    height: 700px;
+    padding: 0px 0px 0px 20px;
+    
+    
+    /* position: fixed; */
+    /* position: fixed; */
+    /* margin-left: 600rem; */
+    
+  }
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+  .date {
+        background-color: rgb(70, 69, 69);
+        color: white;
+        font-size: larger;
+        cursor: pointer;
+        width: 60%;
+        text-align: center;
+        padding: 10px;
+        border-radius: 7px;
+        outline: none;
+        font-size: 15px;
+        margin: 40px;
+        /* margin-top: 20px; */
+        transition: 0.4s;
+        display: inline-block;
+        overflow: hidden;
+      }
+  
+      .date:hover {
+        transform: scale(1.1);
+      }
+  
+      .date:after {
+        content: "\1F447";
+        margin-left: 80%;
+      }
+  
+      .active:after {
+        content: "\1F446";
+      }
+  
+      .notes {
+        width: 60%;
+        background-color: rgb(116, 115, 115);
+        color: white;
+        font-size: large;
+        padding: 0px 18px 0px 20px;
+        margin: 1px 40px;
+        max-height: 0px;
+        transition: 0.4s;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+  /* i decoration  in accordion*/
+      .acor-i {
+        color: #111;
+      }
+  
+/* end of accordion and carousel */
  
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
@@ -185,4 +322,16 @@ button {
     #lakle,#landHistory{
         font-size: 14px;
     }
+
+    /* button link play/pause */
+    #Pause {
+        z-index: 2;
+        /* margin-bottom: 10px; */
+        color: rgb(106, 0, 255); 
+        background-color: rgb(201, 226, 36); 
+        position: absolute;
+        top: 43rem; 
+        right: 1rem; 
+        height: 3rem;
+      }
 } 
