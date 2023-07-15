@@ -169,26 +169,68 @@ button {
  /* carousel style */
 
     .carousel {
-        width: 300px; /* Adjust the width according to your needs */
-        height: 200px; /* Adjust the height according to your needs */
+        width: 300px; 
+        /* Adjust the width according to your needs */
+        height: 200px; 
+        /* Adjust the height according to your needs */
         overflow: hidden;
         position: relative;
-        margin:  80px 40px 40px 40px;
+        left: 30em;
+        margin: 50px 0 0 45px;
+        /* margin:  80px 40px 40px 40px; */
         z-index: -1;
     }
     /* carousel in accordion */
-    #z-index{z-index: 1;}
+    #zindex{
+        z-index: 1;
+        /* margin: 0 30px 6px 0; */ 
+        
+    }
 
     .carousel ul {
         width: 500%;
         height: 100%;
         position: relative;
         list-style: none;
-        margin:  40px;
+        /* margin:  40px; */
         padding: 0;
         animation: carousel-scroll 20s infinite linear;
     }
 
+/* carousel resizing ids     */
+.carouse ul{
+    width: 500%;
+    height: 100%;
+    /* width: 80%;
+    height: 80%;  */
+    /* width: 100%;
+    height: 100%; */
+    position: relative;
+    list-style: none;
+    padding: 0;
+    /* padding: 0; */
+    animation: carousel-scroll 20s infinite linear;
+
+}
+.carouse img {
+    width: 100%;
+    height: 100%;
+    /* height: 50%; */
+    object-fit: cover;
+    padding-left: 100px;
+}
+.carouse li {
+    
+    /* width: 100%;
+    height: 80%; */
+    width: 20%;
+    height: 100%;
+    float: left;
+
+}
+
+
+/* end of resizing */
     .carousel li {
         width: 20%;
         height: 100%;
@@ -220,7 +262,7 @@ button {
       color: red; 
       background-color: #180101ee; 
       position: absolute;
-      top: 40rem; 
+      top: 36rem; 
       right: 23rem; 
       height: 3rem;
     }
@@ -259,6 +301,8 @@ button {
         font-size: larger;
         cursor: pointer;
         width: 60%;
+/* acocordion height */
+        height: 70px;
         text-align: center;
         padding: 10px;
         border-radius: 7px;
@@ -327,11 +371,48 @@ button {
     #Pause {
         z-index: 2;
         /* margin-bottom: 10px; */
-        color: rgb(106, 0, 255); 
+        /* color: rgb(106, 0, 255);  */
+        /* color: black; */
+        color: blue;
         background-color: rgb(201, 226, 36); 
         position: absolute;
-        top: 43rem; 
+        top: 50rem; 
         right: 1rem; 
         height: 3rem;
       }
+
+      #Pause:hover{
+        color: yellow;
+        font-weight: normal;
+        font-size: 14px;
+        
+      }
+/* carousel shape */
+    .carousel{
+        position: relative;
+        /* left: 0; */
+        left: 0em;
+        margin: 50px 0 0 45px;
+        border-radius: 10px;
+        border: 1px solid blue;
+        margin-top:20px;
+        box-shadow: 1px 1px 2px yellow;
+    }
+    .carouse{
+        position: relative;
+        /* left: 0; */
+        left: 0em;
+        margin: 50px 0 0 45px;
+        border-radius: 10px;
+        border: 1px solid blue;
+        margin-top:20px;
+        box-shadow: 1px 1px 2px yellow;
+    }
+  
+
+    #zindex{
+        z-index: 1;
+        margin: 0 0 6px 0;
+        
+    }
 } 
