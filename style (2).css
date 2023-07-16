@@ -1,0 +1,377 @@
+body{
+    background-color: rgba(74, 4, 4, 0.347);
+    background-image:linear-gradient(90deg,red,blue,yellow);
+    font-family: Verdana, sans-serif; margin:0;
+    color: rgba(255, 255, 255, 0.82);
+    background-image: url(./image/istockphoto-whale.jpg);
+    background-size: cover;
+} 
+
+.text {
+  background-color: #ffffff7e;
+  color: #19043a;
+  font-size:x-large;
+  padding: 8px 0px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+}
+
+#footer {
+  text-decoration: none;
+  background-color: navy;
+  text-align:center;
+  color: #fff;
+  font-size: 14px;
+  font-family: montserrat-black;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  margin-top: 2rem;
+} 
+
+/* bubbles section */
+.fancy{
+  width: 50px;
+  height: 50px;
+  background-image:linear-gradient(35deg,white,rgb(255, 0, 115),rgba(150, 218, 24, 0.368),brown);
+  /* background-image:linear-gradient(90deg,red,blue,yellow);  */
+  display: inline-block;
+  border-radius: 100%;
+  font-size: 14px;
+  color: rgba(13, 1, 1, 0.708);
+  text-align: center;
+  padding: 2px;
+  margin: 5px;
+}
+
+.x{ position: absolute;
+  left: 3rem;
+  top: 10rem
+
+}
+
+.y{
+  position: absolute;
+  left: 7rem;
+  /* bottom: 1rem; */
+
+}
+
+.z{
+  position: absolute;
+  right: 1rem;
+  top: 31rem;
+
+}
+
+.v{
+  position: absolute;
+  right: 2rem;
+  top: 32rem;
+
+}
+
+.w{
+  position: absolute;
+  right: 5rem;
+  top: 15rem;
+
+}
+
+.u{
+  position: absolute;
+  right: 7.2rem;
+  top: 69rem;
+  border-radius: 10px;
+  box-shadow: 1px 2px #d0d00adc;
+  z-index: 1;
+
+}
+
+.i{
+  color: red;
+  padding:0.5rem;
+}
+/* .thumb-bar {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+} */
+
+.col{
+        color: burlywood;
+        display: inline-block;
+        width: auto;
+        height: auto;
+        background-color:#e79e4f4f ;
+        text-align: center;
+        margin: 1rem;
+        border-radius: 1rem;
+        box-shadow: #df2626aa;
+        z-index: 1;
+        box-shadow: 1px 2px 1px rgba(17, 15, 15, 0.568);
+
+}
+
+.col-5{
+    overflow-wrap: break-word;
+    line-break: auto;
+
+}
+.col-7{
+    padding: 0px;
+    background-image:linear-gradient(115deg,red,rgba(0, 0, 255, 0.366),rgba(255, 255, 0, 0.475), brown);
+    width:500px;
+    height: 500px;
+}
+/* add call to action */
+.add-call{
+    width: 17rem;
+    height:1.5rem; 
+    margin: 1rem; 
+    border-top-right-radius:21px;
+    /* box-shadow:2px 2px 2px  whitesmoke;  */
+    padding:2rem 0rem 2rem 0rem;
+    border-top-left-radius:21px; 
+    box-shadow: 1px 5px 7px 2px whitesmoke; 
+    font-size:14px;}
+
+.cardbody{width:auto;
+        background-color: #2125290d;
+        text-align:center;
+    }
+/*.navbar{} */
+
+.container-fluid{
+  text-align:center;
+}
+
+/* Optional: Hide horizontal scrollbar */
+.thumb-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+.thumb-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+
+.displayed-img {
+  /* height: auto;
+  max-width: 100%; */
+  width:19rem;
+  height: 20rem;
+}
+/* tunu carosel 3 resize */
+
+/* .edit.row{
+  margin: 0 30px 0 50px ;
+} */
+
+
+/* .full-img{
+
+} */
+
+
+/* img{
+
+} */
+
+/* .overlay{
+
+} */
+.ride-animation {
+          animation: ride-carousel 1s;
+        }
+      
+.darken {
+            filter: brightness(0.7);
+} 
+
+
+@keyframes ride-carousel {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+    
+ /* CAROSEL CODE */
+       
+/*.btn{
+  cursor: pointer;
+  background-color: #dc3545 ;
+  color: white;
+  /* border-radius: 10%; */
+
+  /* border-radius: 30%;
+  border-color: yellow;
+  font-weight: bolder;
+  font-size: x-large;
+  margin-left: 5%;;
+  position: absolute; 
+  right: 43.5%; 
+  margin: 2rem 0rem;
+  font-weight: bold;
+  font-size: 18px;
+} */
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  /* max-width: 20rem; */
+  max-width: 30.5rem;
+  position: relative;
+  /* bottom: 30rem; */
+  margin: auto;
+  z-index: 1;
+}
+
+
+/* Caption text */
+.text {
+  background-color: #ffffff7e;
+  color: #19043a;
+  font-size:x-large;
+  padding: 8px 0px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #e03535;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  left: 2px;
+}
+h1 {
+  /* color: #fff; */
+  font-weight: bolder;
+  font-size: xx-large;
+  margin: 5% 0% 2% 5%;
+}
+p{
+  color:#dcb035 ;
+  font-weight: bolder;
+  font-size: x-large;
+  margin-left: 5%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+  
+  .slideshow-container {
+  /* max-width: 20rem;  */
+  max-width: 40rem;
+  position: relative;
+  bottom: 45rem;
+  margin: auto; 
+} 
+h1 { 
+  color: #fff; 
+  font-weight: bolder;
+  font-size: xx-large; 
+  margin: 3% 0% 2% 5%; 
+ } 
+}
+
+/* On bigger screens, increase text size */
+@media only screen and (min-width: 600px) {
+  .prev, .next,.text {font-size: 11px}
+  .slideshow-container {
+  /* max-width: 20rem; */
+     max-width: 40rem;
+     position: relative;
+     /* top: -5rem; */
+     top: -1rem;
+
+     margin: auto; 
+}
+
+h1 {
+  /* color: #fff; */
+  font-weight: bolder;
+  font-size: xx-large;
+  margin: 1% 0% 2% 5%;
+}
+.dot{
+  position:relative;
+  top:-5rem;
+}
+
+.text {
+  background-color: #ffffff7e;
+  color: #19043a;
+  font-size:x-large;
+  padding: 8px 0px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+}
+/* button */
+/* .btn, a{
+  cursor: pointer;
+  background-color: #dc3545 ;
+  color: white; */
+  /* border-radius: 10%; */
+  /* border-radius: 30%;
+  border-color: yellow;
+  font-weight: bolder;
+  font-size: x-large;
+  margin-left: 5%;
+  position: absolute;  */
+  /* right: 43.5%;  */
+  /* right: 10.5%; 
+  top:0%;
+  margin: 1rem 0rem;
+  font-weight: bold;
+  font-size: 18px;
+} */
+}
+  

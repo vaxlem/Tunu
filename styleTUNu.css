@@ -3,6 +3,46 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
+
+
+/* vavbar rbrands */
+.navbar .container,
+.navbar .container-fluid, .navbar .container-sm, .navbar .container-md, .navbar .container-lg, .navbar .container-xl {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  display: inline-block;
+  padding-left: 1rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+.navbar-brand:hover, .navbar-brand:focus {
+  text-decoration:overline;
+}
+
+.navbar-nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
 /* welcome address */
 #welcome .welcome{
     text-align: center;
@@ -144,10 +184,10 @@ button {
     scroll-behavior:smooth;
     overflow-y:scroll ;
     height:10rem ;
-    background-image: -webkit-linear-gradient(top, white, rgb(249, 18, 18));
-    -moz-background-image: linear-gradient(top, white, rgb(249, 18, 18));
-    -ms-background-image: linear-gradient(top, white, rgb(249, 18, 18));
-    -o-background-image: linear-gradient(top, white, rgb(249, 18, 18));
+    background-image: -webkit-linear-gradient(top, rgb(45, 3, 3), rgb(26, 18, 249));
+    -moz-background-image: linear-gradient(top, rgb(22, 8, 8), rgb(91, 18, 249));
+    -ms-background-image: linear-gradient(top, rgb(26, 4, 4), rgb(95, 18, 249));
+    -o-background-image: linear-gradient(top, rgb(24, 3, 3), rgb(55, 10, 146));
   }
 
 #footer {

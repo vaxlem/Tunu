@@ -58,7 +58,12 @@ body{
 .row{
     display: flex;
     text-align: center;
+    /* margin: 0 30px 0 50px; */
 }
+/* another carousel edit */
+.edit{
+    margin: 0 0 0 100px ;
+  }
 
 img{
     width: 200px;
@@ -169,7 +174,7 @@ img{
 
 /* tunu in round details*/
 p{
-background-color:rgba(0, 0, 139, 0.389); color: white; line-height: 20px; margin-bottom: 0px;
+background-color:rgba(0, 0, 139, 0.389); color: white; line-height: 40px; margin: 42px;
 }
 .tunu{
     font-size:85px;
@@ -286,7 +291,22 @@ button {
     padding-top:1px;
 }
 
-
+/* another carousel edit */
+.edit{
+    margin: 0;
+  }
+}
+.edit{
+    width: 300px;
+    height: auto;
+    position: relative;
+    /* left: 0; */
+    left: 0em;
+    margin: 50px 0 0 45px;
+    border-radius: 10px;
+    border: 1px solid blue;
+    margin-top:20px;
+    box-shadow: 1px 1px 2px yellow;
 }
 @media screen and (max-width: 700px) {
 
@@ -314,4 +334,22 @@ button {
         line-height: 30.5px;
 
     }
+/* another carousel edit */
+.edit{
+    margin: 0;
+  }
+}
+.edit{
+    width: 300px;
+    height: auto;
+    position: relative;
+    /* left: 0; */
+    left: 0em;
+    /* margin: 50px 0 0 45px; */
+    border-radius: 10px;
+    border: 1px solid blue;
+    margin-top:20px;
+    box-shadow: 1px 1px 2px yellow;
+}
+
 }
