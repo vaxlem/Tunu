@@ -298,7 +298,8 @@ button {
         color: white;
         font-size: larger;
         cursor: pointer;
-        width: 60%;
+        width: 90%;
+        /* width: 60%; */
         text-align: center;
         padding: 10px;
         border-radius: 7px;
