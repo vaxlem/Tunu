@@ -125,9 +125,9 @@ height: 50%;
 }
 
 /* tunu */
-p{
-/* background-color:rgba(0, 0, 139, 0.389); color: white; line-height: 20px; margin-bottom: 0px; */
-}
+/* p{
+background-color:rgba(0, 0, 139, 0.389); color: white; line-height: 20px; margin-bottom: 0px;
+} */
 .tunu{
     font-size:85px;
     padding-top: 0px;
@@ -184,10 +184,10 @@ button {
     scroll-behavior:smooth;
     overflow-y:scroll ;
     height:10rem ;
-    background-image: -webkit-linear-gradient(top, rgb(45, 3, 3), rgb(26, 18, 249));
-    -moz-background-image: linear-gradient(top, rgb(22, 8, 8), rgb(91, 18, 249));
-    -ms-background-image: linear-gradient(top, rgb(26, 4, 4), rgb(95, 18, 249));
-    -o-background-image: linear-gradient(top, rgb(24, 3, 3), rgb(55, 10, 146));
+    background-image: -webkit-linear-gradient(top, rgb(26, 18, 249), rgb(45, 3, 3) );
+    -moz-background-image: linear-gradient(top, rgb(91, 18, 249), rgb(22, 8, 8) );
+    -ms-background-image: linear-gradient(top, rgb(95, 18, 249), rgb(26, 4, 4) );
+    -o-background-image: linear-gradient(top, rgb(55, 10, 146), rgb(24, 3, 3) );
   }
 
 #footer {

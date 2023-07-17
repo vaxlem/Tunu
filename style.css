@@ -176,6 +176,9 @@ img{
 p{
 background-color:rgba(0, 0, 139, 0.389); color: white; line-height: 40px; margin: 42px;
 }
+.pp{
+    background-color:rgba(0, 128, 0, 0.527);
+}
 .tunu{
     font-size:85px;
     padding-top: 0px;
