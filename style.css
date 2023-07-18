@@ -295,9 +295,9 @@ button {
 }
 
 /* another carousel edit */
-.edit{
+/* .edit{
     margin: 0;
-  }
+  } */
 }
 .edit{
     width: 300px;
@@ -305,7 +305,7 @@ button {
     position: relative;
     /* left: 0; */
     left: 0em;
-    margin: 50px 0 0 45px;
+    margin: 50px 0 0 0px;
     border-radius: 10px;
     border: 1px solid blue;
     margin-top:20px;
@@ -341,7 +341,7 @@ button {
 .edit{
     margin: 0;
   }
-}
+
 .edit{
     width: 300px;
     height: auto;

@@ -299,7 +299,18 @@ p{
   from {opacity: .4} 
   to {opacity: 1}
 }
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 600px){
+h1 {
+  /* color: #fff; */
+  color: #c21414;;
+  font-weight: bolder;
+  font-size: xx-large;
+  /* margin: 1% 0% 2% 5%; */
+  margin: 1% 0% 2% 0%;
 
+}
+}
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
@@ -311,12 +322,23 @@ p{
   bottom: 45rem;
   margin: auto; 
 } 
-h1 { 
+/* h1 { 
   color: #fff; 
   font-weight: bolder;
   font-size: xx-large; 
   margin: 3% 0% 2% 5%; 
- } 
+ }  */
+
+ h1 {
+  /* color: #fff; */
+  color: #c21414;;
+  font-weight: bolder;
+  font-size: xx-large;
+  /* margin: 1% 0% 2% 5%; */
+  margin: 1% 0% 2% 0%;
+
+}
+
 }
 
 /* On bigger screens, increase text size */
@@ -334,9 +356,12 @@ h1 {
 
 h1 {
   /* color: #fff; */
+  color: #c21414;;
   font-weight: bolder;
   font-size: xx-large;
-  margin: 1% 0% 2% 5%;
+  /* margin: 1% 0% 2% 5%; */
+  margin: 1% 0% 2% 0%;
+
 }
 .dot{
   position:relative;
