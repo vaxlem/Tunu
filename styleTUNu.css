@@ -384,8 +384,9 @@ button {
         color: white;
         font-size: larger;
         cursor: pointer;
-        width:72%;
+        /* width:72%; */
         /* width: 60%; */
+        
         text-align: center;
         padding: 0px;
         border-radius: 7px;
