@@ -379,7 +379,43 @@ button {
         height: 3rem;
       }
 
-/* aligning changes */  .date {
+/* outer carousel resize position; */
+.carousel {
+  /* width: 650px;  */
+  /* Adjust the width according to your needs */
+  /* height: 320px; */
+   /* Adjust the height according to your needs */
+   width: 328px;
+   height: 199px;
+  overflow: hidden;
+  position: relative;
+  left: 3em;
+  /* margin:  0;
+  z-index: -1; */
+}      
+
+
+
+.carousel ul {
+  width: 500%;
+  height: 100%;
+  position: relative;
+  /* bottom: 10em; */
+  left: 3em;
+  list-style: none;
+  margin:  0px;
+  padding: 0;
+  animation: carousel-scroll 20s infinite linear;
+}
+
+
+        .carousel img{
+          width: 328px;
+          height: 199px;
+        }
+
+/* carousel inneer aligning changes */ 
+  .date {
         background-color: rgb(70, 69, 69);
         color: white;
         font-size: larger;

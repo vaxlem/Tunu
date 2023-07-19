@@ -29,6 +29,45 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 
+<!-- guess name game style-->
+<style>
+  html {
+    font-family: sans-serif;
+  }
+
+  /* .body {
+    width: 50%;
+    max-width: 800px;
+    min-width: 480px;
+    margin: 0 auto;
+  }
+   */
+
+  .body{
+    /* width: 50%; */
+
+    margin: 10px;
+    padding: 5px 2px 5rem;
+    text-align: center;
+  } 
+  /* where nuese number is out */
+  .form input[type="number"] {
+    width: 200px;
+  }
+
+  .lastResult {
+    color: white;
+    /* padding: 3px; */
+    padding: 3px;
+    margin:1rem;
+  }
+  .resultParas{
+    margin-top: 1rem;
+  }
+</style>
+
+
+
 </head>
 <body>
   <a class="navbar-brand" href="./images/tunuLogo.PNG"><img src="./images/tunuLogo.PNG" alt="" class="logo"></a>
@@ -140,7 +179,7 @@
 
 <!-- outer carousel slide here -->
 
-<!-- <div class="carousel">
+<div class="carousel">
   <ul>
       <li><img src="./images/aku.png" alt="Company 1"></li>
       <li><img src="./images/mangrove.jpg" alt="Company 2"></li>
@@ -148,7 +187,7 @@
       <li><img src="./images/tunuhomes5.PNG" alt="Company 4"></li>
       <li><img src="./images/fingureup.png" alt="Company 5"></li>
   </ul>
-</div> -->
+</div>
 
 
 <!-- end of carousel slide -->
@@ -192,14 +231,7 @@
           </div>
       
           <button class="date">experience <br/>User 3</button>
-          <div class="notes" style="margin: 1px 0; padding: 0 0 0 1px; 
-        
-          width: 300px;
-          background-color: #fff;
-          box-shadow: 2px, 1px, 2px, red;
-          border: 1px solid yellow;
-          border-radius: 10px;
-          padding-bottom: 75rem;">
+         <div class="notes" style="margin: 1px 0; padding: 0 0 10px 1px; width: 300px;  overflow: hidden; background-color: #fff; box-shadow: 2px, 1px, 2px, red;border: 1px solid yellow;border-radius: 10px;">
             <div class="container-fluid flex" >
             <div class="row" >
 <!-- another carousel            -->
@@ -335,15 +367,35 @@
           </div>
       
       
+<!-- guess GAME -->
           <button class="date">experience  <br />Next user</button>
           <div class="notes" style="margin: 1px 0; padding: 0 0px 0 0;width: 380px;">
-            <div class="container-fluid flex"></div>
+            <!-- <div class="container-fluid flex"></div>
             <div class="row">
-            
+                  
+            </div> -->
+    <div class="body">
+            <h1 style="color:greenyellow;">Number Name guessing game</h1>
+    
+            <h6>Here, play who you know GAME.See if you can guess it in 10 turns or fewer. 
+                <br>We'll tell you if your guess was who you know.</h6>
+            <div class="form">
+              <label for="guessField">Enter a guess Number: </label>
+              <input type="number" min="1" max="100" required="" id="guessField" class="guessField">
+              <input type="submit" value="Submit guess" class="guessSubmit">
             </div>
-          </div>
-      
         
+            <div class="resultParas">
+              <h5 class="guesses"></h5>
+              <h5 class="lastResult"></h5>              <h5 class="lowOrHi"></h5>
+            </div>
+    </div>
+        
+            
+            
+          </div>
+          
+<!-- end of GAME -->
           <button class="date">Another experience<br />User </button>
           <div class="notes" style="margin: 1px 0; padding: 0 0 0 1px; width: 380px;">
             <div class="container-fluid flex"></div>
@@ -351,7 +403,7 @@
              
             </div>
               <div class="col col-sm-7" style="background-color: #eb0a6f;"><img src="./image/TEACHER.jpg" alt="kids" style="width: auto; height: auto; position: relative;right: 1.1rem;"></div>
-               -->
+               
             </div>
           </div>
       
@@ -492,6 +544,77 @@ Google Local — Tunu mapWelcome to the Tunu google satellite map! This place is
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 3000); // Change image every 3 seconds
   }
+  </script>
+
+  <!-- guess name number game -->
+  <script>
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    const guesses = document.querySelector('.guesses');
+    const lastResult = document.querySelector('.lastResult');
+    const lowOrHi = document.querySelector('.lowOrHi');
+    const guessSubmit = document.querySelector('.guessSubmit');
+    const guessField = document.querySelector('.guessField');
+    let guessCount = 1;
+    let resetButton;
+
+    function checkGuess() {
+      const userGuess = Number(guessField.value);
+      if (guessCount === 1) {
+        guesses.textContent = 'Previous guesses: ';
+      }
+
+      guesses.textContent += userGuess + ' ';
+
+      if (userGuess === randomNumber) {
+        lastResult.textContent = 'Congratulations! You got it right! This is the next child ofv Lakle. What is his or her Name? ';
+        lastResult.style.backgroundColor = 'green';
+        lowOrHi.textContent = '';
+        setGameOver();
+      } else if (guessCount === 10) {
+        lastResult.textContent = '!!!GAME OVER!!!';
+        lowOrHi.textContent = '';
+        setGameOver();
+      } else {
+        lastResult.textContent = 'Wrong!';
+        lastResult.style.backgroundColor = 'red';
+        if(userGuess < randomNumber) {
+          lowOrHi.textContent = 'Last guess was too low!' ;
+        } else if(userGuess > randomNumber) {
+          lowOrHi.textContent = 'Last guess was too high!';
+        }
+      }
+
+      guessCount++;
+      guessField.value = '';
+      guessField.focus();
+    }
+
+    guessSubmit.addEventListener('click', checkGuess);
+
+    function setGameOver() {
+      guessField.disabled = true;
+      guessSubmit.disabled = true;
+      resetButton = document.createElement('button');
+      resetButton.textContent = 'Start new game';
+      document.body.appendChild(resetButton);
+      resetButton.addEventListener('click', resetGame);
+    }
+
+    function resetGame() {
+      guessCount = 1;
+      const resetParas = document.querySelectorAll('.resultParas p');
+      for (const resetPara of resetParas) {
+        resetPara.textContent = '';
+      }
+
+      resetButton.parentNode.removeChild(resetButton);
+      guessField.disabled = false;
+      guessSubmit.disabled = false;
+      guessField.value = '';
+      guessField.focus();
+      lastResult.style.backgroundColor = 'white';
+      randomNumber = Math.floor(Math.random() * 100) + 1;
+    }
   </script>
 </body>
 </html>
