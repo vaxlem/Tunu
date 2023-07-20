@@ -67,14 +67,14 @@ body{
     padding: auto 10px;
 }
 
-
+/* naration contatner white bgrd */
 .container{
     width: auto;
     box-shadow: 1px 1px 2px rgba(255, 0, 0, 0.018);
     border: 1px solid greenyellow;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 3rem;
-    margin: 0px 10px 0 60px;
+    margin: 0px 10px 0px 42px;
     text-align: center;
     height: auto;
     flex: auto;
@@ -164,13 +164,18 @@ button {
     border-radius: 15px;
     box-shadow: 1px 1px 2px rgba(255, 0, 0, 0.018);
     border: 0px;
-    margin: 0 auto;
+    margin: 4px auto;
     background-color:red;
     cursor: pointer; 
     color: white; 
     /* width: 5px; */
     
-    background-color:rgb(62, 138, 138) ;cursor: pointer; color: white; width: 140px;
+    background-color:rgb(62, 138, 138) ;
+    cursor: pointer; color: white; width: 140px;
+}
+
+.btnalign{
+  margin: auto 42px;
 }
 
 #landHistory{
@@ -298,6 +303,8 @@ button {
       }
   .date {
         background-color: rgb(70, 69, 69);
+        box-shadow: 0.1px 0.5px 1px darkgoldenrod;
+        border: 1px solid darkgoldenrod;
         color: white;
         font-size: larger;
         cursor: pointer;
@@ -434,5 +441,5 @@ button {
         transition: 0.4s;
         display: inline-block;
         overflow: hidden;
-      }
+   }
 } 

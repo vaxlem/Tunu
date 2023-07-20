@@ -176,9 +176,12 @@ img{
 p{
 background-color:rgba(0, 0, 139, 0.389); color: white; line-height: 40px; margin: 42px;
 }
+
+/* background green history */
 .pp{
     background-color:rgba(0, 128, 0, 0.527);
-}
+    padding: 0 0 0 5px;
+    }
 .tunu{
     font-size:85px;
     padding-top: 0px;

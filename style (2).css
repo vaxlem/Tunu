@@ -261,11 +261,16 @@ img {vertical-align: middle;}
   left: 2px;
 }
 h1 {
-  /* color: #fff; */
+  color: #fff;
   font-weight: bolder;
   font-size: xx-large;
   margin: 5% 0% 2% 5%;
 }
+
+
+
+
+
 p{
   color:#dcb035 ;
   font-weight: bolder;
@@ -328,7 +333,7 @@ h1 {
   font-size: xx-large; 
   margin: 3% 0% 2% 5%; 
  }  */
-
+/* color of welcome addrress */
  h1 {
   /* color: #fff; */
   color: #c21414;;
