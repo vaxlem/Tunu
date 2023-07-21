@@ -97,22 +97,25 @@ img{
     justify-content: space-around;
     align-items: center;
     margin: 10px 0px 0px 0px;
-    list-style: none;}
+    list-style: none;
+
+   }
 
     .cards-all li {
         position: relative;
         /* right: 90px; */
         overflow: hidden;
+        
     }
 
    
     .cards-all li img {
-        width: 200px;
-        height: 200px;
+        width: 220px;
+        height: 220px;
         margin: 10px;
         transition: 2s;
         position: relative;
-        right: 0rem;
+        right: 0rem; /* of img */
     }
     .card-content {
         margin: 20px;
@@ -296,7 +299,48 @@ button {
         z-index: 2;
 
     }
+    .bottomy-container{
+        /* background-color: rgba(255, 255, 0, 0.353); */
+/* the tunu in round yellow     */
+        /* margin:5rem 0rem 0rem 0rem; */
+        margin:4rem 0rem 0rem 0rem;
+        position: absolute;
+        /* left: 6rem; */
+        left:4rem;
+        line-height: 30.5px;
+
+    }
+
+    .cards-all {
+        /* display: flex; */
+        justify-content: space-around;
+        align-items: center;
+        margin: 10px 0px 0px 0px;
+        list-style: none;
     
+        position: relative;
+        /* right: 4rem; */
+        right: 1rem;
+    
+    }
+    
+        .cards-all li {
+            position: relative;
+            /* right: 90px;  position of img */
+            right: 1rem;
+            overflow: hidden;
+            
+        }
+    
+       
+        .cards-all li img {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            transition: 2s;
+            position: relative;
+            right: 1rem;
+        }
 
 /* tunu land color details */
 #land-color{
