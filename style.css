@@ -346,9 +346,9 @@ button {
     
         .cards-all li {
             position: relative;
-            right: 90px; 
+            /* right: 90px;  */
              /* position of img */
-            /* right: 1rem; */
+            left: 6rem;
             overflow: hidden;
             
         }
