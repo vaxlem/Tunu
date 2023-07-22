@@ -36,7 +36,8 @@ body{
     text-align: center;
     /* left: 3rem; */
     left: 1rem;
-    margin: 1rem;
+    /* margin: 1rem; */
+    margin: -1rem;
 }
 /* on test */
 .first-div{
@@ -281,6 +282,12 @@ button {
 .clear{
     clear: both;
 }
+
+
+.but-Children{width: 89px; padding: 10px; background-color:rgb(175, 7, 77); margin:5px;cursor: pointer; color: rgba(255, 255, 255, 0.868);}
+.nut-home{}
+.but-theLand{width: 80px; padding: 10px; background-color:rgba(89, 63, 236, 0.813); margin: 5px;cursor: pointer;}
+.but-activities{width: 89px; padding: 10px; background-color:rgb(175, 7, 77); margin:5px;cursor: pointer; color: rgba(255, 255, 255, 0.868);}
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (min-width: 600px) {/* top container  and  navigation butts*/
     .bottomy-container{
@@ -296,11 +303,15 @@ button {
         font-size:85px;
         padding-top: 0px;
     }
+
+
 }
     @media screen and (max-width: 600px) {
-
-    
-    .notice{
+    .but-activities{width: 60px; padding: 0.5px; background-color:rgb(175, 7, 132); margin:0.5px;cursor: pointer; color: rgba(255, 255, 255, 0.868); font-size: 11px; letter-spacing: 1px;}
+    .but-theLand{ width: 60px; padding: 0.5px; background-color:rgb(175, 7, 132); margin:0.5px;cursor: pointer; color: rgba(255, 255, 255, 0.868); font-size: 11px; letter-spacing: 1px;}
+    .but-Children{width: 60px; padding: 0.5px; background-color:rgb(175, 7, 132); margin:0.5px;cursor: pointer; color: rgba(255, 255, 255, 0.868); font-size: 11px; letter-spacing: 1px;}
+    .but-home{width: 60px; padding: 0.5px; background-color:rgb(175, 7, 132); margin:0.5px;cursor: pointer; color: rgba(255, 255, 255, 0.868); font-size: 11px; letter-spacing: 1px;}
+.notice{
         margin: 4.3rem 0 0 0.1rem;
         width:8rem ;
         font-size: 14px;
@@ -327,8 +338,8 @@ button {
         list-style: none;
     
         position: relative;
-        /* right: 4rem; */
-        right: 1rem;
+        right: 4rem;
+        /* right: 1rem; */
     
     }
     
@@ -343,15 +354,15 @@ button {
     
        
         .cards-all li img {
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             margin: 10px;
-            transition: 2s;
+            /* transition: 2s; */
             position: relative;
             right: 1rem;
         }
         .cards li h4 {
-            text-transform: uppercase;
+            /* text-transform: uppercase; */
             position: relative;
             right: 1rem;
           }
