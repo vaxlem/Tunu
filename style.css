@@ -200,9 +200,9 @@ background-color:rgba(0, 0, 139, 0.389); color: white; line-height: 40px; margin
 /* background green history */
 .pp{
     background-color:rgba(0, 128, 0, 0.527);
-    padding: 0 0 0 5px;
+    padding: 0 0 0 2px;
     color: black;
-    width: 400px;
+    width: 365px;
     }
 .tunu{
     font-size:85px;
