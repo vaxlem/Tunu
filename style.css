@@ -201,6 +201,8 @@ background-color:rgba(0, 0, 139, 0.389); color: white; line-height: 40px; margin
 .pp{
     background-color:rgba(0, 128, 0, 0.527);
     padding: 0 0 0 5px;
+    color: black;
+    width: 400px;
     }
 .tunu{
     font-size:85px;
