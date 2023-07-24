@@ -198,12 +198,28 @@ background-color:rgba(0, 0, 139, 0.389); color: white; line-height: 40px; margin
     margin: 4px;
 }
 /* background green history */
-.pp{
+/* .pp{
     background-color:rgba(0, 128, 0, 0.527);
     padding: 0 0 0 2px;
     color: black;
     width: 365px;
+    } */
+.pp{
+    background: -webkit-linear-gradient(45deg, red, green);
+    background: -moz-linear-gradient(45deg, red, green);
+    background: -o-linear-gradient(45deg, red, green);
+    background: -ms-linear-gradient(45deg, red, green);
+    background: linear-gradient(45deg, rgb(11, 11, 11), green);
+    margin: 1rem 1rem 4rem;
+    padding: 1rem;
+    text-align: justify;
+    line-height:30px ;
     }
+
+
+
+
+
 .tunu{
     font-size:85px;
     padding-top: 0px;
