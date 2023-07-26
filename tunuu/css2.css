@@ -15,8 +15,10 @@
   }
 
 .cards li img {
-    width: 290px;
-    height: 250px;
+    /* width: 290px;
+    height: 250px; */
+    width: 90px;
+    height: 70px;
     margin: 10px;
     transition: 2s;
   }  
@@ -59,3 +61,101 @@
   .lakle{
     color: rgba(128, 255, 0, 0.903);
   }
+
+  .alorgbodzi{
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .alorgbodzi .image{
+    margin: 10px auto;
+    text-align: center;
+    width: 500px;
+    margin: 10px auto;
+  }
+/* responsive media */
+@media screen and (max-width: 600px){
+
+.projects div { /* yellow div */
+margin: 5px;}
+
+.cards {/* black card */
+display: flex;
+justify-content: space-around;
+align-items: center;
+margin: 8px 3px;
+padding-left: 1px;
+list-style: none;
+}
+
+.cards li{
+margin: 0px;
+padding: 0px;
+}
+.card li img {
+width: 60px;
+height: 60px;
+margin: 1px;
+transition: 2s;
+}    
+
+.cards li img {/* the images */
+/* width: 290px;
+height: 250px; */
+width: 60px;
+height: 60px;
+margin: 2px;
+transition: 2s;}
+
+.card {/* blue ash */
+display: flex;
+justify-content: space-around;
+align-items: center;
+/* margin: 10px; */
+list-style: none;
+width: 500px;
+margin-left:1px;
+padding: 2px;
+}
+button {
+width: fit-content;
+height: 35px;
+border-radius: 15px;
+border: 0px;
+margin:10px ;
+
+}
+
+.card-content,p{
+font-size: 14px;
+margin: 5px;
+text-decoration: none;
+}
+
+.h4{ /* alorgbodzi profile txt color */
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color: rgba(0, 0, 0, 0.692);
+padding: 5px;
+
+} 
+
+
+.alorgbodzi .image{
+  width: 140px;
+  height: 120px;
+  text-align: center;
+  margin: 10px auto;
+  text-decoration: none;
+  }  
+
+.image{
+width: 140px;
+height: 120px;
+text-align: center;
+margin: 10px auto;
+text-decoration: none;
+}  
+ul{
+text-decoration: none;
+}
+}

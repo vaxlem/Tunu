@@ -174,24 +174,25 @@ button {
     cursor: pointer; color: white; width: 140px;
 }
 .button{
-  height: 30px;
+  /* height: 30px; */
     border-radius: 15px;
     box-shadow: 1px 1px 2px rgba(255, 0, 0, 0.018);
     border: 0px;
     margin: 4px auto;
-    background-color:red;
+    padding: 5px 0;
+    /* background-color:red; */
     cursor: pointer; 
     color: white; 
     /* width: 5px; */
     
     background-color:rgb(62, 138, 138) ;
-    cursor: pointer; color: white; width: 140px;
+    cursor: pointer; color: white; width: 116px;
 
 }
 
 /* history under play/resme button */
 .btnalign{
-  margin: auto 42px;
+  margin: auto 4px;
 }
 
 #landHistory{
@@ -386,7 +387,7 @@ button {
         padding-top: 0px;
     } */
 /* play/pause */
-  .but-theLand{ width: fit-content; padding: 0.5px; background-color:rgb(175, 7, 132); margin:0.5px;cursor: pointer; color: rgba(255, 255, 255, 0.868); font-size: 11px; letter-spacing: 1px;}
+  .but-theLand{ width: fit-content; padding:auto 5px; background-color:#B5592A; margin:0.5px;cursor: pointer; color: rgba(15, 1, 1, 0.868); font-size: 13px; letter-spacing: 1px; border-radius: 4px;}
 
    
     #lakle,#landHistory{

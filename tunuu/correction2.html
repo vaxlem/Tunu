@@ -5,11 +5,160 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALORGBODZI</title>
-    <link rel="stylesheet" href="./css2.css">
+    <!-- <link rel="stylesheet" href="./css2.css"> -->
     <style>
         body{
             background-color: rgb(169, 169, 235);
         }
+
+
+.alorgbodzi{
+  margin: 10px auto;
+  text-align: center;
+}
+        
+.projects div {
+    margin: 20px;}
+
+.cards {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 10px;
+        list-style: none;
+      }
+.cards li {
+    position: relative;
+    overflow: hidden;
+  }
+
+.cards li img {
+    width: 290px;
+    height: 250px;
+    /* width: 90px;
+    height: 70px; */
+    margin: 10px;
+    transition: 2s;
+  }  
+
+.cards li:hover img {
+    transform: scale(1.5);
+  }
+  
+.card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    list-style: none;
+    width: 1222px;
+  }
+  .card li {
+    position: relative;
+    overflow: hidden;}
+
+  .card li img {
+    width: 130px;
+    height: 120px;
+    margin: 10px;
+    transition: 2s;
+  }  
+
+.card li:hover img {
+    transform: scale(1.5);
+  }
+  button {
+    width: 250px;
+    height: 55px;
+    border-radius: 15px;
+    border: 0px;}
+  .h4{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgba(0, 0, 0, 0.692);
+
+  }
+  .lakle{
+    color: rgba(128, 255, 0, 0.903);
+    /* width: 20px; */
+  }
+
+ /* responsive media */
+@media screen and (max-width: 600px){
+  
+.projects div { /* yellow div */
+    margin: 5px;}
+
+.cards {/* black card */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 8px 3px;
+    padding-left: 1px;
+    list-style: none;
+  }
+
+  .cards li{
+    margin: 0px;
+    padding: 0px;
+  }
+.card li img {
+  width: 60px;
+  height: 60px;
+  margin: 1px;
+  transition: 2s;
+}    
+
+  .cards li img {/* the images */
+    /* width: 290px;
+    height: 250px; */
+    width: 60px;
+    height: 60px;
+    margin: 2px;
+    transition: 2s;}
+ 
+.card {/* blue ash */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* margin: 10px; */
+    list-style: none;
+    width: 500px;
+    margin-left:1px;
+    padding: 2px;
+  }
+button {
+    width: fit-content;
+    height: 35px;
+    border-radius: 15px;
+    border: 0px;
+    margin:10px ;
+  
+  }
+    
+.card-content,p{
+  font-size: 14px;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.h4{ /* alorgbodzi profile txt color */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgba(0, 0, 0, 0.692);
+    padding: 5px;
+
+  }    
+
+.image{
+  width: 140px;
+  height: 120px;
+  text-align: center;
+  margin: 10px auto;
+  text-decoration: none;
+}  
+ul{
+  text-decoration: none;
+}
+}
     </style>
 </head>
 <body>
@@ -153,20 +302,23 @@
                         <section class="card-content" style="background-color: rgba(255, 255, 0, 0.348); text-align: center;">
                             <!-- <h4 style="text-align: CENTER;"> <button><a href="./people.html">READ ABOUT THE OTHERS </a></button></h4>
                             <h4 style="text-align: CENTER;"> <button style="width: 100px; "><a href="./fami.html">BACK</a></button></h4> -->
-                            <button ><a href="./people.html">READ ABOUT THE OTHERS </a></button>
-                            <button style="width: 100px;"><a href="./fami.html">BACK </a></button>
+                            <button ><a href="./people.html"><p>READ ABOUT THE OTHERS</p> </a></button>
+                            <button style="width: 100px;"><a href="./fami.html"><p>BACK</p></a></button>
 
                         </section>
         </li>
-        <li  style="background-color: yellow;">
-                        <a href=""><img src="./image/feather.jpg" alt=""></a>
-                        <section style="width: 290px; padding-top:30px; padding-left:10px; padding-bottom:10px; padding-right: 10px; ">
-                            <h4 class="h4">KWAKU ALORGBODZI TETTEY Temporibus, provident et. Maxime reprehenderit accusamus omnis inventore aliquid distinctio ex voluptatibus cum ducimus dolorem, eius enim dignissimos velit officiis quam deserunt exercitationem suscipit architecto ratione iure eaque quas veritatis! Quo, <a href="individuals.html"> click to Read More</a></h4>
-                        </section>
-                    </li>
+      
                 </ul> 
              </div>
     </section>
   </DIV>
+<div class="alorgbodzi">  <li class="imag" style="background-color: yellow;">
+    <a href=""><img src="./image/feather.jpg" alt="" class="image">
+      <!-- style="width: 20px; padding-top:3px; padding-left:1px; padding-bottom:1px; padding-right: 1px; "</a> -->
+    <section >
+      <!-- style="width: 20px; padding-top:3px; padding-left:1px; padding-bottom:1px; padding-right: 1px; " -->
+        <h4 class="h4">KWAKU ALORGBODZI TETTEY Temporibus, provident et. Maxime reprehenderit accusamus omnis inventore aliquid distinctio ex voluptatibus cum ducimus dolorem, eius enim dignissimos velit officiis quam deserunt exercitationem suscipit architecto ratione iure eaque quas veritatis! Quo, <a href="individuals.html"> click to Read More</a></h4>
+    </section>
+</li></div>
 </body>
 </html>
