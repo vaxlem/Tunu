@@ -7,8 +7,32 @@
     <link rel="icon" href="./images/tunuLogo.PNG">
 
     <link rel="stylesheet" href="./styleTUNu.css">
+<!-- password style -->
+<style>
+  html {
+    font-family: Google sans-serif;
+  }
 
-<!-- Google tag (gtag.js) -->
+  body {
+    width: 50%;
+    /* max-width: 500px; */
+    min-width: 380px;
+    margin: 0 auto;
+  }
+  
+  .form input[type="number"] {
+    width: 100px;
+  }
+
+  .lastResult {
+    color: white;
+    padding: 2px;
+  }
+</style>
+
+<!-- end of password style -->
+
+<!-- Google tag (gtag.js)  *must be added to all pages-->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F02K9DJ88C"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -20,7 +44,29 @@
 
 </head>
 <body>
+
+   <!-- Password prompt -->
+   <div id="passwordPrompt" style="text-align: center; margin: 15rem auto; background-color: rgba(255, 228, 196, 0.886); border-radius: 3rem; border: 5px solid green;  box-shadow: 1px 1px 2px yellow; padding-bottom: 1.8rem;">
+    <h1>Welcome to A Land of Riches!</h1>
+    <label for="passwordField">Enter password to proceed: </label><br>
+    <input type="password" placeholder="type password here" id="passwordField">
+    <button style="width: fit-content; padding: 5px ;" onclick="checkPassword()">Submit</button>
+    <p id="passwordError" style="display: none; color: red;">ooh! Incorrect password. Try again.</p> <br>
+    <label for="code"><a href="tel:+233(0)256470448">contact ME for <i>Password</i></a>
+    </label>
+
+  </div>
+
+
+
     <!-- welcome addres -->
+
+
+
+    
+  <!-- Main content (hidden by default) -->
+  <div id="mainContent" style="display: none; text-align: center;">
+    
 <div id="welcome">
     <h1 class="welcome">        <a class="navbar-brand" href="./images/tunuLogo.PNG"><img src="./images/tunuLogo.PNG" alt="" class="logo"></a>
         WAO!</h1>
@@ -76,6 +122,42 @@
     </div>
 
     <div style="font-family: Google Sans, Roboto,sans-serif; font-size: 18px; line-height: 24px;">Mama gbemagbe get inssight only on Google</div>
+  </div> 
+    <!-- password script -->
+
+    <script>
+      const password = "hermon";
+  
+      function checkPassword() {
+        const enteredPassword = document.getElementById("passwordField").value;
+        if (enteredPassword === password) {
+          
+          // If the entered password is correct, show the main content
+          document.getElementById("passwordPrompt").style.display = "none";
+          document.getElementById("mainContent").style.display = "block";
+        } else {
+          
+          
+          // If the entered password is incorrect, show an error message
+          document.getElementById("passwordError").style.display = "block";
+        }
+      }    
+      
+      
+      // Handle Enter key press on the password input field
+    document.getElementById("passwordField").addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        checkPassword();
+      }
+    });
+
+    </script>
+
+    <!-- end of password script -->
+    
+    <!-- game script -->
+
+      <!-- // Existing script content... -->
     <script type="text/javascript">
         alert("WELCOME TO TUNU!");
     </script>
