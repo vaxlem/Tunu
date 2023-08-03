@@ -71,7 +71,16 @@ h1 a{
 .clear{
     clear: both;
 }
+#introduct{
+    background: linear-gradient(red, rgba(255, 255, 255, 0.45));
+    background: -webkit-linear-gradient(red, rgba(255, 255, 255, 0.45));
+    background: -o-linear-gradient(red, rgba(255, 255, 255, 0.45));
+    background: -moz-linear-gradient(red, rgba(255, 255, 255, 0.45));
+    padding: 10px;
+    margin: 16px 0;
+    height: 190px;
 
+}
 #menu{
     height: 70px;
     background: linear-gradient( #b7e953, red);
@@ -82,24 +91,30 @@ h1 a{
     padding: 30px 0px;
 }
 
-ul{
+#introduct ul{
     list-style: none;
+    padding: 0;
 
 }
+/* #menu ul li{ */
 
-#menu ul li{
+#introduct ul li{
     float: left;
     padding: 0 30px;
     height: 20px;
     border-right:1px solid #5d12e7;
-    
+    text-align: justify;
+
 }
 
-#menu ul li:last-child{
+/* #menu ul li:last-child{
+    border-right: none;
+} */
+#introduct ul li:last-child{
     border-right: none;
 }
-
-#menu ul li a{
+/* #menu ul li a{ */
+#introduct ul li a{
     text-decoration: none;
     text-transform:capitalize;
     font-size: 1.5rem;
@@ -110,7 +125,8 @@ ul{
 
 }
 /* transition */
-#menu ul li a{
+#introduct ul li a{
+    /* #menu ul li a{ */
     transition: font-size 0.5s ease;
     -moz-transition: font-size 0.5s ease;
     -o-transition: font-size 0.5s ease;
@@ -119,7 +135,9 @@ ul{
 
 }
 /* active list */
-#menu ul li a:hover, #menu ul li a.active{
+/* #menu ul li a:hover, #menu ul li a.active{ */
+
+#introduct ul li a:hover, #introduct ul li a.active{
     font-size: 2rem;
     /* color: rgba(0, 0, 0, 0.55) ; */
     color: azure;
@@ -291,19 +309,36 @@ ul{
         margin: 0px;
     }
 
-    #menu ul li{
-        float: left;
-        padding: 0 0;
+    /* #introduction ul li{ */
+        /* float: left; */
+        /* margin: 20px auto; */
+        /* text-align: justify; */
+        /* padding: 0 30px;
         height: 20px;
+        border-right:1px solid #5d12e7; */
+        
+    /* } */
+    #introduct ul li{
+        /* float: left; */
+        padding: 0 0;
+        height: auto;
         border-right:1px solid #5d12e7;
+        margin: 20px auto;
         
     }
+    /* #introduction ul li{
+        float: left;
+        padding: 0 0;
+        height:20 auto;
+        border-right:1px solid #5d12e7;
+        
+    } */
     
-    #menu ul li:last-child{
+    #introduct ul li:last-child{
         border-right: none;
     }
     
-    #menu ul li a, ul li a:active{
+    #introduct ul li a, ul li a:active{
         text-decoration: none;
         text-transform:capitalize;
         font-size: 0.9rem;
@@ -311,11 +346,12 @@ ul{
         color: #5d12e7;
         /* padding: 10px; */
         line-height: 30px;
+        margin-left: 10px;
     
     }
   
     /* active list */
-    #menu ul li a:hover, #menu ul li a.active{
+    #introduct ul li a:hover, #introduct ul li a.active{
         font-size: 1rem;
         /* color: rgba(0, 0, 0, 0.55) ; */
         color: azure;
