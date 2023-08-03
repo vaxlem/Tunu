@@ -367,4 +367,7 @@ ul{
         padding: 5px 0;
         margin: 0;
     }
+    #menu ul li .fa{
+        padding-left: 15px;
+    }
 }
