@@ -303,10 +303,10 @@ ul{
         border-right: none;
     }
     
-    #menu ul li a{
+    #menu ul li a, ul li a:active{
         text-decoration: none;
         text-transform:capitalize;
-        font-size: 0.5rem;
+        font-size: 0.9rem;
         /* color:rgba(255, 255, 255, 0.997) ; */
         color: #5d12e7;
         /* padding: 10px; */
