@@ -31,6 +31,10 @@ h1 a{
 #brand{
     float: left;
 }
+#brand img{
+    float:left;
+    margin: 10px auto;
+}
 #search{
     float: right ;
     background: linear-gradient( #b7e953, yellow);
@@ -188,11 +192,11 @@ ul{
 }
 /* leftsidebar */
 #leftsidebar ul li {
-    padding: 5px;
+    padding: 2px;
     list-style-image: url(./image/cimyiom\ .PNG);
 }
 #leftsidebar ul li,a{
-    padding: 10px;
+    padding: 10px 10px 10px 0px;
     margin-top: 5px;
     text-decoration: none;
     font-size: 25px;
@@ -211,7 +215,6 @@ ul{
 /* transitions */
 .sidebar ul li a:hover, .sidebar ul li a.active{
     text-decoration: none;
-    transition: ;
     color: #5d12e7;
     font-size: 37px;
     font-weight: 500px;
@@ -273,4 +276,80 @@ ul{
     margin: 15px;
     text-align: center;
     text-transform: uppercase;
+}
+
+@media screen  and (max-width: 600px){
+    #menu{
+        height: 60px;
+        width: 377px;
+        background: linear-gradient( #b7e953, red);
+        background: -webkit-linear-gradient( #b7e953, red);
+        background: -o-linear-gradient( #b7e953, red);
+        background: -moz-linear-gradient( #b7e953, red);
+    text-align: justify;
+        /* padding: 10px ; */
+        margin: 0px;
+    }
+
+    #menu ul li{
+        float: left;
+        padding: 0 0;
+        height: 20px;
+        border-right:1px solid #5d12e7;
+        
+    }
+    
+    #menu ul li:last-child{
+        border-right: none;
+    }
+    
+    #menu ul li a{
+        text-decoration: none;
+        text-transform:capitalize;
+        font-size: 1rem;
+        /* color:rgba(255, 255, 255, 0.997) ; */
+        color: #5d12e7;
+        /* padding: 10px; */
+        line-height: 30px;
+    
+    }
+  
+    /* active list */
+    #menu ul li a:hover, #menu ul li a.active{
+        font-size: 1rem;
+        /* color: rgba(0, 0, 0, 0.55) ; */
+        color: azure;
+        text-transform: uppercase;
+        font-weight: bold;
+        /* transition:linear 0.3s ease; */
+    }
+
+    .sidebar ul li a, .sidebar ul li a.active{
+        text-decoration: none;
+        color: #5d12e7;
+        font-size: 15px;
+        /* font-weight: 300px; */
+        font-weight: 500px;
+       }
+    /* transitions */
+.sidebar ul li a:hover, .sidebar ul li a.active{
+    text-decoration: none;
+    color: #5d12e7;
+    font-size: 20px;
+    font-weight: 500px;
+   }
+    #container{
+        width: auto;
+        /* border: 1px solid red; */
+        height: auto;
+        margin: 0 1rem;
+        flex-wrap: wrap;
+    }
+    #search{
+        width: 337px;
+        height: 50px;
+        padding: 20px 20px 0 20px;
+        margin-top:40px ;
+    
+    }
 }
