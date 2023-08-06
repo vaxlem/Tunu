@@ -41,7 +41,37 @@
 
         button:hover {
             background-color: rgba(0, 0, 255, 0.5);
-        } 
+    font-size: 1rem;
+    /* color: rgba(0, 0, 0, 0.55) ; */
+    color: azure;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition:linear 0.3s ease;
+}
+img{
+    width: 550px;
+}
+
+/* responsive */
+@media screen and (max-width:600px){
+        .meaning{
+            text-align: left;
+            margin: 5rem 0.1rem 0rem;
+            line-height: 2rem;
+        }
+        .muzzle{
+            
+            width: 350px;
+            margin: 15px 0;
+            z-index: 1;
+        }
+        .hunter{
+
+            
+            width: 350px;
+            margin: 15px 0;
+            z-index: 1;
+        }
 
 </style>
     <script>
@@ -75,6 +105,7 @@
             if (utterance) {
                 speechSynthesis.cancel();
             }
+            
         }
     </script>
 </head>
