@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meaning of Tunu in GHANA</title>
+    <style>
+body {
+            color: rgba(71, 19, 226, 0.888);
+            background-color: bisque;
+            font-family: 'Google Sans', sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1,
+        u,
+        .tun {
+            text-transform: uppercase;
+        }
+
+        .butn {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 255, 0.363);
+            border-radius: 3px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgba(0, 0, 255, 0.5);
+        } 
+    </style>
+</head>
+
+<body>
+    <div class="meaning" id="textToRead">
+        <h1>Tunu.</h1>
+        <p>According to the narratives, the name <u>Tunu</u> is an appellation that is coined by these men.  Preku and Lakle Tay over centuries ago.</p> <br> <br>
+        <hr>
+        <h3>FULL STORY.</h3>
+        <P>One day in a very long time, a man called Papa Preku went to hunt wild animals in the place. He was a hunter. The animals were disturbing on this hill. So Preku was sent by his partner Lakle to go on the hunting expedition. Upon going, he set his trap by fixing a gun on the pathway where the beasts move on or pass when they are roaming. After setting his gun he would climb a tree and by means of a rope, he would pull the triger of the gun he set on the ground at the animals from the tree top . <br> He would then complete the killing by firing other riffles and amunitions he had with him at the top of the tree. In no time all the dangerous animals including lions were no longer disturbing, they were cleared off. This bravery amazed all other hunters and the people because they tried and failed and they wonder how he did it. Therefore, they would ask him how he did it. <br>And proudly, Preku would say (' Afisia la, Etunue wonye.'). To wit, "<i>this place, it is a muzzle of a Gun. When one tries one dies.</i>" <br>This fame naturally resulted in the Famous name <span class="tun">Tunu.</span> <br> (at the barrel and muzzle of a gun.)</P>
+             <span class="bgcolor"><a href="./images/Shotgun-Parts-Pump.jpg"><img src="./images/Shotgun-Parts-Pump.jpg" class="muzzle" alt="muzzle"> <a href="./images/hunter3 istockphoto-1090782326-612x612.jpg"> <img src="./images/hunter3 istockphoto-1090782326-612x612.jpg" class="hunter" alt="hunting expedition"></a></span> <div class="clear"></div>
+             <br>
+         <h3>... MORE ABOUT.</h3>   
+         <p class="p">
+            Initially, the members of a clan called Klevi allowed the area to be occupied by the people of <span class="tun">Ada</span>. They were using it to farm when they came to trade but later on they realized, the Klevi people have been stealing their farm produce and due to that they render a curse on the Klevi clan. When the curse was working on them, the Bate people came and pay for the sin on their behalve. Due to this big favor shown  by the Bate clan folks, the Klevi people dashed them the land. Here comes the reason why Bate clan  folks take control of the land. Later on, because of the work that Preku did, the Bate people also dashed him and lakle the land. And they came to settle their and engage in fishing.
+         </p>
+    
+    
+    </div>
+
+    <!-- Buttons -->
+    <div class="butn">
+        <button onclick="toggleSpeech()">Toggle Speech</button>
+        <div class="butn ">
+            <button onclick="speakText()"> <i class="fa fa-play-circle-o fa-1x" aria-hidden="true"></i> Play/Resume</button>
+            <button onclick="pauseSpeech()"> <i class="fa fa-pause fa-1x" aria-hidden="true"></i> Pause</button>
+            <button onclick="stopSpeech()"> <i class="fa fa-stop fa-1x" aria-hidden="true"></i> Stop</button>
+            <button onclick="alert('You are going back to home page!')"> <i class="fa fa-home fa-1x" aria-hidden="true"></i> HOME </a></button>
+            </div>
+    
+    
+    </div>
+
+    <script>
+        var speech = new SpeechSynthesisUtterance();
+        var isPaused = false;
+
+        function speakText() {
+            var text = document.getElementById("textToRead").innerText;
+            speech.text = text;
+            window.speechSynthesis.speak(speech);
+        }
+
+        function pauseSpeech() {
+            if (window.speechSynthesis.speaking) {
+                window.speechSynthesis.pause();
+                isPaused = true;
+            }
+        }
+
+        function stopSpeech() {
+            window.speechSynthesis.cancel();
+            isPaused = false;
+        }
+
+        function toggleSpeech() {
+            if (!window.speechSynthesis) {
+                alert("Text-to-speech is not supported on this device/browser.");
+                return;
+            }
+
+            if (window.speechSynthesis.speaking) {
+                stopSpeech();
+            } else {
+                speakText();
+            }
+        }
+
+        // Event listeners to handle speech start, end, and error events
+        speech.onstart = function() {
+            console.log("Speech started");
+        };
+
+        speech.onend = function() {
+            console.log("Speech ended");
+        };
+
+        speech.onerror = function(event) {
+            console.error("Speech error:", event.error);
+        };
+    </script>
+</body>
+
+</html>

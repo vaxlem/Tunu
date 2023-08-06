@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meaning of Tunu in GHANA</title>
+    <style>
+        body {
+            color: rgba(71, 19, 226, 0.888);
+            background-color: bisque;
+            font-family: 'Google Sans', sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1,
+        u,
+        .tun {
+            text-transform: uppercase;
+        }
+
+        .butn {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 255, 0.363);
+            border-radius: 3px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgba(0, 0, 255, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="meaning" id="textToRead">
+        <h1>Tunu.</h1>
+        <p>According to the narratives, the name <u>Tunu</u> is an appellation that is coined by these men. Preku and
+            Lakle Tay over centuries ago.</p>
+        <hr>
+        <h3>FULL STORY.</h3>
+        <p>One day in a very long time, a man called Papa Preku went to hunt wild animals in the place. He was a hunter.
+            The animals were disturbing on this hill. So Preku was sent by his partner Lakle to go on the hunting
+            expedition. Upon going, he set his trap by fixing a gun on the pathway where the beasts move on or pass when
+            they are roaming.</p>
+        <h3>... MORE ABOUT.</h3>
+        <p>Initially, the members of a clan called Klevi allowed the area to be occupied by the people of <span class="tun">Ada</span>.
+            They were using it to farm when they came to trade but later on they realized,</p>
+    </div>
+
+    <!-- 3rd btn adds -->
+    <div class="butn">
+        <button onclick="speakText()">Play</button>
+        <button onclick="pauseSpeech()">Pause</button>
+        <button onclick="stopSpeech()">Stop</button>
+    </div>
+
+    <script>
+        var speech = new SpeechSynthesisUtterance();
+        var isPaused = false;
+
+        function speakText() {
+            var text = document.getElementById("textToRead").innerText;
+            speech.text = text;
+
+            if (isPaused) {
+                window.speechSynthesis.resume();
+                isPaused = false;
+            } else {
+                window.speechSynthesis.speak(speech);
+            }
+        }
+
+        function pauseSpeech() {
+            if (window.speechSynthesis.speaking) {
+                window.speechSynthesis.pause();
+                isPaused = true;
+            }
+        }
+
+        function stopSpeech() {
+            window.speechSynthesis.cancel();
+            isPaused = false;
+        }
+    </script>
+
+</body>
+
+</html>

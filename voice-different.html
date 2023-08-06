@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    from gtts import gTTS
+import os
+
+def get_tts(text, lang='en', voice='default', speed=1.0):
+    # Define a pronunciation dictionary to customize problematic words
+    pronunciation_dict = {
+        'word1': 'wərd1',   # Replace 'word1' with its phonetic representation
+        'word2': 'wɜrd2'    # Replace 'word2' with its phonetic representation
+        # Add more words as needed
+    }
+
+    # Replace problematic words with custom pronunciation from the dictionary
+    for word, phonetic in pronunciation_dict.items():
+        text = text.replace(word, phonetic)
+
+    # Use SSML to set the voice and language
+    if voice == 'default':
+        tts = gTTS(text, lang=lang, slow=False, tld='com')
+    else:
+        tts = gTTS(text, lang=lang, slow=False, tld='com', lang_check=False)
+        tts.write_to_fp("temp.mp3")
+
+        # Replace the default voice with the desired voice
+        # This is an example and might need different implementations depending on your TTS engine
+        # Consult your TTS engine's documentation for voice selection
+        replace_default_voice("temp.mp3", voice)  
+
+        with open("temp.mp3", "rb") as f:
+            tts = gTTS(text=None, slow=False, lang_check=False)
+            tts.write_to_fp(f)
+
+        os.remove("temp.mp3")
+
+    # Save the TTS output to a file
+    tts.save("output.mp3")
+
+# Example usage:
+text_to_speak = "Some phones are reading the text to speech well. Others are not pronouncing some of the words well as others do."
+language = 'en'
+voice_selection = 'default'
+tts_speed = 1.0
+
+get_tts(text_to_speak, lang=language, voice=voice_selection, speed=tts_speed)
+
+</body>
+</html>
