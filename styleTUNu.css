@@ -416,12 +416,23 @@ button {
    height: 199px;
   overflow: hidden;
   position: relative;
-  left: 3em;
+  left: 1.5em;
   /* margin:  0;
   z-index: -1; */
 }      
 
-
+/* .notes {
+  width: 60%;
+  background-color: rgb(116, 115, 115);
+  color: white;
+  font-size: large;
+  padding: 0px 18px 0px 20px;
+  margin: 1px 40px;
+  max-height: 0px;
+  transition: 0.4s;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+} */
 
 .carousel ul {
   width: 500%;
