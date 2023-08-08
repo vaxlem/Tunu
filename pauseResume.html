@@ -1,8 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Text-to-Speech Buttons</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meaning of Tunu in GHANA</title>
+    <link rel="stylesheet" href="./style.css">
+<!-- bootstrap-4 -->    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./bootstrap-4.5.3-dist/">
 
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F02K9DJ88C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F02K9DJ88C');
+</script>
 <style>
 
     /* hmmmmmmm * correct style for devices/ */
@@ -22,11 +37,69 @@
             text-transform: uppercase;
         }
 
-        .butn {
+        .meaning{
+            text-align: center;
+            margin: auto 5rem;
+            line-height: 3rem;
+
+        }
+        .butn, .bgcolor, .meaning h1 p, h3 p, p{
+            margin: 0.5rem auto;
+            text-align: justify;
+            padding: 0 30px;
+            font-size: 1.7rem;
+        }
+        /* .butn {
             text-align: center;
             margin: 20px 0;
+        } */
+
+        .butn, .bgcolor, .meaning h1 p, h3 p, p{
+            margin: 0.5rem auto;
+            text-align: justify;
+            padding: 0 30px;
+            font-size: 1.7rem;
         }
 
+         /* tunu typeface heading */
+         h1, u, .tun{
+            text-transform: uppercase;
+        }
+
+        .muzzle{
+            float: left;
+            width: 400px;
+            margin: 15px 0;
+       }
+        .hunter{
+            float: right;
+            width: 400px;
+            margin: 15px 0;
+       }
+
+       .clear{
+            clear: both;
+        }
+
+/* buttons */
+.butn, button{
+            text-align: center;
+            background-color: rgba(0, 0, 255, 0.363);
+            border-radius: 3px;
+            box-shadow: 1px 1px 3px white;
+            border: 1px solid ;
+            margin-bottom: 50px;
+
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            /* color: #fff; */
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+}
+/* 
         button {
             padding: 10px 20px;
             background-color: rgba(0, 0, 255, 0.363);
@@ -37,7 +110,7 @@
             border: none;
             cursor: pointer;
             transition: background-color 0.3s ease;
-        }
+        } */
 
         button:hover {
             background-color: rgba(0, 0, 255, 0.5);
@@ -48,10 +121,35 @@
     font-weight: bold;
     transition:linear 0.3s ease;
 }
-img{
+
+/* img in carosel. style.css */
+/* img{
     width: 550px;
+} */
+
+.clear{
+            clear: both;
+        }
+        
+.p{
+    color: rgb(130, 82, 43);
+    
 }
 
+/* control button */
+#fixButton{
+    position:fixed; 
+    margin: 4rem auto;
+}
+/* audio section */
+
+#myAudio {
+      display: none;
+    }
+ /* carousel align */
+ .caro{
+        margin: auto 33rem;
+    }
 /* responsive */
 @media screen and (max-width:600px){
         .meaning{
@@ -60,19 +158,31 @@ img{
             line-height: 2rem;
         }
         .muzzle{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-            width: 450px;
-            margin: 15px 0;
+             /* width: 150px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  */
+            width: 370px;
+            margin: 15px 1rem;
             z-index: 1;
         }
         .hunter{
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-            width: 450px;
-            margin: 15px 0;
+            width: 370px;
+            margin: 15px 1rem;
             z-index: 1;
         }
 
+        /* control button */
+#fixButton{
+    position:fixed; 
+    margin: 5rem auto;
+}
+
+
+ /* carousel */
+ .caro{
+        margin: auto 5rem;
+    }
+}
 </style>
     <script>
         let utterance;
@@ -92,7 +202,7 @@ img{
             } else if (utterance && speechSynthesis.paused) {
                 speechSynthesis.resume();
             } else {
-                speak('FULL STORY. One day in a very long time, a man called Papa Preku went to hunt wild animals in the place. He was a hunter. The animals were disturbing on this hill. So Preku was sent by his partner Lakle to go on the hunting expedition. Upon going, he set his trap by fixing a gun on the pathway where the beasts move on or pass when they are roaming. After setting his gun he would climb a tree and by means of a rope, he would pull the triger of the gun he set on the ground at the animals from the tree top. He would then complete the killing by firing other riffles and amunitions he had with him at the top of the tree. In no time all the dangerous animals including lions were no longer disturbing, they were cleared off. This bravery amazed all other hunters and the people because they tried and failed and they wonder how he did it. Therefore, they would ask him how he did it.And proudly, Preku would say  Afisia la, Etunue wonye. To wit, "this place, it is a muzzle of a Gun. When one tries one dies."This fame naturally resulted in the Famous name Tunu. (at the barrel and muzzle of a gun.)... MORE ABOUT. Initially, the members of a clan called Klevi allowed the area to be occupied by the people of Ada. They were using it to farm when they came to trade but later on they realized, the Klevi people have been stealing their farm produce and due to that they render a curse on the Klevi clan. When the curse was working on them, the Bate people came and pay for the sin on their behalve. Due to this big favor shown by the Bate clan folks, the Klevi people dashed them the land. Here comes the reason why Bate clan folks take control of the land. Later on, because of the work that Preku did, the Bate people also dashed him and lakle the land. And they came to settle their and engage in fishing. According to the narratives, the name Tunu is an appellation that is coined by these men. Preku and Lakle Tay over centuries ago.');}
+                speak('Tunu. According to the narratives, the name Tunu is an appellation that is coined by these men.  Preku and Lakle Tay, over centuries ago. FULL STORY. One day in a very long time, a man called Papa Preku went to hunt wild animals in the place. He was a hunter. The animals were disturbing on this hill. So Preku was sent by his partner Lakle to go on the hunting expedition. Upon going, he set his trap by fixing a gun on the pathway where the beasts move on or pass when they are roaming. After setting his gun he would climb a tree and by means of a rope, he would pull the triger of the gun he set on the ground at the animals from the tree top. He would then complete the killing by firing other riffles and amunitions he had with him at the top of the tree. In no time all the dangerous animals including lions were no longer disturbing, they were cleared off. This bravery amazed all other hunters and the people because they tried and failed and they wonder how he did it. Therefore, they would ask him how he did it.And proudly, Preku would say  Afisia la, Etunue wonye. To wit, "this place, it is a muzzle of a Gun. When one tries one dies."This fame naturally resulted in the Famous name Tunu. (at the barrel and muzzle of a gun.)... MORE ABOUT. Initially, the members of a clan called Klevi allowed the area to be occupied by the people of Ada. They were using it to farm when they came to trade but later on they realized, the Klevi people have been stealing their farm produce and due to that they render a curse on the Klevi clan. When the curse was working on them, the Bate people came and pay for the sin on their behalve. Due to this big favor shown by the Bate clan folks, the Klevi people dashed them the land. Here comes the reason why Bate clan folks take control of the land. Later on, because of the work that Preku did, the Bate people also dashed him and lakle the land. And they came to settle their and engage in fishing. According to the narratives, the name Tunu is an appellation that is coined by these men. Preku and Lakle Tay over centuries ago.');}
         }
 
         function pause() {
@@ -110,10 +220,24 @@ img{
     </script>
 </head>
 <body>
-    <h1>Text-to-Speech Buttons</h1>
+    <!-- <nav><div id="fixButton" >
+    <button onclick="playResume();">Play/Resume</button>
+    <button onclick="pause();">Pause</button>
+    <button onclick="stop();">Stop</button>
+    </div></nav> -->
+    <nav class="nav navbar" >
+        <!-- 3rd btn adds -->
+    <div class="butn " style="position: ; z-index: 1;">
+    <button onclick="speakText()"> <i class="fa fa-play-circle-o fa-1x" aria-hidden="true"></i> Play/Resume</button>
+    <button onclick="pauseSpeech()"> <i class="fa fa-pause fa-1x" aria-hidden="true"></i> Pause</button>
+    <button onclick="stopSpeech()"> <i class="fa fa-stop fa-1x" aria-hidden="true"></i> Stop</button>
+    <a href="./index.html"><button onclick="alert('You are going back to home page!')"> <i class="fa fa-home fa-1x" aria-hidden="true"></i> HOME</button></a>
+    </div></nav>
+    <h1>meaning of the name</h1>
     <div class="meaning" id="textToRead">
+        
         <h1>Tunu.</h1>
-        <p></p> <br> <br>
+    <p>According to the narratives, the name <u>Tunu</u> is an appellation that is coined by these men.  Preku and Lakle Tay, over centuries ago.</p> <br> <br>
         <hr>
         <h3>FULL STORY.</h3>
         <P>One day in a very long time, a man called Papa Preku went to hunt wild animals in the place. He was a hunter. The animals were disturbing on this hill. So Preku was sent by his partner Lakle to go on the hunting expedition. Upon going, he set his trap by fixing a gun on the pathway where the beasts move on or pass when they are roaming. After setting his gun he would climb a tree and by means of a rope, he would pull the triger of the gun he set on the ground at the animals from the tree top . <br> He would then complete the killing by firing other riffles and amunitions he had with him at the top of the tree. In no time all the dangerous animals including lions were no longer disturbing, they were cleared off. This bravery amazed all other hunters and the people because they tried and failed and they wonder how he did it. Therefore, they would ask him how he did it. <br>And proudly, Preku would say (' Afisia la, Etunue wonye.'). To wit, "<i>this place, it is a muzzle of a Gun. When one tries one dies.</i>" <br>This fame naturally resulted in the Famous name <span class="tun">Tunu.</span> <br> (at the barrel and muzzle of a gun.)</P>
@@ -124,13 +248,185 @@ img{
             Initially, the members of  a clan called Klevi allowed the area to be occupied by the people of <span class="tun">Ada</span>. They were using it to farm when they came to trade but later on they realized, the Klevi people have been stealing their farm produce and due to that they render a curse on the Klevi clan. When the curse was working on them, the Bate people came and pay for the sin on their behalve. Due to this big favor shown  by the Bate clan folks, the Klevi people dashed them the land. Here comes the reason why Bate clan  folks take control of the land. Later on, because of the work that Preku did, the Bate people also dashed him and lakle the land. And they came to settle their and engage in fishing.
          </p>
     
-         
+      
+<!-- <h2 style="background-color: beige;" id="textToRead">I am TAY Lakle. your great great grandfather. My father is called EHA ASHIAPIM - 1st (Priest Eha Ashiapim l). (DO YOU KNOW MY REAL NAME?) OH! Ok. My real name is TAY EHA.</h2> -->
+<!-- audio file here -->
+<!-- <audio id="audioElement" src="./mary tortsi junior.m4a" preload="auto"></audio> -->
+
+
+<!-- visual display carousel -->
+<div class="caro">
+    <!-- another carousel      style.css      -->
+    <div class="edit">
+        <div class="container-fluid edit" style="width: 250px;margin: 16px 0 0 0;"><!-- THIS IS THE BLUE CONTAINER ON WHICH CARO IS -->
+          <div class="row" >
+                <div class="col col-5 cardbody" style="width:250px;margin: 0px;">        <!-- style="width: 19rem but crrent large=30rem" -->
+        
+                  <div class="navbar" fixed ">
+                  <h1 style="color:black; background-color: #b97d7da8;"><span><i>our</i></span>L<span><i>OCS</i></span> tunu</h1>
+                  </div>
+                
+          
+            <!-- <h3>Collection YOU can trust</h3>
+            Let's do your OWN now.
+            <p>WHAT IS YOUR STYLE?</p>  -->
+        <!-- 215w chNGES TO 250 TO CONFORM WITH COL-5     -->
+            <div class="slideshow-container edit" style="width: 250px; margin: 20px 0 0 0;">
+              <div class="mySlides fade" style="width: 250px; margin: 20px 0 0 0;">
+                <!-- <img src="./images/10.PNG" style="width:100%; margin: 10px 0;"> -->
+                <!-- <img src="./images/1.PNG" alt="Company 1" style="width:100%; height: 100%; margin: 10px 0;"> -->
+                <img src="./images/hunterNative2 istockphoto-537438421-612x612.jpg" alt="Company 5">
+    
+          
+                <!-- <img src="./image/TEACHER.jpg" style="width:100%; height: 100%; margin: 10px 0;"> -->
+                <!-- <div class="text">AGBALE----book</div> -->
+              </div>
+        
+        
+              <div class="mySlides fade" style="width: 250px; margin: 20px 0 0 0;">
+                <!-- <img src="./images/6.PNG" style="width:100%; margin: 10px 0;"> -->
+                <img src="./images/hunter2 istockphoto-509234826-612x612.jpg" alt="Company 5">
+                
+                <!-- <img src="./image/TEACHER.jpg" style="width:100%; height: 100%; margin: 10px 0;"> -->
+                <!-- <div class="text">AGBALE----book</div> -->
+              </div>
+        
+        
+            <div class="mySlides fade" style="width: 250px; margin: 20px 0 0 0;">
+              <!-- <img src="./images/7.PNG" style="width:100%; margin: 10px 0;"> -->
+              <!-- <img src="./images/mangrove.jpg" alt="Company 2" style="width:100%; height: 100%; margin: 10px 0;"> -->
+              <img src="./images/hunter.jpg" alt="Company 1">
+                
+              <!-- <img src="./image/TEACHER.jpg" style="width:100%; height: 100%; margin: 10px 0;"> -->
+              <!-- <div class="text">AGBALE----book</div> -->
+            </div>
+            
+            <div class="mySlides fade" style="width: 250px; margin: 20px 0 0 0;">
+              <!-- <div class="numbertext">2 </div> -->
+              <!-- <img src="./images/5.PNG" style="width:100%; margin: 10px 0;"> -->
+              <!-- <img src="./images/2.PNG" alt="Company 3" style="width:100%; height: 100%; margin: 10px 0;"> -->
+              <img src="./image/tunu mapcarta2.PNG" alt="Company 2">
+                     
+              <!-- <img src="./image/bread.jpg" style="width:100%; margin: 10px 0;"> -->
+              <!-- <div class="text">yevubolo .... Bread</div> -->
+            </div>
+            <div class="mySlides fade" style="width: 250px; margin: 20px 0 0 0;">
+              <!-- <div class="numbertext">3 </div> -->
+              <!-- <img src="./images/4.PNG" style="width:100%; margin: 10px 0;"> -->
+              <!-- <img src="./images/4.PNG" alt="Company 4" style="width:100%; height: 100%; margin: 10px 0;"> -->
+              <img src="./images/tunuLogo.PNG" alt="Company 3">
+              <!-- <img src="./image/3.jpg" style="width:100%; margin: 10px 0;"> -->
+              <!-- <div class="text">online</div> -->
+            </div>
+            <a href="./images/tunuhomes5.PNG"><img src="./images/tunuhomes5.PNG" alt="Company 4"></a>
+    
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <!-- <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span> -->
+            
+            
+               
+            
+            </div>
+            <div>
+              <!-- <a href="./english.html"><button class="btn">click for More</button></a> -->
+            
+            <!-- <footer id="footer"  > -->
+              Contact Information
+              <br>
+              <a href="mailto:#"><i class="social-icon fa fa-envelope i fa-2x" alt="e-mail"></i></a>
+              <a href="#"><i class="i social-icon fa fa-facebook fa-2x" alt="fbook"></i></a>
+              <a href="#"><i class="i social-icon fa fa-twitter fa-2x" alt="twitter"></i></a>
+              <!-- <a href="https://www.linkedin.com/feed/update/urn:li:activity:6966952343951003648?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A6966952343951003648%29"><i class="social-icon fa fa-linkedin"></i></a> -->
+              <a href="#"><i class="i social-icon fa fa-instagram fa-2x "></i></a>
+            
+            <p >© 2023 - All Rights Reserved.
+            </p>
+            <!-- </footer> -->
+                  </div>
+           <!-- EXTRA COLUMN      -->
+                <div>
+          
+                </div>
+          </div></div>
     
     </div>
-    <p>According to the narratives, the name <u>Tunu</u> is an appellation that is coined by these men. Preku and Lakle Tay over centuries ago.</p>
-    <button onclick="playResume();">Play/Resume</button>
-    <button onclick="pause();">Pause</button>
-    <button onclick="stop();">Stop</button>
+    <!-- scripts -->
+    </div></div>
+    
+    <!-- 3rd btn adds -->
+    
+    <script>
+        var speech = new SpeechSynthesisUtterance();
+        var isPaused = false;
+        var audioElement = document.getElementById("audioElement");
+        
+        function speakText() {
+            var text = document.getElementById("textToRead").innerHTML;
+            speech.text = text;
+            
+            if (isPaused) {
+                window.speechSynthesis.resume();
+                isPaused = false;
+            } else {
+                window.speechSynthesis.speak(speech);
+            }
+            
+            audioElement.play();
+        }
+        
+        function pauseSpeech() {
+            if (window.speechSynthesis.speaking) {
+                window.speechSynthesis.pause();
+                isPaused = true;
+            }
+            
+            audioElement.pause();
+        }
+        
+        function stopSpeech() {
+            window.speechSynthesis.cancel();
+            audioElement.pause();
+            audioElement.currentTime = 0;
+            isPaused = false;
+        }
+    </script>
+    
+    <!-- style.css -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+        </script>
+    </div>
+    
 </body>
 </html>
  
