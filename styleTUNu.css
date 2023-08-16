@@ -4,6 +4,12 @@ body{
     background-size: cover;
 }
 
+/* appreciation cards about land/content.html */
+.th {
+  margin: 4px;
+  padding: 3px;
+  box-sizing: border-box;
+}
 
 /* vavbar rbrands */
 .navbar .container,
