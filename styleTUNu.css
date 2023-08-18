@@ -213,10 +213,10 @@ button {
     scroll-behavior:smooth;
     overflow-y:scroll ;
     height:10rem ;
-    background-image: -webkit-linear-gradient(top, rgb(26, 18, 249), green,rgba(255, 255, 255, 0.792) );
-    -moz-background-image: linear-gradient(top, rgb(91, 18, 249), green, rgba(255, 255, 255, 0.792) );
-    -ms-background-image: linear-gradient(top, rgb(95, 18, 249), green, rgba(255, 255, 255, 0.792) );
-    -o-background-image: linear-gradient(top, rgb(55, 10, 146), green, rgba(255, 255, 255, 0.792) );
+    background-image: -webkit-linear-gradient(top, rgb(26, 18, 249),black );
+    -moz-background-image: linear-gradient(top, rgb(91, 18, 249), black );
+    -ms-background-image: linear-gradient(top, rgb(95, 18, 249), black );
+    -o-background-image: linear-gradient(top, rgb(55, 10, 146), black );
   }
 
 #footer {
