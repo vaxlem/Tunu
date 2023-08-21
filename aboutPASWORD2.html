@@ -2,10 +2,16 @@
 <html lang="en-us">
 <head>
   <meta charset="utf-8">
-  <title>Protected Website</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Tunu</title>
+  <link rel="icon" href="./images/tunuLogo.PNG">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-  <style>
+  <!-- <link rel="stylesheet" href="./styleTUNu.css"> -->
+<!-- password style -->
+<style>
+html {
+  font-family: 'helvetica' Google sans-serif;
+}
   #passwordPrompt p, ol li{
     width: 55px;
   }
@@ -14,23 +20,37 @@
     margin: 20px 50%;
     padding:0 10px 5px;
   } 
-   /* submit  */
-   button{
-    margin: 10px 0 0 40px;
-    border-radius: 5px;
-   }
+  
   #passwordPrompt p {
       background-color: bisque;
   
   }
-  </style>
+ /* submit  */
+ button{
+    margin: 10px 0 0 40px;
+    border-radius: 5px;
+   }
+
+</style>
+
+<!-- end of password style -->
+
+<!-- Google tag (gtag.js)  *must be added to all pages-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F02K9DJ88C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F02K9DJ88C');
+</script> 
 </head>
 <body>
 
   <!-- Password prompt -->
   <div id="passwordPrompt" style="text-align: center;">
-    <h1>Answer the Question</h1><br> <h3>The full name of Lakle is '<i>TAY LAKLE EHA</i>'</h3> <br><p><ol style="list-style-type: upper-alpha; margin-right: 160px;"><li style="padding-right: 0px;">true</li>
-    <li style="padding-right: 0px;">false</li></ol></p>
+    <h1>Answer the Question</h1><br> <h3>The wife of Lakle is '<i>Megbenya Hafia Draki</i>'</h3> <br><p><ol style="list-style-type: upper-alpha; margin-right: 160px;"><li style="padding-right: 0px;">False</li>
+    <li style="padding-right: 0px;">True</li></ol></p>
     <label for="passwordField">Enter correct Answer as password: </label>
     <div style="position: relative;">
       <input type="password" placeholder="A or B" id="passwordField" style="padding:1px 5px;">
@@ -51,7 +71,7 @@
 
 <!-- the script -->
   <script>
-    const password = "A";
+    const password = "B";
 
     function checkPassword() {
       const enteredPassword = document.getElementById("passwordField").value;
