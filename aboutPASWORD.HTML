@@ -32,6 +32,35 @@
     border-radius: 5px;
    }
 
+/* hovertest set */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(194, 58, 58);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 2px;
+  left: 10%;
+  text-anchor: middle;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  position: absolute;
+  color: yellow;
+}
 </style>
 
 <!-- end of password style -->
@@ -67,13 +96,32 @@
 
   <!-- Main content (hidden by default) -->
   <div id="mainContent" style="display: none; text-align: center;">
-    <h1>A  strong Woman </h1>
+    <h1>A  strong Man </h1>
     <p>The life Story</p>
 
     <!-- MAMAM DOWE -->
     <div class="col col-sm-7" style="background-color: #eb0a6f; margin: 1rem auto; padding: 2rem 0rem ; overflow-y: visible; width: 280px;">
-    <a href="./images/mamadowe.png"><img src="./images/mamadowe.png" alt="MAMMA DOEWE"style="width: 260px; height: auto; position: relative;left: 0.1rem; padding-bottom:3rem;">
-    </a> <div style="padding:1rem; text-align: justify; font-family:Impact, 'Haettenschweiler', Arial Narrow Bold, sans-serif ;">Date of birth: Untracked. <br> She's a humble woman <br> from: WUti. <br> who spent her life loving her husband. <br>She was a third of a triplet, that is where she's called DOEWE. <br>This legend has given birth to 10 children.</div> </div>
+    <a href="./images/oldboy.jpg">
+      <img src="./images/oldboy.jpg" alt="Torgbi Ashiapim Kubi Eha II" usemap="#myChildren" style="width: 260px; height: auto; position: relative;left: 0.1rem; padding-bottom:3rem;">
+  
+<!-- usemap pic in pics -->
+  <map name="myChildren"> 
+    
+<!-- tooltip hover  -->
+<div class="tooltip">
+
+  <area  onclick="alert('you will see my child here')" shape="rect" coords="34,80,100,250" alt="phil" href=".//images/1.PNG">
+  <span class="tooltiptext">click there and see my child or click top corner and see myself</span>
+</div>
+<div class="tooltip">
+  <area onclick="alert('you will see my child here')"shape="rect" coords="39,80,105,250" alt="hermon" href="./image/PAWPAW.jpg">
+  <span class="tooltiptext"> top corner and see myself</span>
+</div>
+  <area shape="rect" coords="290,172,333,250" alt="Mamma" href="./image/ORANGE.jpg">
+  <area shape="circle" coords="337,300,44" alt="Fuseini" href="./image/PAWPAW.jpg">
+</map>
+    </a> 
+    <div style="padding:1rem; text-align: justify; font-family:Impact, 'Haettenschweiler', Arial Narrow Bold, sans-serif ;">Date of birth: 1940s. <br> He's a humble man <br> Father: Kpobi Tettey <br>Mother: Atoeshie from Hatorgodo. <br>He started school at Detsikui **** <br> <br> He serves on the throne of the GrandFathers as a Chisf-Prist at Nyegbla palace, Anloga. Where he perform inatallation rights to Awoamefia and other kings in same manner his predecessors/Ancestors did. <br> <br>He is the eldest of his parents and has 6 parternal siblings. But Torgbi was the only son of his mother with KPOBI his father He however, had 8 step siblings from his mother. <br> <br>This legend has given birth to 8 children.</div> </div>
 
   
   </div>
