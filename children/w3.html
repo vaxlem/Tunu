@@ -30,7 +30,54 @@
 img{
   width: 100% ;
   height: auto;
-}</style>
+}
+
+.tunumap:hover{
+  text-transform: uppercase;
+  color: blueviolet;
+  transition: linear ease 30s;
+}
+
+/* tunu logo */
+.logo{
+    height: 45px;
+    width: 100px;
+    margin: 0 10px 10px 1px;
+    border-radius: 10px;
+    padding: auto 10px;
+}
+.navbar-brand {
+  display: inline-block;
+  padding-left: 1rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+.navbar-brand:hover, .navbar-brand:focus {
+  text-decoration:overline;
+}
+
+
+
+/* buttons floating */
+#navLink, #navLink ul li{
+  float: right;
+  list-style-type:none;
+}
+#activity{
+  float: left;
+}
+
+.clear{
+  clear: both;
+  display: table;
+
+}
+</style>
 
 <!-- end of password style -->
 
@@ -48,31 +95,52 @@ img{
 <body>
 
 <div class="w3-container w3-blue">
-  <h1> <i class="fa fa-gears " aria-hidden="true" style="padding-right: 30px;"></i>ACTIVITIES</h1>
+  <h1 id="activity"><a class="navbar-brand" href="../images/tunuLogo.PNG"><img src="../images/tunuLogo.PNG" alt="" class="logo"></a>  <i class="fa fa-gears " aria-hidden="true" style="padding-right: 30px;"></i>ACTIVITIES</h1>
   <!-- <p>Resize this responsive page!</p>  -->
+  <div id="navLink">
+    <ul>
+      <li>  <a href="../the-12Tribe.html"><button class="button-hover" style="width: fit-content; padding: 5px; background-color:rgba(89, 63, 236, 0.813); margin: 5px;cursor: pointer; border: none; border-radius: 10px;" > <i class="fa fa-tree" aria-hidden="true"></i>
+        The Land</button></a></li>
+      <li> <a href="../the-people.html"><button class="button-hover" style=" width: fit-content; padding: 5px; background-colo:rgb(175, 7, 77); margin:5px;cursor: pointer; colo: rgba(255, 255, 255, 0.612); border: none; border-radius: 10px;"> <i class="fa fa-users" aria-hidden="true"></i>
+        People</button></a></li>
+      <li>  <a href="../index.html"><button class="button-hover" style=" width: fit-content; padding: 5px; background-colo:rgb(175, 7, 77); margin:5px;cursor: pointer; colo: rgba(255, 255, 255, 0.612); border: none; border-radius: 10px;"> <i class="fa fa-home" aria-hidden="true"></i>
+        HOME</button></a></li>
+
+    <div class="clear"></div>
+    <!-- <br>
+    <a href="./the-people.html"><button class="button-hover" style=" width: 89px; padding: 10px; background-color:rgb(175, 7, 77); margin:5px;cursor: pointer; color: rgba(255, 255, 255, 0.612);"> 
+        People</button></a>
+    <br>
+
+    <a href="./index.html"><button class="button-hover" style=" width: 89px; padding: 10px; background-color:rgb(175, 7, 77); margin:5px;cursor: pointer; color: rgba(255, 255, 255, 0.612);"> 
+        HOME</button></a>
+    <br> -->
+    </ul>
+  </div>
 </div>
 
 <div class="w3-row-padding">
     <div class="w3-third">
-    <h2>London</h2>
-    <p>London is the capital city of England.</p>
-  <img src="../images/hunter.jpg" alt="">
-  <p>It is the most populous city in the United Kingdom,
-    with a metropolitan area of over 13 million inhabitants.</p>
-
+    <h2>FISHING</h2>
+    <p>Main occupation here fishing. Different kinds of endoskeletal and exoskeletal fishes are here.</p> <p>The source of the stream is a tributary from the VOLTA RIVER joining the sea at Azizanu - Fuveme. <br> People can rear their own fish as well. </p>
+  <img src="../images/fisher.jpg" alt=""> credit: istock photos 
+  <br>
+ 
   </div>
 
   <div class="w3-third">
-    <h2>Paris</h2>
-    <p>Paris is the capital of France.</p> 
-    <img src="../images/MARKET.png" alt="">
-  </div>
+    <h2>RIVER-SPORTS</h2>
+    <p>Water Sports is possible on this stream.It is both shallow and deep at some ends.</p> 
+    <p> A nice centre in Anlo kingdom. This can generate millions of Cedis for the inhabitants. The water current is good. <a class="tunumap" href="../images/tunu mapcarta1.PNG">Tunu Map</a></p>
+   <img src="../images/fisheristockphoto-1364301062-612x612.jpg" alt="">
+     </div>
 
   <div class="w3-third">
-    <h2>Tokyo</h2>
-    <p>Tokyo is the capital of Japan.</p>
-    <p>It is the center of the Greater Tokyo Area,
-    and the most populous metropolitan area in the world.</p>
+    <h2>what?</h2>
+    <p>You can see is, these kinds of fishes. Crabs, lobsters and other shell animals, tilapia, mudfish, red fish, catfish, etc.</p>
+    <p>It is the center of hatching for the sea creatures (fishes) because the water changes from salt to fresh and back to salty  following the seasons that each fish kind lays eggs and breeds.</p>
+    <div class="col col-4" style="color: rgba(0, 0, 128, 0.75); font-weight: bold;">Major occupation for the people is to catch fish for food and to sell. the tributery channel provide a good environment for lots of water living creatures to breed. This is because the area serves as a nursery where some sea fishes as well as the lagoon and the river volta fishes come to hatch their eggs. Above are some kinds of fishes that the people catch. </div>
+
   </div>
 </div>
 

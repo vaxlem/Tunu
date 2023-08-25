@@ -23,15 +23,59 @@
 
 
 
-
-
+    
+    
 
 <style>
 * {
   box-sizing: border-box;
 }
 
-
+    
+    /* tunu logo */
+    .logo{
+        height: 45px;
+        width: 100px;
+        margin: 0 10px 10px 1px;
+        border-radius: 10px;
+        padding: auto 10px;
+    }
+    .navbar-brand {
+      display: inline-block;
+      padding-left: 1rem;
+      padding-top: 0.3125rem;
+      padding-bottom: 0.3125rem;
+      margin-right: 1rem;
+      font-size: 1.25rem;
+      line-height: inherit;
+      white-space: nowrap;
+    }
+    
+    .navbar-brand:hover, .navbar-brand:focus {
+      text-decoration:overline;
+    }
+   /* tunu map  */
+    .tunumap:hover{
+  text-transform: uppercase;
+  color: blueviolet;
+  transition: linear ease 30s;
+}
+    
+    /* buttons floating */
+    #navLink, #navLink ul li{
+      float: right;
+      list-style-type:none;
+    }
+    #activity{
+      float: left;
+    }
+    
+    .clear{
+      clear: both;
+      display: table;
+    
+    }
+/* end of nav deta */
         /* #clan1 {
             width: auto;
             text-align: center;
@@ -92,7 +136,7 @@ html {
 .header {
   background-color: #9933cc;
   color: #ffffff;
-  padding: 15px;
+  padding: 10px;
 }
 
 .menu ul {
@@ -102,6 +146,7 @@ html {
 }
 
 .menu li {
+  cursor: pointer;
   padding: 8px;
   margin-bottom: 7px;
   background-color :#33b5e5;
@@ -141,7 +186,24 @@ html {
 <body>
 
 <div class="header">
-  <h1> <i class="fa fa-gears " aria-hidden="true" style="padding-right: 30px;"></i>ACTIVITIES</h1>
+    <div class="w3-container w3-blue">
+        <h1 id="activity"><a class="navbar-brand" href="../images/tunuLogo.PNG"><img src="../images/tunuLogo.PNG" alt="" class="logo"></a>  <i class="fa fa-gears " aria-hidden="true" style="padding-right: 30px;"></i>ACTIVITIES</h1>
+        <!-- <p>Resize this responsive page!</p>  -->
+        <div id="navLink">
+          <ul>
+            <li> 
+                
+                <a href="../the-12Tribe.html"><button class="button-hover" style="width: fit-content; padding: 5px; background-color:rgba(89, 63, 236, 0.813); margin: 5px;cursor: pointer; border: none; border-radius: 10px;" > <i class="fa fa-tree" aria-hidden="true"></i>
+                The Land</button></a></li>
+              <li> <a href="../the-people.html"><button class="button-hover" style=" width: fit-content; padding: 5px; background-colo:rgb(175, 7, 77); margin:5px;cursor: pointer; colo: rgba(255, 255, 255, 0.612); border: none; border-radius: 10px;"> <i class="fa fa-users" aria-hidden="true"></i>
+                People</button></a></li>
+              <li>  <a href="../index.html"><button class="button-hover" style=" width: fit-content; padding: 5px; background-colo:rgb(175, 7, 77); margin:5px;cursor: pointer; colo: rgba(255, 255, 255, 0.612); border: none; border-radius: 10px;"> <i class="fa fa-home" aria-hidden="true"></i>
+                HOME</button></a></li>        
+          </ul>
+        </div>
+      </div>
+<div class="clear">
+</div>
 </div>
 
 <div class="row">
@@ -151,7 +213,7 @@ html {
       <li id="city">Farming</li>
       <li id="island">Firewood Processing</li>
       <li id="food">Trading and Commence</li>
-      <li id="food">Entertainment and Others</li>
+      <li id="ent">Entertainment and Others</li>
     </ul>
   </div>
 
@@ -166,24 +228,26 @@ html {
   <div class="col-3 col-s-12">
     <div class="aside">
       <h2>What?</h2>
-      <p>Chania is a city on the island of Crete.</p>
+      <p>A home place to be.</p>
+      <div class="col-12" ><p>As a sovering State among the 36 states of Anlo, Tunu township engages in numerous livelyhood activities. Besides are some works that keep them busy each day</p></div>
+
       <h2>Where?</h2>
-      <p>Crete is a Greek island in the Mediterranean Sea.</p>
+      <p> Tunu is at the mouth of the running tributary that connects and feeds the Keta lagoon fron the west.<a class="tunumap" href=".//images/tunu mapcarta1.PNG">See Map <i class="fa fa-map-pin" aria-hidden="true"></i></a></p>
       <h2>How?</h2>
-      <p>You can reach Chania airport from all over Europe.</p>
+      <p>You can reach Tunu township by two (2) means. By road network and Cruisane on the tributary  stream that connects the large Keta lagoon on the eastern part and the estuary to the west. <br> <a class="tunumap" href="./images/plain tunu NAME.png">See Map <i class="fa fa-map-pin" aria-hidden="true"></i></a></p>
     </div>
   </div>
 </div>
 
 <div class="footer">  <!-- <footer id="footer"  > -->
 
-  <p>VISIT TUNU TODAY. And Experience the beautiful Culture and Fresh Nature.</p>   WELCOME to <span style="text-decoration: overline; font-size: 14px; color: rgba(255, 255, 255, 0.701);">TUNU</span> a land of Riches. FOLLOW YOUR ROOT
+  <p>VISIT TUNU TODAY. And Experience the beautiful Culture and Fresh Nature.</p>WELCOME to <span style="text-decoration: overline; font-size: 14px; color: rgba(255, 255, 255, 0.701);">TUNU</span> a land of Riches. FOLLOW YOUR ROOT
   <p>' Now you know'</p>
 
     Contact Information
     <br>
     <a href="mailto:tunulandofriches@gmail.com"><i class="social-icon fa fa-envelope i fa-2x" alt="e-mail"></i></a>
-    <a href="#"><i class="i social-icon fa fa-facebook fa-2x" alt="fbook"></i></a>
+    <a href="https://www.facebook.com/profile.php?id=100095491724789"><i class="i social-icon fa fa-facebook fa-2x" alt="fbook"></i></a>
     <a href="#"><i class="i social-icon fa fa-twitter fa-2x" alt="twitter"></i></a>
     <a href="https://www.linkedin.com/feed/update/urn:li:activity:6966952343951003648?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A6966952343951003648%29"><i class="i social-icon fa fa-linkedin fa-2x"></i></a>
     <a href="#"><i class="i social-icon fa fa-instagram fa-2x "></i></a>
@@ -211,7 +275,7 @@ html {
        document.getElementById("food").onclick = function(){
        document.getElementById("clan1").innerHTML = "<h1>The City</h1>" +
                                                         "<p>Chania is the capital of the Chania region on the island of Crete. The city can be divided into two parts, the old town and the modern city.</p>" +
-                                                        "<img src='./images/mangrove.jpg' width='460' height='345'>";
+                                                        "<a href='.//images/date.jpg'><img src='.//images/mangrove.jpg' width='460' height='345'></a>";
         }
    
 
@@ -219,7 +283,19 @@ html {
 
     // sites
     document.getElementById("city").onclick = function(){
-        document.getElementById("clan1").innerHTML = "<h1>The City</h1>";
+        document.getElementById("clan1").innerHTML = "<h1>Farming Activities</h1>"+ 
+        "<img src='./images/farmingistockphoto.jpg' width='460' height='345'>"+
+        "<p>Although the Land is  not totally fertile due to the salinity of the area, few  individuals grow foodstuffs that they needed to eat. Even the swampy areas support the growth of mangroves. Both men and women do this mangrove plantation work. Some times they involve their children especially during harvest days. <br><br> However, Food crops such as cassava, corn, sweet potato, yam and groundnut may grow well in the area. That is not all, fruits also do well. Some of the fruits one can get are: date palm, oranges,  palm fruit, coconut and mango. <br><br>The good coastal weather gives rainy and dry seaons which enable some Individuals to plant vegetables on small portions of land. Some of the people also engage in growing mangrove as a cash crop to sell.</p>"+
+        "<h2>THE MANGROVE </h2>"+
+        "<p>date palm, (Phoenix dactylifera), tree of the palm family (Arecaceae) cultivated for its sweet edible fruits. The date palm has been prized from remotest antiquity and may have originated in what is now Iraq. The fruit has been the staple food and chief source of wealth in the irrigable deserts of North Africa and the Middle East. Spanish missionaries carried the tree to the New World in the 18th and early 19th centuries. Date palms are grown in the Canary Islands, northern Africa, the Middle East, Pakistan, India, Mexico, and the U.S. state of California.</p> "+
+        "<a href='./images/date frul.jpg'><img src='./images/date.jpg' width='460' height='345'></a>"+
+        "<p><br> dried dates <br> Dates have a long shelf life, and many varieties, including the common deglet noor, are often sold dried and processed. The dried fruit is more than 50 percent sugar by weight and contains about 2 percent each of protein, fat, and mineral matter. Other types of dates, such as the medjool, are eaten as fresh produce and gradually shrink and wrinkle as they age. </p>"+
+        "<div>The date palm grows about 23 metres (75 feet) tall. Its stem, strongly marked with the pruned stubs of old leaf bases, terminates in a crown of graceful, shining, pinnate leaves about 5 metres (16 feet) long. Floral spikes branch from the axils of leaves that emerged the previous year. Male and female flowers are borne on separate plants. Under cultivation the female flowers are artificially pollinated. The date is a one-seeded fruit, or drupe, usually oblong but varying much in shape, size, colour, quality, and consistency of flesh, according to the conditions of culture and the variety. More than 1,000 dates may appear on a single bunch weighing 8 kg (18 pounds) or more.</div>"+
+        "<p> The tree is propagated either from seeds or from suckers, offshoots that arise chiefly near the base of the stem in the early years of the life of the palm. Offshoots are used for commercial plantings. When offshoots are three to six years old and have formed roots of their own, they are removed and planted. Palms begin to bear fruit in 4 to 5 years and reach full bearing at 10 to 15 years, yielding 40 to 80 kg (90 to 180 pounds) or more each. Palms are known to live as long as 150 years, but their fruit production declines, and in commercial culture they are replaced at an earlier age.</p>"+
+        "<img src='./images/nathan-dumlao-fRN5Y7BN1ZU-unsplash date.jpg' width='460' height='345'>"+
+        " <h1>Uses</h1>"+
+        "<p> All parts of the date palm yield products of economic value. Its trunk furnishes timber; the midribs of the leaves supply material for <br><p style='background-color:rgb(225, 225, 125, 004); padding:2px; text-align:justify;'> crates and furniture; the leaflets, for basketry; the leaf bases, for fuel; the fruit stalks, for rope and fuel; the fibre, for cordage and packing material; and the seeds are sometimes ground and used as stock feed. Syrup, alcohol, vinegar, and a strong liquor are derived from the fruit.</p> The sap is also used as a beverage, either fresh or fermented, but, because the method of extraction seriously injures the palm, only those trees that produce little fruit are used for sap. When a palm is cut down, the tender terminal bud is eaten as a salad. <br> Egypt, Iran, Saudi Arabia, and Iraq are the leading date-producing and date- exporting countries, although fruit from Algeria and Tunisia also is well known in Europe. California is the major American producer. <br> The date palm is grown as an ornamental tree along the Mediterranean shores of Europe, and its leaves are used for the celebration of Palm Sunday among Christians and for the celebration of Sukkoth (Feast of Tabernacles) among Jews.</p>"+
+        " <br> <u>Credit</u>: <p style='font-size:small;'> istockphotos. <br>Britannica, Editors of Encyclopaedia Britannica.This article was most recently revised and updated by Melissa Petruzzello.</p>";
         document.getElementById("clan1").style = "width:auto";
         document.getElementById("clan1").style = "text-align:center";
         document.getElementById("clan1").style = "background-color:red";
@@ -232,6 +308,16 @@ html {
         document.getElementById("clan1").style = "width:auto";
         document.getElementById("clan1").style = "text-align:center";
         document.getElementById("clan1").style = "background-color:green";
+
+
+
+    }
+// entertainment
+    document.getElementById("ent").onclick = function(){
+        document.getElementById("clan1").innerHTML = "<p>good job</p>";
+        document.getElementById("clan1").style = "width:auto";
+        document.getElementById("clan1").style = "text-align:center";
+        document.getElementById("clan1").style = "background-color:yellow";
 
 
 
