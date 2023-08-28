@@ -22,10 +22,10 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
-
+s
 <!-- script pwd -->
 <!-- <link rel="javascript" href="./script.js"> -->
-
+<script src="script.js"defer></script>
 <!-- password style -->
 <style>
   html {
@@ -155,50 +155,8 @@
   </div> 
     <!-- password script -->
 
-    <script>
-      const password = "hermon";
-  
-      function checkPassword() {
-        const enteredPassword = document.getElementById("passwordField").value;
-        if (enteredPassword === password) {
-          
-          // If the entered password is correct, show the main content
-          document.getElementById("passwordPrompt").style.display = "none";
-          document.getElementById("mainContent").style.display = "block";
-        } else {
-          
-          
-          // If the entered password is incorrect, show an error message
-          document.getElementById("passwordError").style.display = "block";
-        }
-      }    
-      
-  // eye toggle
-  
-      
-  function togglePasswordVisibility() {
-      const passwordField = document.getElementById("passwordField");
-      const icon = document.querySelector(".togglePassword i");
-
-      if (passwordField.type === "password") {
-        passwordField.type = "text";
-        icon.classList.remove("fa-eye");
-        icon.classList.add("fa-eye-slash");
-      } else {
-        passwordField.type = "password";
-        icon.classList.remove("fa-eye-slash");
-        icon.classList.add("fa-eye");
-      }
-    }
-  
-  // Handle Enter key press on the password input field
-    document.getElementById("passwordField").addEventListener("keypress", function(event) {
-      if (event.key === "Enter") {
-        checkPassword();
-      }
-    });
-
-    </script>
+    
+    
 
     <!-- end of password script -->
     
