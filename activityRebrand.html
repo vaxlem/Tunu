@@ -99,8 +99,35 @@ img {
   width: 100%;
 }
 
+    /* If the screen size is 600px wide or less, modify the arrow direction */
+    @media only screen and (max-width: 600px) {
+      .menu ul li {
+        position: relative;
+      }
+
+      .menu ul li i.fa-arrow-right {
+        display: none;
+      }
+
+      .menu ul li i.fa-arrow-down {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+   
+    
+  
+
 @media only screen and (min-width: 600px) {
-  .col-s-1 {width: 8.33%;}
+/* Hide the arrow down icon when screen width is above 600px */
+ .menu ul li i.fa-arrow-down {
+        display: none;
+      }
+ .col-s-1 {width: 8.33%;}
   .col-s-2 {width: 16.66%;}
   .col-s-3 {width: 25%;}
   .col-s-4 {width: 33.33%;}
@@ -181,10 +208,12 @@ html {
     padding: 10px;
 }
 
+
+   
+ 
 </style>
 </head>
 <body>
-
 <div class="header">
     <div class="w3-container w3-blue">
         <h1 id="activity"><a class="navbar-brand" href="./images/tunuLogo.PNG"><img src="./images/tunuLogo.PNG" alt="tunubrand" class="logo"></a>  <i class="fa fa-gears " aria-hidden="true" style="padding-right: 30px;"></i>ACTIVITIES</h1>
@@ -209,11 +238,21 @@ html {
 <div class="row">
   <div class="col-3 col-s-3 menu">
     <ul>
-      <li id="school">Schooling  <i class="fa fa-arrow-right" id="navLink"></i></li> <div class="row"></div>
-      <li id="city">Farming <i class="fa fa-arrow-right" id="navLink"></i></li> <div class="row"></div>
-      <li id="firewood">Firewood Processing <i class="fa fa-arrow-right" id="navLink"></i></li> <div class="row"></div>
-      <li id="food">Trading and Commence <i class="fa fa-arrow-right" id="navLink"></i></li> <div class="row"></div>
-      <li id="ent">Entertainment and Others <i class="fa fa-arrow-right" id="navLink"></i></li> <div class="row"></div>
+      <li id="school">Schooling    <i class="fa fa-arrow-right" id="navLink"></i>
+          <i class="fa fa-arrow-down" id="navLink"></i> <!-- Arrow bottom icon -->
+        </li> <div class="row"></div>
+      <li id="city">Farming   <i class="fa fa-arrow-right" id="navLink"></i>
+          <i class="fa fa-arrow-down" id="navLink"></i> <!-- Arrow bottom icon -->
+        </li> <div class="row"></div>
+      <li id="firewood">Firewood Processing   <i class="fa fa-arrow-right" id="navLink"></i>
+          <i class="fa fa-arrow-down" id="navLink"></i> <!-- Arrow bottom icon -->
+        </li> <div class="row"></div>
+      <li id="food">Trading and Commence   <i class="fa fa-arrow-right" id="navLink"></i>
+          <i class="fa fa-arrow-down" id="navLink"></i> <!-- Arrow bottom icon -->
+        </li> <div class="row"></div>
+      <li id="ent">Entertainment and Others   <i class="fa fa-arrow-right" id="navLink"></i>
+          <i class="fa fa-arrow-down" id="navLink"></i> <!-- Arrow bottom icon -->
+        </li> <div class="row"></div>
     </ul>
   </div>
 
@@ -308,7 +347,8 @@ html {
 
     // names
     document.getElementById("firewood").onclick = function(){
-        document.getElementById("clan1").innerHTML ="<H1>FIREWOOD PROCESSING</h1>"+"Tunu township belives the mangroves is their Cocoa, they grow it, and when the bush matured they cut it into uniform lengths and dry them. When the logs are drenched off water, they then would tie a considerable volume and place a monitary value on a bundle. The one beauty of the business is that each bundle appeared to be same in volume after they are tied. People from far buy the bundles and use them for cooking or other fires. It is a hard but lucretive business." +"<h3><U>IMPORTANCE</U></h3>"+"<P>Here are some benefits of Mangrove that Tunu boast of. <ol><li>It serves as Home for lots of shell fishes like snails and other crustaceans</li><li>It is a breeding area for birds<li>It reduces flooding from the overflowing river. It absorbs the excess waters. especially its roots</li><li>The leaves make manure for acquatic weeds that fishes eat</li><li>It helps different herbs and plants to grow.</li><li>Mangrove provides clean air. It purify the environment</ol></P>" +"<h2> OTHER USES</h2>" +"<p>The tree has m</p>";
+        document.getElementById("clan1").innerHTML ="<H1>FIREWOOD PROCESSING</h1>"+
+                                                    "Tunu township belives the mangroves is their Cocoa, they grow it, and when the bush matured they cut it into uniform lengths and dry them. When the logs are drenched off water, they then would tie a considerable volume and place a monitary value on a bundle. The one beauty of the business is that each bundle appeared to be same in volume after they are tied. People from far buy the bundles and use them for cooking or other fires. It is a hard but lucretive business." +"<h3><U>IMPORTANCE</U></h3>"+"<P>Here are some benefits of Mangrove that Tunu boast of. <ol><li>It serves as Home for lots of shell fishes like snails and other crustaceans</li><li>It is a breeding area for birds<li>It reduces flooding from the overflowing river. It absorbs the excess waters. especially its roots</li><li>The leaves make manure for acquatic weeds that fishes eat</li><li>It helps different herbs and plants to grow.</li><li>Mangrove provides clean air. It purify the environment</ol></P>" +"<h2> OTHER USES</h2>" +"<p>The tree has three (3) main parts. The roots, the trunk and the branches. Each of these has specific use. The root is fibre like and absorbs water. it is the part that hangs up from the ground and supports the top parts.This roots makes the most soft fire woods here. <h5 style='color white'>The Trunk</h5>the trunk of the tree is completely suspended above the water by the arcing <a href='https://www.google.com/imgres?imgurl=https%3A%2F%2Fproduction-new-commonwealth-files.s3.eu-west-2.amazonaws.com%2Fs3fs-public%2Fstyles%2Fhero_banner%2Fpublic%2F2022-02%2Fshutterstock_1402345532.jpg%3FVersionId%3DLqLctYJOGsxSBu0uYJ2g8v4JoI4AAWro%26itok%3D2rhtScL4&tbnid=yIT-uf8HO0DzeM&vet=10CDgQMyjPAmoXChMI0OKpn-mAgQMVAAAAAB0AAAAAEAU..i&imgrefurl=https%3A%2F%2Fthecommonwealth.org%2Fbluecharter%2Fmangrove-restoration&docid=fIniRqTcjLW3pM&w=1920&h=750&q=the%20trunk%20of%20a%20mangrove&ved=0CDgQMyjPAmoXChMI0OKpn-mAgQMVAAAAAB0AAAAAEAU'>stilt roots</a>. What are the uses of mangrove wood? In other parts of the world, people have utilized mangrove trees as a renewable resource. Harvested for durable, water-resistant wood, mangroves have been used in building houses, boats, pilings, and furniture </p>"+"<p> <br>They are also used for fires and a choice for strong wood. <br><br> The local name of the parts in EWE is ATRA/ATRADOE, ATRATSUI AND ATIWUDZI for the branches. </p>";
         document.getElementById("clan1").style = "width:auto";
         document.getElementById("clan1").style = "text-align:center";
         document.getElementById("clan1").style = "background-color:green";
@@ -318,7 +358,7 @@ html {
     }
 // entertainment
     document.getElementById("ent").onclick = function(){
-        document.getElementById("clan1").innerHTML = "<p>good job</p>";
+        document.getElementById("clan1").innerHTML = "<p>good jobA relatively recent commercial use of mangroves is for recreation and ecotourism Use of mangroves as natural sewage-treatment plants has been considered. Mangroves trap sediments and so contribute to land building, preventing erosion and excessive shifting of coastlines. A relatively recent commercial use of mangroves is for recreation and ecotourism. In Australia, mangrove habitats play a significant role in programs of conservation, recreation and researching methods of establishing nature reserves, sanctuaries, national parks and biosphere reserves.</p>";
         document.getElementById("clan1").style = "width:auto";
         document.getElementById("clan1").style = "text-align:center";
         document.getElementById("clan1").style = "background-color:yellow";
@@ -327,5 +367,7 @@ html {
 
     }
  </script>
+
+
 </body>
 </html>
