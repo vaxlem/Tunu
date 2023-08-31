@@ -28,6 +28,39 @@
 
 
 <style>
+  /* nav list position to right */
+ #position,#positionLeft{
+    float: left;
+
+  }
+
+  /* logo position to right */
+  #position,#positionRight{
+    float: right;
+
+  }
+
+  #navPosition{
+  position: fixed;
+    display: inline-flex;
+    margin: 0rem;
+    float: right;
+    right: 0px;
+    padding-left: 0px;
+    left: 0px;
+    
+    
+  }
+/* clear floats */
+.clear{
+      clear: both;
+      display: table;
+    
+    }
+
+    .container{
+      margin-top: 60px;
+    }
   .footer {
   /* background-color: #0099cc; */
   background-color: black;
@@ -37,6 +70,7 @@
   padding: 15px;
 
 }
+
 /* footter i */
 .footer .i{
     padding: 10px;
@@ -94,7 +128,7 @@
 .acor-i {
   color: #111;
 }
-  /* heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeererer */
+  /* heeeerer */
 
 /* end of accordion and carousel */
   /* tv mode */
@@ -214,7 +248,7 @@
     font-size: 14;
   }
 
-  /* appreciation resize */
+  /* appreciation resize with margin top for nav*/
   
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 /* @media screen and (max-width: 600px) { */
@@ -225,7 +259,7 @@
     border: 1px solid greenyellow;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 3rem;
-    margin: 0px 10px ;
+    margin: 60px 10px  ;
     text-align: center;
     height: auto;
     flex: auto;
@@ -255,35 +289,6 @@
   height: 3rem;
 }
 
-/* outer carousel resize position; */
-.carousel {
-/* width: 650px;  */
-/* Adjust the width according to your needs */
-/* height: 320px; */
-/* Adjust the height according to your needs
-width: 328px;
-height: 199px;
-overflow: hidden;
-position: relative;
-left: 0.4em; */
-/* margin:  0;
-z-index: -1; */
-}      
-
-/* .notes {
-width: 60%;
-background-color: rgb(116, 115, 115);
-color: white;
-font-size: large;
-padding: 0px 18px 0px 20px;
-margin: 1px 40px;
-max-height: 0px;
-transition: 0.4s;
-overflow: hidden;
-transition: max-height 0.2s ease-out;
-} */
-
-  /* heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeererer */
 
 }
 
@@ -299,11 +304,12 @@ transition: max-height 0.2s ease-out;
 </script>
 
 </head>
-<body>       
-  <a class="navbar-brand" href="./images/tunuLogo.PNG"><img src="./images/tunuLogo.PNG" alt="" class="logo"></a>
+<body>   
+<div id="navPosition">    
+  <a class="navbar-brand" href="./images/tunuLogo.PNG"><img src="./images/tunuLogo.PNG" alt="" class="logo" id="positionRight"></a>
 
 
-  <nav style="height:3.6rem;">
+  <nav style="height:3.6rem;" id="positionLeft">
 
     <div class="navbar-brand" style="position: fixed; display: inline-flex; margin: 0rem;">
 
@@ -320,7 +326,8 @@ transition: max-height 0.2s ease-out;
         <!-- <h1 ><a href="./correct.html"><button class="button-hover" style="width: 80px; padding: 10px; background-color:rgba(255, 0, 21, 0.821); margin: 5px;cursor: pointer; color: rgb(240, 239, 245); font-size:20px;"> Home</button></a></h1> -->
     </div>
 </nav>
-
+</div>
+<div class="clear"></div>
     <a href="./images/plain tunu NAME.png"> 
     <div class="container " style="background-color: #132fe4;  height:30rem ;background: white url(./images/plain\ tunu\ NAME.png) center no-repeat;"></div></a> 
     <BR></BR>
@@ -354,12 +361,15 @@ transition: max-height 0.2s ease-out;
 <div style="background-color:rgba(255, 228, 196, 0.554) ; padding: 0px auto;">
 <div style="background-color:#f34f4fc4 ; ">
 <div style="margin: 6rem 2rem; text-align: justify;color: #06060692; background-color: #fff;text-transform: uppercase;font-family: Helvetica, Arial, sans-serif; font-size: large; padding: 0.5rem; line-height: 2rem;"> <span stytext-align: center; background-color: #fff;text-transform: uppercase; font-size: x-large; padding: ;"><h1 class="appreciation">appreciations</h1><div style="text-align: center;"><img class="img" src="./images/programming.gif" alt=""></div>
-This documentary is Painstakingly prepared with the sole aim of providing quick and ease of access to the information dfhgjhtyu ygyuyi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis alias debitis harum nemo laboriosam magnam dolores dolore corporis quaerat, voluptate non architecto voluptatum corrupti quibusdam temporibus asperiores exercitationem, vel officia?
-
-  
-  </table>
-  
+This documentary is Painstakingly prepared with the sole aim of providing quick and ease of access to the history information that  properly and authentically represent our history which is achived to suit  modern platforms of achiving information. <br> <p style="padding: 0px 5px; margin: 1px auto;">many thanks to the personalities below, <i class="fa fa-arrow-down"></i> <br> for helping with facts which their permission is sort for to prepare this.</p>
+</table>
+ <div id="howTo"> <a href="#howTo"><button >how to use this platform</button></a></div>
   </div>
+  </div>
+
+
+
+  <!-- end of meanual -->
   <div id="accordion">
     <!-- accordion section --><!-- styleTunu.css -->
     <div>
@@ -631,6 +641,8 @@ This documentary is Painstakingly prepared with the sole aim of providing quick 
       </div>
 
     </div>
+
+
     <!-- end of accordion -->
 
     <!-- <div>
@@ -890,6 +902,25 @@ This documentary is Painstakingly prepared with the sole aim of providing quick 
 </div>
 
   <!-- jump to top -->
+   <!-- manual -->
+  
+    <!-- accordion section --><!-- styleTunu.css -->
+    <div id="#">
+      <div classNB="all" height="150rem">
+        <header>
+          <button class="date">USE<br/><h2> IT LIKE THIS</h2></button>
+        <div id="myAppreciation" class="notes" style="margin: 1px auto; padding: 0px; width: 335px; background-color:rgba(255, 228, 196, 0.251) ;">
+          <div id="howTo2">
+
+          </div>   
+        </div>
+          
+        </div>
+        </header>
+      <br>
+
+        </div>
+   
 <nav id="navigation" style="height:3.6rem;">
     <div style=" display: inline-flex; margin: 0rem;">
         <a href="./the-people.html"><button class="button-hover" style="width: 90px; padding: 10px; background-color:rgba(89, 63, 236, 0.813); margin: 5px;cursor: pointer;" > 
@@ -982,7 +1013,18 @@ This documentary is Painstakingly prepared with the sole aim of providing quick 
 </script>
 </body>
 </html>
+<!-- manual script -->
+<script>
+   document.getElementById("howTo").onclick = function(){
+        document.getElementById("howTo2").innerHTML ="<h1>SCHOOLING</h1>" +"<div>The indigeons love School. Even before independence the children have been in school.Today the town can boast of a complete Primary school. The school once served pupils of Bomigo untill they had their own Primary. The children will continue to secondary school in another town after they complete their primary. Anyanui, Dzita and some other places serves them for their continuation.</div>";
+        document.getElementById("howTo2").style = "width:auto";
+        document.getElementById("howTo2").style = "text-align:center";
+        document.getElementById("howTo2").style = "background-color:#3bc4";
 
+
+
+    }
+</script>
   
 </body>
 </html>
