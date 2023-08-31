@@ -61,6 +61,11 @@
     .container{
       margin-top: 60px;
     }
+
+    #howTo2{
+      text-align: justify;
+      padding: 5px;
+    }
   .footer {
   /* background-color: #0099cc; */
   background-color: black;
@@ -196,6 +201,21 @@
      padding: 30px; 
     border-radius: 100%;
   }
+
+/* how to section */
+.game{
+    margin: 2px; 
+    padding: 2px; 
+    box-sizing: border-box; 
+    text-align: center; 
+    background-color:rgba(255, 0, 0, 0.695) ; 
+    width:max-content ;
+    border: 1px solid rgb(0, 0, 8); 
+    box-shadow: 1px 1px 1px 1px rgba(231, 225, 225, 0.966);
+    border-radius: 0.5rem;
+  }
+/* end of how to section */
+
   /* mediaa */
 @media screen and (max-width:600px){
    /* appreciation sector */
@@ -361,7 +381,8 @@
 <div style="background-color:rgba(255, 228, 196, 0.554) ; padding: 0px auto;">
 <div style="background-color:#f34f4fc4 ; ">
 <div style="margin: 6rem 2rem; text-align: justify;color: #06060692; background-color: #fff;text-transform: uppercase;font-family: Helvetica, Arial, sans-serif; font-size: large; padding: 0.5rem; line-height: 2rem;"> <span stytext-align: center; background-color: #fff;text-transform: uppercase; font-size: x-large; padding: ;"><h1 class="appreciation">appreciations</h1><div style="text-align: center;"><img class="img" src="./images/programming.gif" alt=""></div>
-This documentary is Painstakingly prepared with the sole aim of providing quick and ease of access to the history information that  properly and authentically represent our history which is achived to suit  modern platforms of achiving information. <br> <p style="padding: 0px 5px; margin: 1px auto;">many thanks to the personalities below, <i class="fa fa-arrow-down"></i> <br> for helping with facts which their permission is sort for to prepare this.</p>
+This documentary is Painstakingly prepared with the sole aim of providing quick and ease of access to the history information that  properly and authentically represent our history which is archived to suit  modern platforms of archiving information. <br> <p style="padding: 0px 5px; margin: 1px auto;">many thanks to the personalities below, <i class="fa fa-hand-o-down" aria-hidden="true"></i>
+  <br> for helping with facts which their permission is sort for to prepare this.</p>
 </table>
  <div id="howTo"> <a href="#howTo"><button >how to use this platform</button></a></div>
   </div>
@@ -1016,7 +1037,9 @@ This documentary is Painstakingly prepared with the sole aim of providing quick 
 <!-- manual script -->
 <script>
    document.getElementById("howTo").onclick = function(){
-        document.getElementById("howTo2").innerHTML ="<h1>SCHOOLING</h1>" +"<div>The indigeons love School. Even before independence the children have been in school.Today the town can boast of a complete Primary school. The school once served pupils of Bomigo untill they had their own Primary. The children will continue to secondary school in another town after they complete their primary. Anyanui, Dzita and some other places serves them for their continuation.</div>";
+        document.getElementById("howTo2").innerHTML = "<h1 style='text-align:center'>NAVIGATION</h1>" +
+                                                      "<ol><li><div>These are <button> buttons</button> press them to see what they contain.</li><br><li>There is a <span class='game'>GAME</span> play it at Lakle page.</li><br><li>This is an <span class='game'>Audio/ Play</span> play it to listen to the readings. You can STOP or Resume also.</li><br><li>PRESS on  <span class='game'>Pictures</span> and see them fully.</li> <br> <li>There are <span class='game'><a style='color:blue; text-decoration:underline; background-color:black;'>LINKS</a></span> Click on them to take you to such informations or Sites.</li> <br> <li>There is a <span class='game'>OK or <i class='fa fa-angle-left' aira-hidden='true'> </span> Press ' OK ' to follow the alert message or (< - Go back).</li> <br><li></li></ol>"+
+                                                      "The indigeons love School. Even before independence the children have been in school.Today the town can boast of a complete Primary school. The school once sethem for their continuation.</div>";
         document.getElementById("howTo2").style = "width:auto";
         document.getElementById("howTo2").style = "text-align:center";
         document.getElementById("howTo2").style = "background-color:#3bc4";
