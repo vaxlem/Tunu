@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF.js Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+</head>
+<body>
+
+    'But there is some form of
+subsistence agriculture - cassave,
+maize, vegetables, shallot growing
+on the fringes of the Keta lagoon,
+especially in the vicinity of An toga,
+made possible by effective manuring1
+
+    <h1>PDF.js Example</h1>
+    <div>
+        <canvas id="pdfCanvas"></canvas>
+    </div>
+    <script>
+            <iframe src="https://example.com/path/to/your/pdf/document.pdf" width="800" height="600"></iframe>
+
+        // PDF.js code to display the PDF
+        var pdfUrl = 'https://example.com/path/to/your/pdf/document.pdf';
+        var pdfContainer = document.getElementById('pdfCanvas');
+
+        pdfjsLib.getDocument(pdfUrl).promise.then(function(pdfDoc) {
+            var pageNum = 1;
+            pdfDoc.getPage(pageNum).then(function(page) {
+                var viewport = page.getViewport({ scale: 1 });
+                var canvas = document.createElement('canvas');
+                pdfContainer.appendChild(canvas);
+                var context = canvas.getContext('2d');
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+                page.render({
+                    canvasContext: context,
+                    viewport: viewport
+                });
+            });
+        });
+    </script>
+</body>
+</html>
