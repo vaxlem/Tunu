@@ -1,0 +1,28 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Embedded PDF</title>
+    <style>
+        /* Default styles for the iframe */
+        iframe {
+            width: 100%; /* 100% width for responsiveness */
+            height: 600px; /* Default height */
+        }
+
+        /* Media query for screens with a maximum width of 600px */
+        @media (max-width: 600px) {
+            iframe {
+                height: auto; /* Auto-adjust height to maintain aspect ratio */
+            }
+        }
+    </style>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script> -->
+
+</head>
+<body>
+    <h1>Embedded PDF Example</h1>
+    <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe>
+</body>
+</html>
