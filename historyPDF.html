@@ -1,0 +1,99 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>bio of Megbenya </title>
+    <style>
+        /* Default styles for the iframe */
+        iframe {
+            width: 100%; /* 100% width for responsiveness */
+            /* height: max-content;  */
+            height: auto;/* Default height */
+        }
+
+        /* Media query for screens with a maximum width of 600px */
+        @media (max-width: 600px) {
+            iframe {
+                height: fit-content;
+                /* height: 1000px;  */
+                /* Auto-adjust height to maintain aspect ratio */
+            }
+        }
+
+        #navFix, #pdfNav{
+            position: fixed;
+            display: inline-block;
+            /* margin-bottom: 50px; */
+        }
+        
+
+        
+        /* #bio{} */
+        #pdfNav img{
+            float: left;
+            width: 80px;
+            height: auto;
+        }
+
+        #pdfNav ul,li{
+position: relative;
+left: 4rem;
+            float:right;
+            width: fit-content;
+            border:1px solid rgb(233, 233, 235) ;
+            border-radius: 3px;
+            margin:0 2px;
+            text-decoration: none;
+            list-style: none;
+            padding: 10px;
+            border-right: greenyellow;
+            
+        }
+        .body{
+           padding-top:4rem;
+        }
+
+        .clear{
+            clear: both;
+        }
+
+    </style>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script> -->
+
+</head>
+<body>
+    <nav>
+        
+        <div id="pdfNav">
+            <a href="./images/tunuLogo.PNG"><img src="./images/tunuLogo.PNG" alt="tunuLOgo"></a>
+        </div>
+        <div id="navFix">
+        <ul>
+            <a href="./index.html"><li>home</li></a>
+            <a href="#"><li>megbenya</li></a>
+            <a href="#war"><li>wars</li></a>
+            <a href="#"><li>clans</li></a>
+        </ul>
+        </div><hr>
+        <div class="clear"></div>
+    </nav>
+    
+<DIV class="body">    
+    <h1 id="bio">BIOGRAPHY OF OUR HEROIC FIGURES</h1>
+    <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe>
+    <!-- <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe>
+    <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe>
+    <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe>
+    <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe>
+    <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe>
+    <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe>
+    <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe>
+    <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe>
+    <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe> -->
+    <!-- <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe> -->
+
+    <iframe id="war" src="../doc"></iframe>
+</DIV>
+</body>
+</html>
