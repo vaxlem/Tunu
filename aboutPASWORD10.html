@@ -25,6 +25,37 @@
     background-color: rgba(9, 5, 0, 0.431);
 
 }
+
+
+/* hovertest set */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(194, 58, 58);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 2px;
+  left: 10%;
+  text-anchor: middle;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  position: absolute;
+  color: yellow;
+}
 </style>
 <!-- end of password style -->
 
@@ -55,10 +86,36 @@
     <p id="passwordError" style="display: none; color: rgb(179, 241, 11);">Incorrect password. Try again.</p>
   </div>
 
-  <!-- Main content (hidden by default) -->
-  <div id="mainContent" style="display: none; text-align: center;">
-    <h1>Main Content</h1>
-    <p>This is the main content of the website. It is protected by a password.</p>
+   <!-- Main content (hidden by default) -->
+   <div id="mainContent" style="display: none; text-align: center;">
+    <h1>A  strong Man </h1>
+    <p>The life Story</p>
+
+    <!-- MAMAM DOWE -->
+    <div class="col col-sm-7" style="background-color: #eb0a6f; margin: 1rem auto; padding: 2rem 0rem ; overflow-y: visible; width: 280px;">
+    <a href="./images/bina.jpeg">
+      <img src="./images/bina.jpeg" alt="Torgbi Ashiapim Kubi Eha II" usemap="#myChildren" style="width: 260px; height: auto; position: relative;left: 0.1rem; padding-bottom:3rem;">
+  
+<!-- usemap pic in pics -->
+  <map name="myChildren"> 
+    
+<!-- tooltip hover  -->
+<div class="tooltip">
+
+  <area  onclick="alert('you will see my child here')" shape="rect" coords="34,80,100,250" alt="phil" href=".//images/1.PNG">
+  <span class="tooltiptext">click there and see my child or click top corner and see myself</span>
+</div>
+<div class="tooltip">
+  <area onclick="alert('you will see my child here')"shape="rect" coords="39,80,105,250" alt="hermon" href="./image/PAWPAW.jpg">
+  <span class="tooltiptext"> top corner and see myself</span>
+</div>
+  <area shape="rect" coords="290,172,333,250" alt="Mamma" href="./image/ORANGE.jpg">
+  <area shape="circle" coords="337,300,44" alt="Fuseini" href="./image/PAWPAW.jpg">
+</map>
+    </a> 
+    <div style="padding:1rem; text-align: justify; font-family:Impact, 'Haettenschweiler', Arial Narrow Bold, sans-serif ;">Date of birth: ....... <br> He's a humble man <br> Father:  KWABLA ALORGBODZI XENYO TETTEY <br>Mother: DOEWE from WHUTI. <br>He started at ...... and worked as ..............<br> <br> He lives in Togo Republic. <br> <br>He is the SECOND TO LAST of his parents and has 9 siblings.. <br> <br>This legend has given birth to .............children.</div> </div>
+
+  
   </div>
 
 

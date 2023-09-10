@@ -3,7 +3,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bio of Megbenya </title>
+    <link rel="stylesheet" href="./EXTRA-STYLE.css">
+
+    
+<link rel="icon" href="./images/tunuLogo.PNG">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+<link rel="stylesheet" href="./bootstrap-4.5.3-dist/">
+<!-- <link rel="icon" href="./image/logo.png"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,900;1,400&family=Montserrat:wght@900&family=Roboto:ital,wght@0,300;0,400;1,400&family=Sacramento&family=Zen+Dots&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F02K9DJ88C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F02K9DJ88C');
+</script> 
     <style>
         /* Default styles for the iframe */
         iframe {
@@ -72,16 +102,17 @@ left: 4rem;
         <div id="navFix">
         <ul>
             <a href="./index.html"><li>home</li></a>
-            <a href="#"><li>megbenya</li></a>
+            <a href="#"><li id="megbenya">megbenya</li></a>
             <a href="#war"><li>wars</li></a>
-            <a href="#"><li>clans</li></a>
+            <a href="#"><li id="clan">clans</li></a>
         </ul>
         </div><hr>
         <div class="clear"></div>
     </nav>
     
-<DIV class="body">    
+<DIV class="body" >    
     <h1 id="bio">BIOGRAPHY OF OUR HEROIC FIGURES</h1>
+    <div id="body">
     <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe>
     <!-- <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe>
     <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe>
@@ -93,8 +124,18 @@ left: 4rem;
     <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe>
     <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe> -->
     <!-- <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe> -->
-
+</div>
     <iframe id="war" src="../doc"></iframe>
 </DIV>
+<script>
+    document.getElementById("megbenya").onclick = function(){
+        document.getElementById("body").innerHTML = "ban";
+        document.getElementById("body").style = "background-color:red";
+    }
+document.getElementById("clan").onclick = function(){
+        document.getElementById("body").innerHTML = "<div><iframe src='https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview'></iframe>";
+        document.getElementById("body").style = "background-color:red";
+    }    
+</script>
 </body>
 </html>
