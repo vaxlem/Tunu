@@ -1,7 +1,12 @@
 body{
     font: Arial, Helvetica, Sans-serif;
 }
-
+/* the image of lagoon resort and keta */
+.imgKeta{
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
 #brand img{
     /* width: 100%;
     height:auto; */
@@ -83,6 +88,13 @@ h1 a{
     height: 190px;
 
 }
+
+#introduction h3{
+    background-color: #ffffff88;
+    width: fit-content;
+    text-align: center;
+    margin: 5rem auto;
+}
 #menu{
     height: 70px;
     background: linear-gradient( #b7e953, red);
@@ -162,6 +174,10 @@ h1 a{
     background: -webkit-linear-gradient(red, rgba(255, 255, 255, 0.45));
     background: -o-linear-gradient(red, rgba(255, 255, 255, 0.45));
     background: -moz-linear-gradient(red, rgba(255, 255, 255, 0.45));
+    background-image: url(./images/keta\ lagoon\ resort.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     padding: 30px;
     margin: 16px 0;
 }
@@ -299,6 +315,13 @@ h1 a{
 }
 
 @media screen  and (max-width: 600px){
+    
+    .imgKeta{
+        width: 100%;
+        height: auto;
+        
+    }
+    
     #menu{
         height: 60px;
         width: 377px;
