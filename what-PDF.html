@@ -3,15 +3,36 @@
 <head>
     <title>PDF.js Example borlar</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
-</head>
+
+    
+    <style>
+      /* Default styles for the iframe */
+      iframe {
+          width: 100%; /* 100% width for responsiveness */
+          height: 600px; /* Default height */
+      }
+
+      /* Media query for screens with a maximum width of 600px */
+      @media (max-width: 600px) {
+          iframe {
+              /* height: auto;  */
+              height: 800px;
+              /* Auto-adjust height to maintain aspect ratio */
+          }
+      }
+  </style>
+
+
+
+  </head>
 <body>
 
    
 <P>During the reign of Awadada Axorlu, 1841-1874, it was recorded that by 1865 there was a misunderstanding between, the Adas and the Anlos, Some historians say the fight was about who owns fishing right over the volta estuary. This war escalates to Yaluvi for another called Datsutagba war in 1866. Making the Anlos victorious.</P>
 
     <h1>PDF.js Example</h1>
-    <div>
-        <canvas id="https://web.facebook.com/381760685687593/posts/the-datsutagba-war-of-1866the-brave-warriors-of-anlo-had-completely-defeated-an-/1063448090852179/?_rdc=1&_rdr "></canvas> 
+    <div id="body">
+      <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe>
     </div>
    
 <H3 style="color: rgba(0, 0, 0, 0.594);">
@@ -80,7 +101,7 @@ Making the Anlo people free to fish in the river Volta estuary. it was Tamekloe 
 
 <BR></BR>
 <H1>The Grand Victory.</H1>
-On 6th march 1866, <a href="https://web.facebook.com/381760685687593/posts/the-datsutagba-war-of-1866the-brave-warriors-of-anlo-had-completely-defeated-an-/1063448090852179/?_rdc=1&_rdr"> <button style="border-radius: 3px; text-decoration: none; color: blue; font-size:small ;cursor: pointer;"> <b>full account here</b> </button></a> when another war broke out , Raa Nyegbla again defeated the people at Datsutagba war. He was however, given Mama Adesu deity to him for a wife, as an appreciation. Here, later, Tamekloe further  decided to move back to the Kwamufie his former home town.
+On 6th march 1866, <a href="#body"> <button id="clan" style="border-radius: 3px; text-decoration: none; color: blue; font-size:small ;cursor: pointer;"> <b>full account here</b> </button></a> when another war broke out , Raa Nyegbla again defeated the people at Datsutagba war. He was however, given Mama Adesu deity to him for a wife, as an appreciation. Here, later, Tamekloe further  decided to move back to the Kwamufie his former home town.
 
 Credit: Asiapim Eha II
 
@@ -510,7 +531,7 @@ html {
 // victory
     document.getElementById("victory").onclick = function(){
         document.getElementById("adaMen").innerHTML = "<H1>The Grand Victory.</H1>"+
-                                                    "<P style='text-align:justify;'>On 6th march 1866, <a href='https://web.facebook.com/381760685687593/posts/the-datsutagba-war-of-1866the-brave-warriors-of-anlo-had-completely-defeated-an-/1063448090852179/?_rdc=1&_rdr'> <button style='border-radius: 3px; text-decoration: none; color: blue; font-size:small ;cursor: pointer;'> <b>full account here</b> </button></a> when another war broke out , Raa Nyegbla again defeated the people at Datsutagba war. He was however, given Mama Adesu deity to him for a wife, as an appreciation. Here, later, Tamekloe further  decided to move back to the Kwamufie his former home town. <BR></BR><br>Credit: Ashiapim Eha II </p>";
+                                                    "<P style='text-align:justify;'>On 6th march 1866, <a href=''> <button id='clan' style='border-radius: 3px; text-decoration: none; color: blue; font-size:small ;cursor: pointer;'> <b>full account here</b> </button></a> when another war broke out , Raa Nyegbla again defeated the people at Datsutagba war. He was however, given Mama Adesu deity to him for a wife, as an appreciation. Here, later, Tamekloe further  decided to move back to the Kwamufie his former home town. <BR></BR><br>Credit: Ashiapim Eha II </p>";
         document.getElementById("adaMen").style = "width:auto";
         document.getElementById("adaMen").style = "text-align:center";
         document.getElementById("adaMen").style = "background-color:yellow";
@@ -519,7 +540,10 @@ html {
 
     }
 
-
+    document.getElementById("clan").onclick = function(){
+        document.getElementById("body").innerHTML ="<div><iframe src='https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview'></iframe></drive>";
+        document.getElementById("body").style = "background-color:red";
+    }  
  </script>
 
 

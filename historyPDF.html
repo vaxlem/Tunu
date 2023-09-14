@@ -25,6 +25,23 @@
 <link rel="manifest" href="/site.webmanifest">
 
 
+<style>
+    /* Default styles for the iframe */
+    iframe {
+        width: 100%; /* 100% width for responsiveness */
+        height: 600px; /* Default height */
+    }
+
+    /* Media query for screens with a maximum width of 600px */
+    @media (max-width: 600px) {
+        iframe {
+            /* height: auto;  */
+            height: 800px;
+            /* Auto-adjust height to maintain aspect ratio */
+        }
+    }
+</style>
+
  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F02K9DJ88C"></script>
 <script>
@@ -69,7 +86,7 @@
 
         #pdfNav ul,li{
 position: relative;
-left: 3rem;
+left: 0.5rem;
             float:right;
             font-size: small;
             width: fit-content;
@@ -81,6 +98,7 @@ left: 3rem;
             padding: 10px;
             border-right: greenyellow;
             background-color: #f45959;
+            /* background-color: green; */
         }
 
         #pdfNav ul,li:hover{
@@ -94,8 +112,27 @@ left: 3rem;
             clear: both;
         }
 
+/* @media only screen and (max-width: 600){
+    #pdfNav ul,li{
+position: relative;
+left: 1rem;
+            float:right;
+            font-size: small;
+            width: fit-content;
+            border:1px solid rgb(233, 233, 235) ;
+            border-radius: 3px;
+            margin:0 2px;
+            text-decoration: none;
+            list-style: none;
+            padding: 10px;
+            border-right: greenyellow;
+            background-color: green;
+        }
+    
+}         */
+
     </style>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
 
 </head>
 <body>
@@ -119,13 +156,16 @@ left: 3rem;
     <h1 id="bio">BIOGRAPHY OF OUR HEROIC FIGURES & PAST</h1>
     Anlo-Ada Wars of 1865-1866
     <div id="body">
-        
-    <iframe src="https://drive.google.com/file/d/1XTPyo3CVgFhLTpGA7GBNAAEeAkw6BQ2P/view?usp=sharing"></iframe>
+        <iframe id="war" src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe>
+
+    <!-- <iframe src="https://drive.google.com/file/d/1XTPyo3CVgFhLTpGA7GBNAAEeAkw6BQ2P/view?usp=sharing"></iframe> -->
     <!-- <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe>
     <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe> -->
     <!-- <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe> -->
 </div>
-    <iframe id="war" src="https://drive.google.com/file/d/136UktKYQZX-sxQ5hFegjDpgow1yEPqgL/view?usp=drive_link"></iframe>
+    <!-- <iframe id="war" src="https://drive.google.com/file/d/136UktKYQZX-sxQ5hFegjDpgow1yEPqgL/view?usp=drive_link"></iframe> -->
+    <iframe sr="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview"></iframe>
+
 </DIV>
 <script>
     document.getElementById("megbenya").onclick = function(){
@@ -133,10 +173,12 @@ left: 3rem;
         document.getElementById("body").style = "background-color:red";
     }
 document.getElementById("clan").onclick = function(){
-        document.getElementById("body").innerHTML ="<div><iframe src='https://drive.google.com/file/d/136UktKYQZX-sxQ5hFegjDpgow1yEPqgL/view?usp=drive_link'></iframe>";
+        document.getElementById("body").innerHTML ="<div><iframe src='https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview'></iframe></drive>";
         document.getElementById("body").style = "background-color:red";
     }    
 </script>
+
+
 </body>
 </html>
 [1:35 AM, 8/17/2023] hammahsel: https://www.google.com/url?sa=t&source=web&rct=j&url=https://www.cairn.info/l-ecriture-de-l-histoire-en-afrique--9782811109370-page-303.htm&ved=2ahUKEwicjJjHguv5AhVn57sIHd6-DD44FBAWegQIBBAB&usg=AOvVaw3JeLpURVkCW5YrOoCYPUl6

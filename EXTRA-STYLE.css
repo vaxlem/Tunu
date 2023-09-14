@@ -314,6 +314,14 @@ h1 a{
     text-transform: uppercase;
 }
 
+/* pdf style     */
+
+/* Default styles for the iframe */
+iframe {
+    width: 100%; /* 100% width for responsiveness */
+    height: 600px; /* Default height */
+}
+
 @media screen  and (max-width: 600px){
     
     .imgKeta{
@@ -431,4 +439,12 @@ h1 a{
     #menu ul li .fa{
         padding-left: 15px;
     }
+
+/* pdf style */
+iframe {
+    /* height: auto;  */
+    height: 800px;
+    /* Auto-adjust height to maintain aspect ratio */
+}
+
 }
