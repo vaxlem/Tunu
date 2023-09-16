@@ -1,5 +1,5 @@
 
-const password = "hermon";
+const password = "lakle";
 
 function checkPassword() {
   const enteredPassword = document.getElementById("passwordField").value;
