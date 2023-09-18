@@ -1,0 +1,226 @@
+
+* {
+  box-sizing: border-box;
+}
+h4{color: rgba(0, 128, 0, 0.734);}
+    
+    /* tunu logo */
+    .logo{
+        height: 45px;
+        width: 100px;
+        margin: 0 10px 10px 1px;
+        border-radius: 10px;
+        padding: auto 10px;
+    }
+    .navbar-brand {
+      display: inline-block;
+      padding-left: 1rem;
+      padding-top: 0.3125rem;
+      padding-bottom: 0.3125rem;
+      margin-right: 1rem;
+      font-size: 1.25rem;
+      line-height: inherit;
+      white-space: nowrap;
+    }
+    
+    .navbar-brand:hover, .navbar-brand:focus {
+      text-decoration:overline;
+    }
+   /* tunu map  */
+    .tunumap:hover{
+  text-transform: uppercase;
+  color: blueviolet;
+  transition: linear ease 30s;
+}
+    
+    /* buttons floating */
+    #navLink, #navLink ul li{
+      float: right;
+      list-style-type:none;
+    }
+    #activity{
+      float: left;
+    }
+    
+    .clear{
+      clear: both;
+      display: table;
+    
+    }
+/* end of nav deta */
+        /* #clan1 {
+            width: auto;
+            text-align: center;
+            background-color: green;
+        }
+    */
+img {
+  width: 100%;
+  height: auto;
+}
+
+.row:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  width: 100%;
+}
+
+    /* If the screen size is 600px wide or less, modify the arrow direction */
+    @media only screen and (max-width: 600px) {
+      .menu ul li {
+        position: relative;
+      }
+
+      .menu ul li i.fa-arrow-right {
+        display: none;
+      }
+
+      .menu ul li i.fa-arrow-down {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        padding-right: 10px;
+        transform: translateY(-50%);
+      }
+    }
+
+   
+    
+  
+
+@media only screen and (min-width: 600px) {
+/* Hide the arrow down icon when screen width is above 600px */
+ .menu ul li i.fa-arrow-down {
+        display: none;
+      }
+ .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  background-color: #9933cc;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.menu li {
+  cursor: pointer;
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color :#33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.footer {
+  /* background-color: #0099cc; */
+  background-color: black;
+  color: #ffffffb4;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+
+}
+/* footter i */
+.footer .i{
+    padding: 10px;
+}
+
+
+/* the added css */
+
+.Men12{
+    margin: auto 10px ;
+    text-align: center;
+}
+.Men12 h1, h2, h3,a{
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.Men12 p{
+    text-align: justify;;
+}
+button{
+    border: 1px solid red;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+}
+ /* end of added css */
+
+ /* iframe */
+ /* Default styles for the iframe */
+ iframe {
+     width: 100%; /* 100% width for responsiveness */
+     height: 600px; /* Default height */
+ }
+
+ /* Media query for screens with a maximum width of 600px */
+ @media (max-width: 600px) {
+     iframe {
+         /* height: auto;  */
+         height: 600px;
+         /* Auto-adjust height to maintain aspect ratio */
+     }
+ }
+/* end of iframe */
+
+.textAlign li{
+    text-align-last: left;
+}
+
+

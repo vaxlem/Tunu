@@ -78,10 +78,10 @@
 
 </head>
 <body>
-
+<div id="frenchBody">
   <!-- Password prompt -->
   <div id="passwordPrompt" style="text-align: center;">
-    <h1>Answer the Question</h1><br> <h3>The full name of Lakle is '<i>TAY LAKLE EHA</i>'</h3> <br><p><ol style="list-style-type: upper-alpha; margin-right: 160px;"><li style="padding-right: 0px;">true</li>
+    <h1>Answer the Question</h1><button id="french">Francais</button><br> <h3>The full name of Lakle is '<i>TAY LAKLE EHA</i>'</h3> <br><p><ol style="list-style-type: upper-alpha; margin-right: 160px;"><li style="padding-right: 0px;">true</li>
     <li style="padding-right: 0px;">false</li></ol></p>
     <label for="passwordField">Enter correct Answer as password: </label>
     <div style="position: relative;">
@@ -110,7 +110,7 @@
 <!-- tooltip hover  -->
 <div class="tooltip">
 
-  <area  onclick="alert('you will see my child here')" shape="rect" coords="34,80,100,250" alt="phil" href=".//images/1.PNG">
+  <area  onclick="alert('you will see my child here')" shape="rect" coords="34,80,100,250" alt="phil" href=".//images/oldboy1.jpg">
   <span class="tooltiptext">click there and see my child or click top corner and see myself</span>
 </div>
 <div class="tooltip">
@@ -121,12 +121,12 @@
   <area shape="circle" coords="337,300,44" alt="Fuseini" href="./image/PAWPAW.jpg">
 </map>
     </a> 
-    <div style="padding:1rem; text-align: justify; font-family:Impact, 'Haettenschweiler', Arial Narrow Bold, sans-serif ;">Date of birth: 1940s. <br> He's a humble man <br> Father: Kpobi Tettey <br>Mother: Atoeshie from Hatorgodo. <br>He started school at Detsikui **** <br> <br> He serves on the throne of the GrandFathers as a Chisf-Prist at Nyegbla palace, Anloga. Where he perform inatallation rights to Awoamefia and other kings in same manner his predecessors/Ancestors did. <br> <br>He is the eldest of his parents and has 6 parternal siblings. But Torgbi was the only son of his mother with KPOBI his father He however, had 8 step siblings from his mother. <br> <br>This legend has given birth to 8 children.</div> </div>
+    <div style="padding:1rem; text-align: justify; font-family:Impact, 'Haettenschweiler', Arial Narrow Bold, sans-serif ;">Date of birth: 1940s. <br> He's a humble man <br> Father: Kpobi Tettey <br>Mother: Atoeshie Ablordevor from Atito. <br>He started school at Atito **** <br> <br> He serves on the throne of the GrandFathers as a <a href="./images/oldboy3.jpg">Chief-Prist</a> at Nyegbla palace, Anloga. Where he perform <a href="./images/oldboy1.jpg">inatallation rights</a> to <a href="#">Awoamefia and other kings</a> in same manner his predecessors/Ancestors did. <br> <br>He is the eldest of his parents and has 6 parternal siblings. But Torgbi was the only son of his mother with KPOBI, his father. He however, had 8 step siblings from his mother. <br> <br>This legend has given birth to 8 children.</div> </div>
 
   
   </div>
 
-
+</div>
 <!-- the script -->
   <script>
     const password = "A";
@@ -165,6 +165,30 @@
       }
     });
   </script>
+<!-- french script -->
+<script>
+  document.getElementById("french").onclick = function(){
+    document.getElementById("frenchBody").innerHTML = "<div id='passwordPrompt' style='text-align: center;'><h1>Answer the Question</h1>"+
+  "<a href='./aboutPASWORD.html'><button id= '#'>English</button></a><br>"+
+"<h3>The full name of Lakle is '<i>TAY LAKLE EHA</i>'</h3>"+
+"<br><p><ol style='list-style-type: upper-alpha; margin-right: 160px;'><li style='padding-right: 0px;'>true</li><li style='padding-right: 0px;'>false</li></ol></p>"+
+"<label for='passwordField'>Enter correct Answer as password: </label>"+
+"<div style='position: relative;'><input type='password' placeholder='A or B' id='passwordField' style='padding:1px 5px;'><span class='togglePassword' onclick='togglePasswordVisibility()'><i class='fas fa-eye'></i></span></div>"+
+"<button onclick='checkPassword()'> Submit </button>"+
+"<p id='passwordError' style='display: none; color: red;'>Incorrect password. Try again.</p>"+
+<div id='mainContent" style="display: none; text-align: center;'>
+"<h1>A  strong Man </h1>"+
+"<p>The life Story</p>"+
+"<div class='col col-sm-7' style='background-color: #eb0a6f; margin: 1rem auto; padding: 2rem 0rem ; overflow-y: visible; width: 280px;'><a href='oldboy.jpg'><img src='./images/oldboy.jpg' alt='Torgbi Ashiapim Kubi Eha II' usemap='#myChildren' style='width: 260px; height: auto; position: relative;left: 0.1rem; padding-bottom:3rem;><map name='myChildren'><div class='tooltip'><area  onclick='alert('you will see my child here') shape='rect' coords='34,80,100,250' alt='phil' href='.//images/oldboy1.jpg'><span class='tooltiptext'>click there and see my child or click top corner and see myself</span></div>"+
+"<div class='tooltip'><area onclick='alert('you will see my child here')'shape='rect' coords='39,80,105,250' alt='hermon' href='./image/PAWPAW.jpg'><span class='tooltiptext'> top corner and see myself</span></div>"+
+"<area shape='rect' coords='290,172,333,250' alt='Mamma' href='./image/ORANGE.jpg'><area shape='circle' coords='337,300,44' alt='Fuseini' href='./image/PAWPAW.jpg'></map></a>"+
+"<div style='padding:1rem; text-align: justify; font-family:Impact, 'Haettenschweiler', Arial Narrow Bold, sans-serif ;'>Date of birth: 1940s. <br> He's a humble man <br> Father: Kpobi Tettey <br>Mother: Atoeshie Ablordevor from Atito. <br>He started school at Atito **** <br> <br> He serves on the throne of the GrandFathers as a <a href='./images/oldboy3.jpg'>Chief-Prist</a> at Nyegbla palace, Anloga. Where he perform <a href='./images/oldboy1.jpg'>inatallation rights</a> to <a href='#'>Awoamefia and other kings</a> in same manner his predecessors/Ancestors did. <br> <br>He is the eldest of his parents and has 6 parternal siblings. But Torgbi was the only son of his mother with KPOBI, his father. He however, had 8 step siblings from his mother. <br> <br>This legend has given birth to 8 children.</div><div></div>";
+document.getElementById("frenchBody").style = "width:auto";
+  document.getElementById("frenchBody").style = "text-align:center";
+  document.getElementById("frenchBody").style = "background-color:#3bcc";
 
+
+  }
+</script>
 </body>
 </html>
