@@ -373,7 +373,7 @@
 </div>
     <!-- 3rd btn adds -->
   <!-- audio speech with txt2read speech script   -->
-    <script>
+    <!-- <script>
         var speech = new SpeechSynthesisUtterance();
         var isPaused = false;
         var audioElement = document.getElementById("audioElement");
@@ -407,7 +407,7 @@
             audioElement.currentTime = 0;
             isPaused = false;
         }
-    </script> 
+    </script>  -->
     
     <!-- style.css  carousel-->
     <script>
@@ -606,6 +606,44 @@ document.getElementById("school").onclick = function() {
         // Rest of your code...
     }
     </script> -->
+
+    <!-- TRY AGAIN -->
+    <script>
+        var speech = new SpeechSynthesisUtterance();
+        var isPaused = false;
+        var audioElement = document.getElementById("audioElement");
+        
+        function speakText() {
+            var text = document.getElementById("textToRead").innerHTML;
+            speech.text = text;
+            
+            if (isPaused) {
+                window.speechSynthesis.resume();
+                isPaused = false;
+            } else {
+                window.speechSynthesis.speak(speech);
+            }
+            
+            audioElement.play();
+        }
+        
+        function pauseSpeech() {
+            if (window.speechSynthesis.speaking) {
+                window.speechSynthesis.pause();
+                isPaused = true;
+            }
+            
+            audioElement.pause();
+        }
+        
+        function stopSpeech() {
+            window.speechSynthesis.cancel();
+            audioElement.pause();
+            audioElement.currentTime = 0;
+            isPaused = false;
+        }
+    </script>
+
 </body>
 </html>
  

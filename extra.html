@@ -83,9 +83,9 @@
         <div id="leftsidebar" class="sidebar">
             <h3>Go to:</h3>
             <ul>
-                <li id="clan1"> <a href="https://web.facebook.com/photo/?fbid=405108141444881&set=pb.100064288052258.-2207520000">NAMES THAT IDENTIFY US</a></li>
+                <li id="names"> <a href="https://web.facebook.com/photo/?fbid=405108141444881&set=pb.100064288052258.-2207520000">NAMES THAT IDENTIFY US</a></li>
                 <li id="sites"> <a href="#">WHERE WILL YOU VISIT?</a></li>
-                <li id="names"> <a href="#">WHAT'S YOUR CLAN?</a></li><BR></BR>
+                <li id="clan1"> <a href="#">WHAT'S YOUR CLAN?</a></li><BR></BR>
                <li> <a href="./historyPDF.html">more <i class="fa fa-hand-right" aria-hidden="true"></i></a></li>
                  <!-- <li> <a href="#">level 8-JHS Lessons</a></li>
                 <li> <a href="#">level 9-JHS Lessons</a></li><BR></BR>
@@ -135,11 +135,12 @@
 
  <!-- script    -->
  <script>
-    document.getElementById("clan").onclick = function(){
-        document.getElementById("clan1").innerHTML = "<h2 style='text-align:left; padding:5px;'>Our clan is <b> BLU</b> and or <b>DZEVIE</b> <br> Some are identified as BLU-DZEVIE(<i>base on a reason</i>)</h2>"+"<BR><p>see other clans of Anlo</p>"+"<iframe src='https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/preview'></iframe>" ;
-        document.getElementById("clan1").style = "width:auto";
-        document.getElementById("clan1").style = "text-align:center";
-        document.getElementById("clan1").style = "background-color:green";
+    document.getElementById("name").onclick = function(){
+        document.getElementById("names").innerHTML = "<a href='https://web.facebook.com/photo/?fbid=405108141444881&set=pb.100064288052258.-2207520000'>NAMES THAT IDENTIFY US</a>"+
+                                                     "<iframe src='https://drive.google.com/file/d/1yaZRkTeI01a7pt1TH8BPJpSL6kKmJFY6/preview'width='100%' height='auto'></iframe>";
+        document.getElementById("names").style = "width:auto";
+        document.getElementById("names").style = "text-align:center";
+        document.getElementById("names").style = "background-color:yellow";
 
 
 
@@ -155,11 +156,11 @@
     }
 
     // names
-    document.getElementById("name").onclick = function(){
-        document.getElementById("names").innerHTML = "<iframe style='text-align:justify; width:100%; height:auto;' src='https://drive.google.com/file/d/1yaZRkTeI01a7pt1TH8BPJpSL6kKmJFY6/preview'width='640' height='480'></iframe>";
-        document.getElementById("names").style = "width:auto";
-        document.getElementById("names").style = "text-align:justify";
-        document.getElementById("names").style = "background-color:green";
+    document.getElementById("clan").onclick = function(){
+        document.getElementById("clan1").innerHTML = "<h2 style='text-align:left; padding:5px;'>Our clan is <b> BLU</b> and or <b>DZEVIE</b> <br> Some are identified as BLU-DZEVIE(<i>base on a reason</i>)</h2>"+"<BR><p>see other clans of Anlo</p>"+
+                                                     "<iframe src='https://drive.google.com/file/d/1yaZRkTeI01a7pt1TH8BPJpSL6kKmJFY6/preview'width='640' height='480'></iframe>";
+        document.getElementById("clan1").style = "text-align:justify";
+        document.getElementById("clan1").style = "background-color:green";
 
 
 
