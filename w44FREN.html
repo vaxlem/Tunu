@@ -378,7 +378,7 @@
                 <div>
           
                 </div>
-          </div></div>
+          </div></div></div>
     
     </div>
     <!-- scripts -->
@@ -390,10 +390,116 @@
             </span>
 
 
+ 
+    <!-- style.css  carousel-->
+        <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+        </script>
 
+<!-- full french -->
+        <script>
+            // full frenc
 
+            document.getElementById("school").onclick = function(){
+            document.getElementById("textToRead").innerHTML ="<h1> Tunu. </h1>" +
+                "<a href='./pauseResume.html'><button id='english' style='float: left; width: fit-content; height: fit-content; margin-top: 10px; padding: 5px;' class='btnalign but-theLand button' onclick='speak('zongo')'><i class='fa fa-language btn-align' aria-hidden='true'></i>ÉCOUTER EN <br>ANGLAISE</button></a>"+" <div class='clear'></div>"+
+                "<p>Selon les récits, le nom <u>Tunu</u> est une appellation inventée par ces hommes. Preku et Lakleh Tay, il y a plus de siècles.</p> <br> <br>"+                                                             "<hr>"+
+                "<h3>HISTOIRE COMPLÈTE.</h3>"+
+                "<P>Un jour, il y a très longtemps, un homme appelé Papa Preku est allé chasser des animaux sauvages à cet endroit. C'était un chasseur. Les animaux dérangeaient sur cette colline. Donc, Preku a été envoyé par son partenaire Lakleh pour partir en expédition de chasse. En y allant, il a posé son piège en fixant un fusil sur le chemin où les bêtes se déplacent ou passent quand elles errent. Après avoir réglé son fusil, il grimperait dans un arbre et, à l'aide d'une corde, il tirerait la gâchette du fusil qu'il avait posé sur le sol sur les animaux depuis le sommet de l'arbre. <br> Il compléterait ensuite la mise à mort en tirant d'autres fusils et munitions qu'il avait avec lui au sommet de l'arbre. En peu de temps, tous les animaux dangereux, y compris les lions, ne dérangeaient plus, ils étaient éliminés. Cette bravoure a étonné tous les autres chasseurs et les gens car ils ont essayé en vain et ils se demandent comment il a fait. Par conséquent, ils lui demanderaient comment il a fait. <br> Et fièrement, Preku dirait (' Afisia la, Etunue wonye.'). Pour dire, '<i>cet endroit, c'est une bouche d'un fusil. Quand on essaie, on meurt.</i>' <br>Cette renommée a naturellement donné naissance au nom célèbre <span class='tun'>Tunu.</span> <br> (à la bouche et au canon d'un fusil.)</P>"+
+                "<span class='bgcolor'><a href='./images/Shotgun-Parts-Pump.jpg'><img src='./images/Shotgun-Parts-Pump.jpg' class='muzzle' alt='muzzle'>"+
+                "<a href='./images/hunter3 istockphoto-1090782326-612x612.jpg'> <img src='./images/hunter3 istockphoto-1090782326-612x612.jpg' class='hunter' alt='expédition de chasse'></a></span> "+
+                "<div class='clear'></div><br>"+
+                "<h3>... PLUS D'INFORMATIONS.</h3>"+
+                "<p class='p'>Les habitants d'Ada et d'Anlo ont une relation inhabituelle. Cette connexion a contribué à donner naissance au terme <u>Tunu</u>. Selon les récits, les habitants d'Ada étaient des pêcheurs. Mais ce n'est pas tout ; ils faisaient aussi de l'agriculture et du commerce avec les habitants d'Anlo de l'autre côté de la rivière Volta. À un moment donné, plusieurs d'entre eux se sont lancés dans la récolte de vin de palme. Voici ce qui s'est passé. La région de collecte a été découverte par les dirigeants du clan Klevie, un clan d'Anlo. Cela s'étendait jusqu'à Fuveme (Azizanu) et jusqu'à Dzita et au-delà.</p>"+
+                "<br> Au fil du temps, les membres du clan Klevie ont donné des portions de la zone de collecte aux gens d'Ada et pendant un certain temps, ces résidents d'Ada ont planté des palmiers sur le site et ont utilisé pour récolter et brasser du vin à partir de la plantation de palmiers. <br>  Puis tout à coup, ils ont remarqué un vol de leur vin et ont accusé les gens du clan Klevi de voler leur vin.  En conséquence, ils ont utilisé leur divinité pour jeter un sort au clan Klevi. La situation est devenue tendue, donc, cela a pris un autre clan (<i class='p'>clan BATEH</i>) membres/anciens pour payer au nom du clan Klevi. Les gens de Klevie ont transféré la terre au clan Bateh à la suite de cette gentillesse du clan Bateh. Cet événement illustre comment les gens de Bateh contrôlent la zone de collecte. Plus tard, les animaux sauvages de la forêt ont posé problème, et lorsque cela est devenu important, la décision a été prise de les éliminer. Ainsi, un homme nommé <u>Agbahnyo</u> du peuple Bateh a sollicité le soutien de vaillants guerriers pour l'aider à exterminer les animaux sauvages. À ce stade, un chasseur de Srogboe-Wuti s'est approché et a proposé de faire le travail. <u class='p'>LAKLEH TAY EHA</u> était le nom de cet individu.</p><br>"+
+                " <h1 class='p'>Lakleh et les bêtes.</h1>"+
+                "<br><p>Immédiatement, Lakleh a envoyé son partenaire de chasse en la personne de Preku, dans la région pour entreprendre l'expédition. Preku a également accepté et est parti à l'aventure.</p> <br>"+
+                " <h1 class=''>Prehku.</h1>"+
+                "<p class='p'> <br> Lorsque Prehku est allé évaluer la région, lui et Lakleh ont conçu un plan de match qui a fonctionné. Après leur réussite, Agbanyo les a récompensés (les chasseurs) avec une part de la terre. Ils ont déménagé dans la zone en compagnie de Torgbui <u>Doe Sifu</u>. En raison du plan d'eau à proximité et pour pêcher, ils considèrent l'établissement comme un succès.</p><br> "+        "<h3 style='text-transform: uppercase;'>Compétences de Preku et le nom tunu.</h3>"+
+                "<a href='./pauseResume.html'><button id='english' style='float: left; width: fit-content; height: fit-content; margin-top: 10px; padding: 5px;' class='btnalign but-theLand button' onclick='speak('zongo')'><i class='fa fa-language btn-align' aria-hidden='true'></i>ÉCOUTER EN <br>FRANÇAIS</button></a>"+
+                " <div class='clear'></div>"+
+                "<div class='caro'>"+
+                "<div class='edit'><div class='container-fluid edit' style='width: 250px;margin: 16px 0 0 0;'><div class='row'><div class='col col-5 cardbody' style=' width:250px; margin: 0px;' ><div class='navbar' fixed'><h1 style='color:black; background-color: #b97d7da8;><span><i>notre</i></span>L<span><i>OCS</i></span> tunu</h1></div>"+
+                "<div class='slideshow-container edit' style='width: 250px; margin: 20px 0 0 0;'><div class='mySlides fade' style='width: 250px; margin: 20px 0 0 0;'><img src='./images/hunterNative2 istockphoto-537438421-612x612.jpg' alt='Company 5></div>"+
+                "<div class='mySlides fade' style='width: 250px; margin: 20px 0 0 0;'><img src='./images/hunter2 istockphoto-509234826-612x612.jpg' alt='Company 5'></div>"+
+                "<div class='mySlides fade' style='width: 250px; margin: 20px 0 0 0;'><img src='./images/hunter.jpg' alt='Company 1'></div>"+
+                "<div class='mySlides fade' style='width: 250px; margin: 20px 0 0 0;'><img src='./image/tunu mapcarta2.PNG' alt='Company 2'></div>"+
+                "<div class='mySlides fade' style='width: 250px; margin: 20px 0 0 0;'></div>"+
+                "<a href='./images/tunuhomes5.PNG'><img src='./images/tunuhomes5.PNG' alt='Company 4'></a></div>"+
+                "<br><div style='text-align:center'><span class='dot'></span><span class='dot'></span><span class='dot'></span><span class='dot'></span><span class='dot'></span><span class='dot'></span></div>"+
+                "<div class='footer'> Informations de contact <br><a href='mailto:tutulandofriches'><i class='social-icon fa fa-envelope i fa-1x' alt='e-mail'></i></a><a href='https://www.facebook.com/profile.php?id=100095491724789'><i class='i social-icon fa fa-facebook fa-1x' alt='fbook'></i></a><a href='#'><i class='i social-icon fa fa-twitter fa-1x' alt='twitter'></i></a><a href='http://www.linkedin.com/in/tunu-tunu-023b26288'><i class='i social-icon fa fa-linkedin fa-1x'></i></a><a href='#'><i class='i social-icon fa fa-instagram fa-1x '></i></a><p style='padding: 1.2rem; text-align: center;'>© - 2023 - Tous <br>Droits Réservés.</p></div>"+
+                "<div></div></div></div></div></div>"+
+                "<a href='./pauseResume.html'><button id='english' style='float: left; width: fit-content; height: fit-content; margin-top: 10px; padding: 5px;' class='btnalign but-theLand button' onclick='speak('zongo')'><i class='fa fa-language btn-align' aria-hidden='true'></i>LISTEN IN <br>ENGLISH</button></a>"+
+                " <div class='clear'></div>";
+            document.getElementById("textToRead").style = "width:auto";
+            document.getElementById("textToRead").style = "text-align:center";
+            document.getElementById("textToRead").style = "background-color:#3bcc";
+        }
+        </script>
+<!-- // end of the french -->
+        <script>
 
+        document.getElementById("schoolbutton").onclick = function(){        
+                document.getElementById("textToRead").innerHTML ="<h1> Tunu. </h1>" +
+                "<a href='./pauseResume.html'><button id='english' style='float: left; width: fit-content; height: fit-content; margin-top: 10px; padding: 5px;' class='btnalign but-theLand button' onclick='speak('zongo')'><i class='fa fa-language btn-align' aria-hidden='true'></i>ÉCOUTER EN <br>ANGLAISE</button></a>"+" <div class='clear'></div>"+
+                "<p>Selon les récits, le nom <u>Tunu</u> est une appellation inventée par ces hommes. Preku et Lakleh Tay, il y a plus de siècles.</p> <br> <br>"+                                                             "<hr>"+
+                "<h3>HISTOIRE COMPLÈTE.</h3>"+
+                                                            "<P>One day in a very long time, a man called Papa Preku went to hunt wild animals in the place. He was a hunter. The animals were disturbing on this hill. So Preku was sent by his partner Lakleh to go on the hunting expedition. Upon going, he set his trap by fixing a gun on the pathway where the beasts move on or pass when they are roaming. After setting his gun he would climb a tree and by means of a rope, he would pull the triger of the gun he set on the ground at the animals from the tree top . <br> He would then complete the killing by firing other riffles and amunitions he had with him at the top of the tree. In no time all the dangerous animals including lions were no longer disturbing, they were cleared off. This bravery amazed all other hunters and the people because they tried and failed and they wonder how he did it. Therefore, they would ask him how he did it. <br>And proudly, Preku would say (' Afisia la, Etunue wonye.'). To wit, '<i>this place, it is a muzzle of a Gun. When one tries one dies.</i>' <br>This fame naturally resulted in the Famous name <span class='tun'>Tunu.</span> <br> (at the barrel and muzzle of a gun.)</P>"+
+                                                            "<span class='bgcolor'><a href='./images/Shotgun-Parts-Pump.jpg'><img src='./images/Shotgun-Parts-Pump.jpg' class='muzzle' alt='muzzle'>"+
+                                                            "<a href='./images/hunter3 istockphoto-1090782326-612x612.jpg'> <img src='./images/hunter3 istockphoto-1090782326-612x612.jpg' class='hunter' alt='hunting expedition'></a></span> "+
+                                                            "<div class='clear'></div><br>"+
+                                                            "<h3>... MORE ABOUT.</h3>"+
+                                                            "<p class='p'>The residents of Ada and Anlo enjoy an unusual bond. This connection went a long way toward giving rise to the term <u>Tunu</u>. According to the narratives, the inhabitants of Ada were fishermen. But that's not all; they also farm and trade with the inhabitants of Anlo beyond the Volta River. At one point, several of them did engage in palm wine tapping. This is exactly what occurred. The catchment region was discovered by the leaders of the Klevie Clan, a clan in Anlo. This extended all the way to Fuveme (Azizanu) and all the way to Dzita and beyond.</p>"+
+                                                            "<br> Overtime, the Klevie members gave portions of the catchment area to the folks from Ada and for some period, these Ada residents planted palm trees on the site and used to tap and brew wine from the palm plantation. <br>  Then all of a sudden , they noticed a theft of their wine and accused the Klevi people of stealing their wine.  As a result, they used their deity to cast a spell on the Klevi clan. The matter become hot, so therefore, it took another clan (<i class='p'>BATEH CLAN</i>) members/elders to pay on behalf of the Klevi Clan. The Klevie people transferred the land to the Bateh clan as a result of this kindness from the Bateh clan. This occurrence illustrates how the Bateh people control the catchment region. Later, wild animals in the forest caused concern, and when this became significant, the decision was made to eliminate them. So a man named <u>Agbahnyo</u> from the Bateh tribe enlisted the support of valiant warriors to help him exterminate the wild animals. At this point, a hunter from Srogboe-Wuti approached and offered to do the job. <u class='p'>LAKLEH TAY EHA</u> was the name of this individual.</p><br>"+
+                                                            " <h1 class='p'>Lakleh and the beasts.</h1>"+
+                                                            "<br><p>Immediately, Lakleh sent his hunting partner in the person of Preku, to the area to undertake the expedition. Preku also agreed and went on this adventure.</p> <br>"+
+                                                            " <h1 class=''>Prehku.</h1>"+
+                                                            "<p class='p'> <br> When Prehku went to assess the region, he and Lakleh devised a game plan that worked. After their achievement, Agbanyo rewarded them (the hunters) with a share of the land. They relocated to the area in the company of Torgbui <u>Doe Sifu</u>.   Because of the body of water nearby, and in order to fish, they consider the setlement a success.</p><br> "+
+                                                            "<h3 style='text-transform: uppercase;'>preku's skills and the Name tunu.</h3>"+
+                                                            "<a href='./pauseResume.html'><button id='english' style='float: left; width: fit-content; height: fit-content; margin-top: 10px; padding: 5px;' class='btnalign but-theLand button' onclick='speak('zongo')'><i class='fa fa-language btn-align' aria-hidden='true'></i>HEAR IN <br>ENGLISH</button></a>"+
+                                                            " <div class='clear'></div>"+
+                                                            "<div class='caro'>"+
+                                                            "<div class='edit'><div class='container-fluid edit' style='width: 250px;margin: 16px 0 0 0;'><div class='row'><div class='col col-5 cardbody' style=' width:250px; margin: 0px;' ><div class='navbar' fixed'><h1 style='color:black; background-color: #b97d7da8;><span><i>our</i></span>L<span><i>OCS</i></span> tunu</h1></div>"+
+                                                            "<div class='slideshow-container edit' style='width: 250px; margin: 20px 0 0 0;'><div class='mySlides fade' style='width: 250px; margin: 20px 0 0 0;'><img src='./images/hunterNative2 istockphoto-537438421-612x612.jpg' alt='Company 5></div>"+
+                                                            "<div class='mySlides fade' style='width: 250px; margin: 20px 0 0 0;'><img src='./images/hunter2 istockphoto-509234826-612x612.jpg' alt='Company 5'></div>"+
+                                                            "<div class='mySlides fade' style='width: 250px; margin: 20px 0 0 0;'><img src='./images/hunter.jpg' alt='Company 1'></div>"+
+                                                            "<div class='mySlides fade' style='width: 250px; margin: 20px 0 0 0;'><img src='./image/tunu mapcarta2.PNG' alt='Company 2'></div>"+
+                                                            "<div class='mySlides fade' style='width: 250px; margin: 20px 0 0 0;'></div>"+
+                                                            "<a href='./images/tunuhomes5.PNG'><img src='./images/tunuhomes5.PNG' alt='Company 4'></a></div>"+
+                                                            "<br><div style='text-align:center'><span class='dot'></span><span class='dot'></span><span class='dot'></span><span class='dot'></span><span class='dot'></span><span class='dot'></span></div>"+
+                                                            "<div class='footer'> Contact Information <br><a href='mailto:tutulandofriches'><i class='social-icon fa fa-envelope i fa-1x' alt='e-mail'></i></a><a href='https://www.facebook.com/profile.php?id=100095491724789'><i class='i social-icon fa fa-facebook fa-1x' alt='fbook'></i></a><a href='#'><i class='i social-icon fa fa-twitter fa-1x' alt='twitter'></i></a><a href='http://www.linkedin.com/in/tunu-tunu-023b26288'><i class='i social-icon fa fa-linkedin fa-1x'></i></a><a href='#'><i class='i social-icon fa fa-instagram fa-1x '></i></a><p style='padding: 1.2rem; text-align: center;'>© - 2023 - All <br>Rights Reserved.</p></div>"+
+                                                            "<div></div></div></div></div></div></div>"+
+                                                            "<a href='./pauseResume.html'><button id='english' style='float: left; width: fit-content; height: fit-content; margin-top: 10px; padding: 5px;' class='btnalign but-theLand button' onclick='speak('zongo')'><i class='fa fa-language btn-align' aria-hidden='true'></i>HEAR IN <br>ENGLISH</button></a>"+
+                                                            " <div class='clear'></div>";
+            document.getElementById("textToRead").style = "width:auto";
+            document.getElementById("textToRead").style = "text-align:center";
+            document.getElementById("textToRead").style = "background-color:#3bcc";
 
+        }
+
+        </script>
+
+<!-- english changes -->
+
+<!-- the old tts -->
 
 
   <script>
@@ -432,5 +538,45 @@
       isPaused = false;
     }
   </script>
+
+
+
+    <!-- TRY AGAIN this seems to place order 2divs added. 3 buttns misssen--> 
+    <script>
+        var speech = new SpeechSynthesisUtterance();
+        var isPaused = false;
+        var audioElement = document.getElementById("audioElement");
+        
+        function speakText() {
+            var text = document.getElementById("textToRead").innerHTML;
+            speech.text = text;
+            
+            if (isPaused) {
+                window.speechSynthesis.resume();
+                isPaused = false;
+            } else {
+                window.speechSynthesis.speak(speech);
+            }
+            
+            audioElement.play();
+        }
+        
+        function pauseSpeech() {
+            if (window.speechSynthesis.speaking) {
+                window.speechSynthesis.pause();
+                isPaused = true;
+            }
+            
+            audioElement.pause();
+        }
+        
+        function stopSpeech() {
+            window.speechSynthesis.cancel();
+            audioElement.pause();
+            audioElement.currentTime = 0;
+            isPaused = false;
+        }
+    </script>
+
 </body>
 </html>
