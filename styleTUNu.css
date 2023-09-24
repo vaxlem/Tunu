@@ -212,7 +212,7 @@ button {
     scrollbar-gutter:initial;
     scroll-behavior:smooth;
     overflow-y:scroll ;
-    height:10rem ;
+    height:15rem ;
     background-image: -webkit-linear-gradient(top, rgb(26, 18, 249),black );
     -moz-background-image: linear-gradient(top, rgb(91, 18, 249), black );
     -ms-background-image: linear-gradient(top, rgb(95, 18, 249), black );
