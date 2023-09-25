@@ -15,11 +15,14 @@
   gtag('config', 'G-F02K9DJ88C');
 </script>
 
+
+<!-- french to open  -->
+
 </head>
 <body>
-  <nav class="nav navbar-nav"><div class="frenchButton"><button id="frenchButton"><i class="fa fa-language fa-2x" aria-hidden="true">Listen in French</i> </button></div></nav>
+   <div id="frenchButton1" tyle="background-color: green;">
+ <nav class="nav navbar-nav"><div class="frenchButton"><button id="frenchButton" ><i class="fa fa-language fa-2x" aria-hidden="true">Listen in French</i> </button></div></nav>
 <!-- the cont6ainer to switch -->
-  <div id="frenchButton1" tyle="background-color: green;">
   <div class="Men12">
 
         <h1>the 12 MEN OF ADA</h1>
@@ -258,6 +261,7 @@ pdfjsLib.getDocument(pdfUrl).promise.then(function(pdfDoc) {
 </div>
 
 </div>
+
  <!-- script    -->
  <script>
     document.getElementById("school").onclick = function(){
@@ -337,7 +341,11 @@ pdfjsLib.getDocument(pdfUrl).promise.then(function(pdfDoc) {
     }  
  </script>
 
-
+<script>
+  document.getElementById("frenchButton").onclick = function (){
+            document.getElementById("frenchButton1").innerHTML = "apple";
+  }
+</script>
 </body>
 </html>
 

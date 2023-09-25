@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simultaneous Actions</title>
+</head>
+<body>
+
+<nav class="nav navbar-nav">
+    <div class="frenchButton">
+        <button id="frenchButton">
+            <i class="fa fa-language fa-2x" aria-hidden="true">Listen in French</i>
+        </button>
+    </div>
+</nav>
+
+<script>
+    // Function to change inner HTML and read text simultaneously
+    function changeInnerHTMLAndReadText() {
+        // Select the button element
+        const buttonElement = document.getElementById('frenchButton');
+
+        // Change the inner HTML
+        buttonElement.innerHTML = 'New HTML content';
+
+        // Read the text in the button
+        const buttonText = buttonElement.innerText;
+        console.log('Text in button:', buttonText);
+    }
+
+    // Call the function to perform the actions simultaneously
+    changeInnerHTMLAndReadText();
+</script>
+
+</body>
+</html>
