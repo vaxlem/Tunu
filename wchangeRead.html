@@ -13,22 +13,116 @@
     </div>
 </nav>
 
+<div id="frenchButton1">Initial content</div>
+
 <script>
-    // Function to change inner HTML and read text simultaneously
-    function changeInnerHTMLAndReadText() {
-        // Select the button element
-        const buttonElement = document.getElementById('frenchButton');
+    // Function to change inner HTML of frenchButton1 when frenchButton is clicked
+    function changeFrenchButton1HTML() {
+        // Select the frenchButton1 element
+        const frenchButton1Element = document.getElementById('frenchButton1');
 
-        // Change the inner HTML
-        buttonElement.innerHTML = 'New HTML content';
+        // Store the initial content
+        const initialContent = frenchButton1Element.innerHTML;
 
-        // Read the text in the button
-        const buttonText = buttonElement.innerText;
-        console.log('Text in button:', buttonText);
+        // Change the inner HTML of frenchButton1
+        frenchButton1Element.innerHTML = 'New HTML content for frenchButton1';
+
+        // Read the changed inner HTML
+        const changedContent = frenchButton1Element.innerHTML;
+
+        console.log('Initial content:', initialContent);
+        console.log('Changed content:', changedContent);
+
+        // Read the changed content aloud using text-to-speech
+        readTextAloud(changedContent);
     }
 
-    // Call the function to perform the actions simultaneously
-    changeInnerHTMLAndReadText();
+    // Function to read text aloud using text-to-speech
+    function readTextAloud(text) {
+        const speechSynthesis = window.speechSynthesis;
+
+        // Create a new speech synthesis utterance
+        const utterance = new SpeechSynthesisUtterance(text);
+
+        // Use the default speech synthesis voice
+        utterance.voice = speechSynthesis.getVoices()[0];
+
+        // Speak the text
+        speechSynthesis.speak(utterance);
+    }
+
+    // Add an event listener to the frenchButton to trigger the action when clicked
+    const frenchButtonElement = document.getElementById('frenchButton');
+    frenchButtonElement.addEventListener('click', changeFrenchButton1HTML);
+</script>
+
+</body>
+</html>
+
+
+
+french
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simultaneous Actions</title>
+</head>
+<body>
+
+<nav class="nav navbar-nav">
+    <div class="frenchButton">
+        <button id="frenchButton">
+            <i class="fa fa-language fa-2x" aria-hidden="true">Listen in French</i>
+        </button>
+    </div>
+</nav>
+
+<div id="frenchButton1">Initial content</div>
+
+<script>
+    // Function to change inner HTML of frenchButton1 when frenchButton is clicked
+    function changeFrenchButton1HTML() {
+        // Select the frenchButton1 element
+        const frenchButton1Element = document.getElementById('frenchButton1');
+
+        // Store the initial content
+        const initialContent = frenchButton1Element.innerHTML;
+
+        // Change the inner HTML of frenchButton1
+        frenchButton1Element.innerHTML = 'Nouveau contenu HTML pour frenchButton1';
+
+        // Read the changed inner HTML
+        const changedContent = frenchButton1Element.innerHTML;
+
+        console.log('Initial content:', initialContent);
+        console.log('Changed content:', changedContent);
+
+        // Read the changed content aloud in French
+        readTextAloud(changedContent, 'fr-FR');
+    }
+
+    // Function to read text aloud using text-to-speech
+    function readTextAloud(text, lang) {
+        const speechSynthesis = window.speechSynthesis;
+
+        // Create a new speech synthesis utterance
+        const utterance = new SpeechSynthesisUtterance(text);
+
+        // Set the language for the utterance
+        utterance.lang = lang;
+
+        // Use the default speech synthesis voice
+        utterance.voice = speechSynthesis.getVoices().find(voice => voice.lang === lang);
+
+        // Speak the text
+        speechSynthesis.speak(utterance);
+    }
+
+    // Add an event listener to the frenchButton to trigger the action when clicked
+    const frenchButtonElement = document.getElementById('frenchButton');
+    frenchButtonElement.addEventListener('click', changeFrenchButton1HTML);
 </script>
 
 </body>

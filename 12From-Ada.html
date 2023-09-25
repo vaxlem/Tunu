@@ -21,8 +21,16 @@
 </head>
 <body>
    <div id="frenchButton1" tyle="background-color: green;">
- <nav class="nav navbar-nav"><div class="frenchButton"><button id="frenchButton" ><i class="fa fa-language fa-2x" aria-hidden="true">Listen in French</i> </button></div></nav>
-<!-- the cont6ainer to switch -->
+    <nav class="nav navbar-nav">
+      <div class="frenchButton">
+          <button id="frenchButton">
+              <i class="fa fa-language fa-2x" aria-hidden="true">Listen in French</i>
+          </button>
+      </div>
+  </nav>
+  
+  <!-- <div id="frenchButton1">Initial content</div> -->
+  <!-- the cont6ainer to switch -->
   <div class="Men12">
 
         <h1>the 12 MEN OF ADA</h1>
@@ -341,11 +349,58 @@ pdfjsLib.getDocument(pdfUrl).promise.then(function(pdfDoc) {
     }  
  </script>
 
-<script>
+<!-- <script>
   document.getElementById("frenchButton").onclick = function (){
             document.getElementById("frenchButton1").innerHTML = "apple";
   }
+</script> -->
+
+
+<!-- change and read french -->
+<script>
+  // Function to change inner HTML of frenchButton1 when frenchButton is clicked
+  function changeFrenchButton1HTML() {
+      // Select the frenchButton1 element
+      const frenchButton1Element = document.getElementById('frenchButton1');
+
+      // Store the initial content
+      const initialContent = frenchButton1Element.innerHTML;
+
+      // Change the inner HTML of frenchButton1
+      frenchButton1Element.innerHTML = 'Nouveau contenu HTML pour frenchButton1';
+
+      // Read the changed inner HTML
+      const changedContent = frenchButton1Element.innerHTML;
+
+      console.log('Initial content:', initialContent);
+      console.log('Changed content:', changedContent);
+
+      // Read the changed content aloud in French
+      readTextAloud(changedContent, 'fr-FR');
+  }
+
+  // Function to read text aloud using text-to-speech
+  function readTextAloud(text, lang) {
+      const speechSynthesis = window.speechSynthesis;
+
+      // Create a new speech synthesis utterance
+      const utterance = new SpeechSynthesisUtterance(text);
+
+      // Set the language for the utterance
+      utterance.lang = lang;
+
+      // Use the default speech synthesis voice
+      utterance.voice = speechSynthesis.getVoices().find(voice => voice.lang === lang);
+
+      // Speak the text
+      speechSynthesis.speak(utterance);
+  }
+
+  // Add an event listener to the frenchButton to trigger the action when clicked
+  const frenchButtonElement = document.getElementById('frenchButton');
+  frenchButtonElement.addEventListener('click', changeFrenchButton1HTML);
 </script>
+
 </body>
 </html>
 
