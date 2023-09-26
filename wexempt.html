@@ -1,5 +1,3 @@
-play pause button added
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,16 +10,23 @@ play pause button added
         <button id="frenchButton">
             <i class="fa fa-language fa-2x" aria-hidden="true">Listen in French</i>
         </button>
+        <button id="pauseButton" style="display: none;">
+            Pause
+        </button>
+        <button id="resumeButton" style="display: none;">
+            Resume
+        </button>
+        <button id="stopButton" style="display: none;">
+            Stop
+        </button>
     </div>
 </nav>
 
 <div id="frenchButton1">Initial content</div>
 
-<button onclick="pausePlayback()">Pause</button>
-<button onclick="resumePlayback()">Resume</button>
-
 <script>
-    let utterance;  // Variable to store the speech synthesis utterance
+    let utterance; // Variable to store the speech synthesis utterance
+    let isPaused = false;
 
     // Function to change inner HTML of frenchButton1 when frenchButton is clicked
     function changeFrenchButton1HTML() {
@@ -32,7 +37,7 @@ play pause button added
         const initialContent = frenchButton1Element.innerHTML;
 
         // Change the inner HTML of frenchButton1
-        frenchButton1Element.innerHTML = 'Nouveau contenu HTML pour frenchButton1';
+        frenchButton1Element.innerHTML = 'Nouveau contenu HTML pour frenchButton1 kofi is avery good bicycle rider';
 
         // Read the changed inner HTML
         const changedContent = frenchButton1Element.innerHTML;
@@ -41,12 +46,15 @@ play pause button added
         console.log('Changed content:', changedContent);
 
         // Read the changed content aloud in French
-        readTextAloud(changedContent, 'fr-FR');
+        speakAloud(changedContent, 'fr-FR');
     }
 
     // Function to read text aloud using text-to-speech
-    function readTextAloud(text, lang) {
+    function speakAloud(text, lang) {
         const speechSynthesis = window.speechSynthesis;
+
+        // Cancel any existing speech synthesis
+        cancelSpeech();
 
         // Create a new speech synthesis utterance
         utterance = new SpeechSynthesisUtterance(text);
@@ -57,29 +65,81 @@ play pause button added
         // Use the default speech synthesis voice
         utterance.voice = speechSynthesis.getVoices().find(voice => voice.lang === lang);
 
+        // Event listener for when the speech is paused
+        utterance.onpause = function(event) {
+            console.log('Speech paused at', event.elapsedTime);
+            isPaused = true;
+        }
+
+        // Event listener for when the speech is resumed
+        utterance.onresume = function() {
+            console.log('Speech resumed');
+            isPaused = false;
+        }
+
         // Speak the text
         speechSynthesis.speak(utterance);
+
+        // Show the pause button and hide the listen button
+        document.getElementById('frenchButton').style.display = 'none';
+        document.getElementById('pauseButton').style.display = 'inline';
+        document.getElementById('stopButton').style.display = 'inline';
     }
 
-    // Function to pause speech playback
-    function pausePlayback() {
+    // Function to cancel speech synthesis
+    function cancelSpeech() {
         if (utterance) {
-            window.speechSynthesis.pause();
+            window.speechSynthesis.cancel();
+            utterance = null;
+
+            // Hide the pause, resume, and stop buttons and show the listen button
+            document.getElementById('frenchButton').style.display = 'inline';
+            document.getElementById('pauseButton').style.display = 'none';
+            document.getElementById('resumeButton').style.display = 'none';
+            document.getElementById('stopButton').style.display = 'none';
         }
     }
 
-    // Function to resume speech playback
-    function resumePlayback() {
-        if (utterance) {
+    // Function to pause speech synthesis
+    function pauseSpeech() {
+        if (utterance && !isPaused) {
+            window.speechSynthesis.pause();
+            isPaused = true;
+
+            // Hide the pause button and show the resume button
+            document.getElementById('pauseButton').style.display = 'none';
+            document.getElementById('resumeButton').style.display = 'inline';
+        }
+    }
+
+    // Function to resume speech synthesis
+    function resumeSpeech() {
+        if (utterance && isPaused) {
             window.speechSynthesis.resume();
+            isPaused = false;
+
+            // Hide the resume button and show the pause button
+            document.getElementById('pauseButton').style.display = 'inline';
+            document.getElementById('resumeButton').style.display = 'none';
         }
     }
 
     // Add an event listener to the frenchButton to trigger the action when clicked
     const frenchButtonElement = document.getElementById('frenchButton');
     frenchButtonElement.addEventListener('click', changeFrenchButton1HTML);
+
+    // Add an event listener to the pauseButton to pause the speech
+    const pauseButtonElement = document.getElementById('pauseButton');
+    pauseButtonElement.addEventListener('click', pauseSpeech);
+
+    // Add an event listener to the resumeButton to resume the speech
+    const resumeButtonElement = document.getElementById('resumeButton');
+    resumeButtonElement.addEventListener('click', resumeSpeech);
+
+    // Add an event listener to the stopButton to stop the speech
+    const stopButtonElement = document.getElementById('stopButton');
+    stopButtonElement.addEventListener('click', cancelSpeech);
 </script>
 
 </body>
 </html>
-
