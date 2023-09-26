@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>12 men of Ada</title>
 <link rel="stylesheet" href="12From-Ada.css">
+<link rel="icon" href="./images/tunuLogo.PNG">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+<link rel="stylesheet" href="./bootstrap-4.5.3-dist/">
+<!-- <link rel="icon" href="./image/logo.png"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,900;1,400&family=Montserrat:wght@900&family=Roboto:ital,wght@0,300;0,400;1,400&family=Sacramento&family=Zen+Dots&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<style>
+  #hidden-row{
+   display:none;   
+    }
+  </style>
+      
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F02K9DJ88C"></script>
 <script>
@@ -148,68 +170,9 @@ Credit: Asiapim Eha II
 <hr>
 </div>
 
-<script>
-    <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/view?usp=sharing" width="800" height="600"></iframe>
-
-// PDF.js code to display the PDF
-var pdfUrl = 'https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/view?usp=sharing';
-var pdfContainer = document.getElementById('pdfCanvas');
-
-pdfjsLib.getDocument(pdfUrl).promise.then(function(pdfDoc) {
-    var pageNum = 1;
-    pdfDoc.getPage(pageNum).then(function(page) {
-        var viewport = page.getViewport({ scale: 1 });
-        var canvas = document.createElement('canvas');
-        pdfContainer.appendChild(canvas);
-        var context = canvas.getContext('2d');
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-        page.render({
-            canvasContext: context,
-            viewport: viewport
-        });
-    });
-});
-</script>
-</body>
-</html>
 
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-<title>Tunu</title>
-    <link rel="icon" href="./images/tunuLogo.PNG">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-
-    <link rel="stylesheet" href="./bootstrap-4.5.3-dist/">
-    <!-- <link rel="icon" href="./image/logo.png"> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,900;1,400&family=Montserrat:wght@900&family=Roboto:ital,wght@0,300;0,400;1,400&family=Sacramento&family=Zen+Dots&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-
-
-<style>
-#hidden-row{
- display:none;   
-  }
-</style>
-    
-    
-
-
-</head>
-<body>
 <div class="header">
     <div class="w3-container w3-blue">
         <h1 id="activity"><a class="navbar-brand" href="./images/tunuLogo.PNG"><img src="./images/tunuLogo.PNG" alt="tunubrand" class="logo"></a>  <i class="fa fa-gears " aria-hidden="true" style="padding-right: 30px;"></i>The Account</h1>
@@ -307,7 +270,7 @@ pdfjsLib.getDocument(pdfUrl).promise.then(function(pdfDoc) {
 </div>
 
 </div>
-
+<!-- txt to read -->
 <script>
     let utterance; // Variable to store the speech synthesis utterance
     let isPaused = false;
@@ -430,5 +393,28 @@ pdfjsLib.getDocument(pdfUrl).promise.then(function(pdfDoc) {
     stopButtonElement.addEventListener('click', cancelSpeech);
 </script>
 
+<script>
+  <iframe src="https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/view?usp=sharing" width="800" height="600"></iframe>
+
+// PDF.js code to display the PDF
+var pdfUrl = 'https://drive.google.com/file/d/1mJrkqZZ1TiJi3OLUf4dlEeNA-X60tzDa/view?usp=sharing';
+var pdfContainer = document.getElementById('pdfCanvas');
+
+pdfjsLib.getDocument(pdfUrl).promise.then(function(pdfDoc) {
+  var pageNum = 1;
+  pdfDoc.getPage(pageNum).then(function(page) {
+      var viewport = page.getViewport({ scale: 1 });
+      var canvas = document.createElement('canvas');
+      pdfContainer.appendChild(canvas);
+      var context = canvas.getContext('2d');
+      canvas.height = viewport.height;
+      canvas.width = viewport.width;
+      page.render({
+          canvasContext: context,
+          viewport: viewport
+      });
+  });
+});
+</script>
 </body>
 </html>
