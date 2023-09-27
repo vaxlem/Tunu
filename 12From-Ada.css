@@ -225,7 +225,7 @@ html {
     text-align: justify;;
 }
 button{
-    border: 1px solid red;
+    border: 2px solid red;
     border-radius: 10px;
     margin-bottom: 3rem;
 }
@@ -235,14 +235,14 @@ button{
  /* Default styles for the iframe */
  iframe {
      width: 100%; /* 100% width for responsiveness */
-     height: 600px; /* Default height */
+     height: 420px; /* Default height */
  }
 
  /* Media query for screens with a maximum width of 600px */
  @media (max-width: 600px) {
      iframe {
          /* height: auto;  */
-         height: 600px;
+         height: 420px;
          /* Auto-adjust height to maintain aspect ratio */
      }
  }
