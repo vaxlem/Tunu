@@ -4,18 +4,17 @@
     <title>12 men of Ada</title>
     <link rel="stylesheet" href="12From-Ada.css">
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F02K9DJ88C"></script>
     
     
     <link rel="icon" href="./images/tunuLogo.PNG">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 
-    <link rel="stylesheet" href="./bootstrap-4.5.3-dist/">
+<link rel="stylesheet" href="./bootstrap-4.5.3-dist/bootstrap.min.css">
     <!-- <link rel="icon" href="./image/logo.png"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,900;1,400&family=Montserrat:wght@900&family=Roboto:ital,wght@0,300;0,400;1,400&family=Sacramento&family=Zen+Dots&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -29,7 +28,7 @@
  display:none;   
   }
 </style>
-    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F02K9DJ88C"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -43,23 +42,27 @@
     
 </head>
 <body>
-
-<nav class="nav navbar-nav">
+  <header>
+    <nav class="nav navbar-nav">
     <div class="frenchButton">
         <button id="frenchButton">
-            <i class="fa fa-headphones fa-2x" aria-hidden="true">Listen in French</i>
+          <i class="fas fa-headphones fa-2x"></i> Listen in French
         </button>
+    
         <button id="pauseButton" style="display: none;">
-          <i class="fasp fa fa-pause fa-2x" aria-hidden="true">pause</i>
+          <i class="fas fa fa-pause fa-2x" aria-hidden="true">pause</i>
           </button>
         <button id="resumeButton" style="display: none;">
-           <i class="fasp fa fa-play-circle fa-2x" aria-hidden="true">Resume</i>
+           <i class="fas fa fa-play-circle fa-2x" aria-hidden="true">Resume</i>
         </button>
         <button id="stopButton" style="display: none;">
-          <i class="fasp fa fa-stop-circle fa-2x" aria-hidden="true">Stop</i>
+          <i class="fas fa fa-stop-circle fa-2x" aria-hidden="true">Stop</i>
         </button>
     </div>
 </nav>
+</header>
+
+
 
 <div id="frenchButton1">
   <!-- Initial content -->
@@ -386,3 +389,15 @@
 
 </body>
 </html>
+
+
+
+
+// Function to resume playback
+function resumePlayback() {
+    // Add your resume logic here
+}
+
+// Event listeners for buttons
+document.getElementById('pauseButton').addEventListener('click', pausePlayback);
+document.getElementById('resumeButton').addEventListener('click', resumePlayback);
