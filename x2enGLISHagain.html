@@ -57,6 +57,11 @@
       lang = (lang === 'en-US') ? 'fr-FR' : 'en-US';
       document.getElementById("textToRead").innerText = (lang === 'en-US') ? "John Doe is a boy. He played table tennis always at noon time." : "Jean Dupont est un garçon. Il jouait toujours au tennis de table à midi.";
       
+ // Update the language switch button text
+ var languageButton = document.querySelector("button[onclick='toggleLanguage()']");
+      languageButton.innerText = (lang === 'en-US') ? "Switch to French" : "Switch to English";
+      
+
       // Speak the text in the new language
       speech.text = document.getElementById("textToRead").innerText;
       speech.lang = lang;
