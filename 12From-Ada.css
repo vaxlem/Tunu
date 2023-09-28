@@ -235,14 +235,14 @@ button{
  /* Default styles for the iframe */
  iframe {
      width: 100%; /* 100% width for responsiveness */
-     height: 420px; /* Default height */
+     height: 500px; /* Default height */
  }
 
  /* Media query for screens with a maximum width of 600px */
  @media (max-width: 600px) {
      iframe {
          /* height: auto;  */
-         height: 420px;
+         height: 500px;
          /* Auto-adjust height to maintain aspect ratio */
      }
  }
