@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TTS Controls</title>
+</head>
+<body>
+  <div>
+    <button onclick="speakText()">Play/Resume</button>
+    <button onclick="pauseSpeech()">Pause</button>
+    <button onclick="stopSpeech()">Stop</button>
+    <button onclick="toggleLanguage()">Switch to French</button>
+  </div>
+  <div>
+    <p id="textToRead">John Doe is a boy. He played table tennis always at noon time.</p>
+  </div>
+
+  <audio id="audioElement" src=""></audio>
+
+  <script>
+    var speech = new SpeechSynthesisUtterance();
+    var isPaused = false;
+    var audioElement = document.getElementById("audioElement");
+    var lang = 'en-US'; // Default language is English
+
+    function speakText() {
+      var text = document.getElementById("textToRead").innerText;
+      speech.text = text;
+      speech.lang = lang;
+
+      if (isPaused) {
+        window.speechSynthesis.resume();
+        isPaused = false;
+      } else {
+        window.speechSynthesis.speak(speech);
+      }
+
+      audioElement.play();
+    }
+
+    function pauseSpeech() {
+      if (window.speechSynthesis.speaking) {
+        window.speechSynthesis.pause();
+        isPaused = true;
+      }
+
+      audioElement.pause();
+    }
+
+    function stopSpeech() {
+      window.speechSynthesis.cancel();
+      audioElement.pause();
+      audioElement.currentTime = 0;
+      isPaused = false;
+    }
+
+    function toggleLanguage() {
+      lang = (lang === 'en-US') ? 'fr-FR' : 'en-US';
+      document.getElementById("textToRead").innerText = (lang === 'en-US') ? "John Doe is a boy. He played table tennis always at noon time." : "Jean Dupont est un garçon. Il jouait toujours au tennis de table à midi.";
+    }
+  </script>
+</body>
+</html>
