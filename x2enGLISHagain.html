@@ -1,14 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
   <title>TTS Controls</title>
+  <link rel="stylesheet" href="12From-Ada.css">
+  <!-- Google tag (gtag.js) -->
+  
+  
+  <link rel="icon" href="./images/tunuLogo.PNG">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+<link rel="stylesheet" href="./bootstrap-4.5.3-dist/bootstrap.min.css">
+  <!-- <link rel="icon" href="./image/logo.png"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+
+<style>
+#hidden-row{
+display:none;   
+}
+</style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F02K9DJ88C"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-F02K9DJ88C');
+  </script>
+  
+  
+  <!-- french to open  -->
+  
 </head>
 <body>
   <div>
-    <button onclick="speakText()">Play/Resume</button>
-    <button onclick="pauseSpeech()">Pause</button>
-    <button onclick="stopSpeech()">Stop</button>
-    <button onclick="toggleLanguage()">Switch to French</button>
+    <button onclick="speakText()"> <i class=" fas fa-play-circle" aria-hidden="true"></i> <br> Play Resume</button>
+    <button onclick="pauseSpeech()"> <i class=" fas fa-pause" aria-hidden="true"></i> <br> Pause</button>
+    <button onclick="stopSpeech()"> <i class=" fas fa-stop-circle" aria-hidden="true"></i> <br> Stop</button>
+    <button onclick="toggleLanguage()"> <i class=" fas fa-gear" aria-hidden="true"></i> <br> Switch to French</button>
+    <button> <i class=" fas fa-home" aria-hidden="true"></i> HOME</button>
   </div>
   <div>
     <p id="textToRead">John Doe is a boy. He played table tennis always at noon time.</p>
