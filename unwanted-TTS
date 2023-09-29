@@ -1,0 +1,53 @@
+ <script>
+    var speech = new SpeechSynthesisUtterance();
+    var isPaused = false;
+    var audioElement = document.getElementById("audioElement");
+    var lang = 'en-US'; // Default language is English
+
+    function speakText() {
+      var text = document.getElementById("textToRead").innerText;
+      speech.text = text;
+      speech.lang = lang;
+
+      if (isPaused) {
+        window.speechSynthesis.resume();
+        isPaused = false;
+      } else {
+        window.speechSynthesis.speak(speech);
+      }
+
+      audioElement.play();
+    }
+
+    function pauseSpeech() {
+      if (window.speechSynthesis.speaking) {
+        window.speechSynthesis.pause();
+        isPaused = true;
+      }
+
+      audioElement.pause();
+    }
+
+    function stopSpeech() {
+      window.speechSynthesis.cancel();
+      audioElement.pause();
+      audioElement.currentTime = 0;
+      isPaused = false;
+    }
+
+    function toggleLanguage() {
+      lang = (lang === 'en-US') ? 'fr-FR' : 'en-US';
+      document.getElementById("textToRead").innerText = (lang === 'en-US') ? "John Doe is a boy. He played table tennis always at noon time. the 12 MEN OF ADA. LONG ago, in the 17th century, there lived a family of 12 strong men in Ada, in the Greater Accra region of Ghana. The names of some of them are: Ashiapim, Kabutey and Asimasinne (also known as LE). The following people are their parents. These are: the Ocanseys, the Kubis, the Shamateys among others. migration" : "Jean Dupont est un garçon. Il jouait toujours au tennis de table à midi. les 12 HOMMES D'ADA. Il y a LONGTEMPS, au XVIIe siècle, vivait une famille de 12 hommes forts à Ada, dans la région du Grand Accra au Ghana.  Les noms de certains d'entre eux sont : Ashiapim, Kabutey et  Asimasinne (également connu sous le nom de LE).  Les personnes suivantes sont leurs parents. Ce sont : les Ocanseys, les Kubis, les Shamateys entre autres. migration";
+      // documemt.getElementById("textToRead").innerHTML = "John Doe is a boy. He played table tennis always at noon time. <h1>the 12 MEN OF ADA</h1><p>LONG ago, in the 17th century, there lived a family of 12 strong men in Ada, in the Greater Accra region of Ghana. <br> The names of some of them are: <br> Ashiapim,<br> Kabutey and <br> Asimasinne (also known as LE). <br> The following people are their parents. These are: the Ocanseys, the Kubis, the Shamateys among others.</p><br><h1>migration</h1>" : "Jean Dupont est un garçon. Il jouait toujours au tennis de table à midi. <h1>les 12 HOMMES D'ADA</h1><p>Il y a LONGTEMPS, au XVIIe siècle, vivait une famille de 12 hommes forts à Ada, dans la région du Grand Accra au Ghana. <br> Les noms de certains d'entre eux sont : <br> Ashiapim,<br> Kabutey et <br> Asimasinne (également connu sous le nom de LE). <br> Les personnes suivantes sont leurs parents. Ce sont : les Ocanseys, les Kubis, les Shamateys entre autres.</p><br><h1>migration</h1>";
+ // Update the language switch button text
+ var languageButton = document.querySelector("button[onclick='toggleLanguage()']");
+      languageButton.innerText = (lang === 'en-US') ? "Switch to French" : "Switch to English";
+      
+
+      // Speak the text in the new language
+      speech.text = document.getElementById("textToRead").innerText;
+      speech.lang = lang;
+
+      window.speechSynthesis.speak(speech);
+    }
+  </script>
