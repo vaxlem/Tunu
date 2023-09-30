@@ -5,11 +5,11 @@
 </head>
 <body>
   <div>
-    <button onclick="playResume()">Play/Resume</button>
-    <button onclick="pause()">Pause</button>
-    <button onclick="stop()">Stop</button>
-    <button id="switchButton" onclick="toggleLanguage()">Switch to French</button>
-    <button onclick="continuePlay()">Continue Play</button> <!-- New button -->
+    <button onclick="playResume()" ontouchstart="playResume()">Play/Resume</button>
+    <button onclick="pause()" ontouchstart="pause()">Pause</button>
+    <button onclick="stop()" ontouchstart="stop()">Stop</button>
+    <button id="switchButton" onclick="toggleLanguage()" ontouchstart="toggleLanguage()">Switch to French</button>
+    <button onclick="continuePlay()" ontouchstart="continuePlay()">Continue Play</button>
   </div>
   <div>
     <div id="textToRead">
