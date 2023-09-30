@@ -3,6 +3,10 @@
 <head>
   <title>TTS Controls</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="12From-Ada.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F02K9DJ88C"></script>
+  
   <style>
     /* Add necessary styles for mobile devices */
     body {
@@ -19,12 +23,26 @@
   <title>TTS Controls</title>
 </head>
 <body>
-  <div>
+    <nav class="nav navbar" >
+        <!-- 3rd btn adds -->
+    <!-- <div class="butn " style="position: ; z-index: 1;"> -->
+    <div id="fixButton" >
+    <button onclick="speakText()" style="height: auto;"> <i class="fa fa-play-circle-o fa-1x" aria-hidden="true"></i> Play<br>Resume</button>
+    <button onclick="pauseSpeech()" style="height: auto;"> <i class="fa fa-pause fa-1x" aria-hidden="true"></i>  <br> Pause</button>
+    <button onclick="stopSpeech()" style="height: auto;"> <i class="fa fa-stop fa-1x" aria-hidden="true"></i>  <br> Stop</button>
+    <button id="switchButton" onclick="toggleLanguage()">Switch to French</button>
+    <!-- <button class="btnalign but-theLand button" onclick="speak('zongo')"><i class="fa fa-language btn-align" aria-hidden="true"></i>
+        FRENCH</button> -->
+    <a href="./index.html"><button style="height: auto;" onclick="alert('You are going back to home page!')"> <i class="fa fa-home fa-1x" aria-hidden="true"></i> <br>  HOME</button></a>
+    </div></nav>
+    <!-- nav added hhere -->
+  <!-- <div>
     <button onclick="speakText('English')">Play/Resume</button>
     <button onclick="pauseSpeech()">Pause</button>
     <button onclick="stopSpeech()">Stop</button>
     <button id="switchButton" onclick="toggleLanguage()">Switch to French</button>
-  </div>
+  </div> -->
+
   <div>
     <p id="textToRead">John Doe is a boy. He played table tennis always at noon time.</p>
     <div id="englishContent" style="display:none;">
