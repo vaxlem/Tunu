@@ -4,6 +4,12 @@
   <title>TTS Controls</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="12From-Ada.css">
+  <link rel="icon" href="./images/tunuLogo.PNG">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+  
+  
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-F02K9DJ88C"></script>
   
@@ -27,12 +33,19 @@
         <!-- 3rd btn adds -->
     <!-- <div class="butn " style="position: ; z-index: 1;"> -->
     <div id="fixButton" >
-    <button onclick="speakText()" style="height: auto;"> <i class="fa fa-play-circle-o fa-1x" aria-hidden="true"></i> Play<br>Resume</button>
+    <!-- <button onclick="speakText()" style="height: auto;"> <i class="fa fa-play-circle-o fa-1x" aria-hidden="true"></i> Play<br>Resume</button>
     <button onclick="pauseSpeech()" style="height: auto;"> <i class="fa fa-pause fa-1x" aria-hidden="true"></i>  <br> Pause</button>
     <button onclick="stopSpeech()" style="height: auto;"> <i class="fa fa-stop fa-1x" aria-hidden="true"></i>  <br> Stop</button>
-    <button id="switchButton" onclick="toggleLanguage()">Switch to French</button>
+    <button id="switchButton" onclick="toggleLanguage()">Switch to French</button> -->
     <!-- <button class="btnalign but-theLand button" onclick="speak('zongo')"><i class="fa fa-language btn-align" aria-hidden="true"></i>
         FRENCH</button> -->
+
+    <button onclick="speakText()"> <i class=" fas fa-play-circle" aria-hidden="true"></i> <br> Play Resume</button>
+    <button onclick="pauseSpeech()"> <i class=" fas fa-pause" aria-hidden="true"></i> <br> Pause</button>
+    <button onclick="stopSpeech()"> <i class=" fas fa-stop-circle" aria-hidden="true"></i> <br> Stop</button>
+    <button id="switchButton" onclick="toggleLanguage()"> <i class="fas fa-gear" aria-hidden="true"></i> <br> Switch to French</button>
+    <!-- <a href="./index.html"></a><button> <i class=" fas fa-home" aria-hidden="true"></i> HOME</button> -->
+  
     <a href="./index.html"><button style="height: auto;" onclick="alert('You are going back to home page!')"> <i class="fa fa-home fa-1x" aria-hidden="true"></i> <br>  HOME</button></a>
     </div></nav>
     <!-- nav added hhere -->
