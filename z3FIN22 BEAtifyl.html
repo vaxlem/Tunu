@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TTS Controls</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Add necessary styles for mobile devices */
+    body {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- First Snippet -->
+<!-- ... previous code ... -->
+
+<script>
+  function speakText(text) {
+    // Strip HTML tags and framework characters
+    var cleanText = text.replace(/<\/?[^>]+(>|$)/g, "");
+    
+    var additionalText = '';
+
+    if (lang === 'fr-FR') {
+      additionalText = document.getElementById("frenchContent").innerText;
+    } else {
+      additionalText = document.getElementById("englishContent").innerText;
+    }
+
+    document.getElementById("textToRead").innerText = cleanText + ' ' + additionalText;
+
+    speech.text = cleanText;
+    speech.lang = lang;
+
+    if (isPaused) {
+      window.speechSynthesis.resume();
+      isPaused = false;
+    } else {
+      window.speechSynthesis.speak(speech);
+    }
+
+    audioElement.play();
+  }
+
+  // ... rest of the code ...
+</script>
+
+<!-- Second Snippet -->
+<!-- ... previous code ... -->
+
+<script>
+  function readText(text) {
+    // Strip HTML tags and framework characters
+    var cleanText = text.replace(/<\/?[^>]+(>|$)/g, "");
+    
+    var speech = new SpeechSynthesisUtterance();
+    speech.text = cleanText;
+    speech.lang = isFrench ? 'fr-FR' : 'en-US';
+    speech.volume = 1;
+    speech.rate = 1;
+    speech.pitch = 1;
+    window.speechSynthesis.speak(speech);
+  }
+
+  // ... rest of the code ...
+</script>
+
+<!-- Rest of the content from the second snippet -->
+
+</body>
+</html>
