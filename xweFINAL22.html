@@ -89,3 +89,67 @@
   </script>
 </body>
 </html>
+
+<div id="textToDisplay" style="padding: 20px; text-align: center;">
+    David aime jouer au football. Il gagnera un jour.
+</div>
+
+<div id="textToRead">
+    <p>Our fathers can go but we won't go today.</p>
+</div>
+
+<audio id="audioPlayer">
+    <source src="path/to/your/audio-file.mp3" type="audio/mp3">
+</audio>
+
+<script>
+    var audio = document.getElementById("audioPlayer");
+    var isPaused = false;
+    var isFrench = true;  // Initially set to French
+
+    function toggleLanguage() {
+        var textToDisplay = document.getElementById("textToDisplay");
+        var textToRead = document.getElementById("textToRead").innerText;
+
+        if (isFrench) {
+            textToDisplay.innerHTML = "David likes playing football. He will win one day.";
+            readText("David likes playing football. He will win one day.");
+            isFrench = false;
+        } else {
+            textToDisplay.innerHTML = "<h1>David aime jouer au football. Il gagnera un jour.</h1>";
+            readText("David can not be here. he must go to where he comes from jour.");
+            isFrench = true;
+        }
+    }
+
+    function readText(text) {
+        var speech = new SpeechSynthesisUtterance();
+        speech.text = text;
+        speech.lang = isFrench ? 'fr-FR' : 'en-US';
+        speech.volume = 1;
+        speech.rate = 1;
+        speech.pitch = 1;
+        window.speechSynthesis.speak(speech);
+    }
+
+    function playAudio() {
+        if (isPaused) {
+            audio.play();
+            isPaused = false;
+        } else {
+            audio.currentTime = 0;
+            audio.play();
+        }
+    }
+
+    function pauseAudio() {
+        audio.pause();
+        isPaused = true;
+    }
+
+    function stopAudio() {
+        audio.pause();
+        audio.currentTime = 0;
+        isPaused = false;
+    }
+</script>

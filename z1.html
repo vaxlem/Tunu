@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TTS Controls</title>
+</head>
+<body>
+  <div>
+    <button onclick="playResume()">Play/Resume</button>
+    <button onclick="pause()">Pause</button>
+    <button onclick="stop()">Stop</button>
+    <button id="switchButton" onclick="toggleLanguage()">Switch to French</button>
+  </div>
+  <div>
+    <div id="textToRead">
+      <p>John Doe is a boy. He played table tennis always at noon time.</p>
+    </div>
+    <div id="textToDisplay" style="padding: 20px; text-align: center;">
+      <p>David aime jouer au football. Il gagnera un jour.</p>
+    </div>
+  </div>
+
+  <script>
+    let utterance;
+    let isFrench = false;
+
+    function speak(word) {
+        if (utterance) {
+            speechSynthesis.cancel();
+        }
+
+        utterance = new SpeechSynthesisUtterance(word);
+        utterance.lang = isFrench ? 'fr-FR' : 'en-US';
+        speechSynthesis.speak(utterance);
+    }
+
+    function playResume() {
+        if (utterance && speechSynthesis.speaking && !speechSynthesis.paused) {
+            speechSynthesis.pause();
+        } else if (utterance && speechSynthesis.paused) {
+            speechSynthesis.resume();
+        } else {
+            speak('Tunu. According to the narratives, the name Tunu is an appellation that is coined by these men. Prehku and Lakleh Tay, over centuries ago...');
+        }
+    }
+
+    function pause() {
+        if (utterance && speechSynthesis.speaking && !speechSynthesis.paused) {
+            speechSynthesis.pause();
+        }
+    }
+
+    function stop() {
+        if (utterance) {
+            speechSynthesis.cancel();
+        }
+    }
+
+    function toggleLanguage() {
+        isFrench = !isFrench;
+        document.getElementById('switchButton').innerText = isFrench ? 'Switch to English' : 'Switch to French';
+        updateContent();
+    }
+
+    function updateContent() {
+        const displayedText = isFrench ? "David aime jouer au football. Il gagnera un jour." : "John Doe is a boy. He played table tennis always at noon time.";
+        document.getElementById('textToDisplay').innerText = displayedText;
+        speak(displayedText);
+    }
+
+    // Initially display the content in English
+    updateContent();
+  </script>
+</body>
+</html>
