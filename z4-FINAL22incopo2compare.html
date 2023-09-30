@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TTS Controls</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Add necessary styles for mobile devices */
+    body {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- First Snippet -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TTS Controls</title>
+</head>
+<body>
+  <div>
+    <button onclick="speakText('English')">Play/Resume</button>
+    <button onclick="pauseSpeech()">Pause</button>
+    <button onclick="stopSpeech()">Stop</button>
+    <button id="switchButton" onclick="toggleLanguage()">Switch to French</button>
+  </div>
+  <div>
+    <p id="textToRead">John Doe is a boy. He played table tennis always at noon time.</p>
+    <div id="englishContent" style="display:none;">
+      <h1>the 12 MEN OF ADA</h1>
+      <p>LONG ago, in the 17th century, there lived a family of 12 strong men in Ada, in the Greater Accra region of Ghana. <br> The names of some of them are: <br> Ashiapim,<br> Kabutey and <br> Asimasinne (also known as LE). <br> The following people are their relatives. These are: the Ocanseys, the Kubis, the Shamateys among others.</p><br>
+      <h1>migration</h1>
+    </div>
+    <div id="frenchContent" style="display:none;">
+      <h1>les 12 HOMMES D'ADA</h1>
+      <p>Il y a LONGTEMPS, au XVIIe siècle, vivait une famille de 12 hommes forts à Ada, dans la région du Grand Accra au Ghana. <br> Les noms de certains d'entre eux sont : <br> Ashiapim,<br> Kabutey et <br> Asimasinne (également connu sous le nom de LE). <br> Les personnes suivantes sont leurs proches. Ce sont : les Ocanseys, les Kubis, les Shamateys entre autres.</p><br>
+      <h1>migration</h1>
+    </div>
+  </div>
+
+  <audio id="audioElement" src=""></audio>
+
+  <script>
+    var speech = new SpeechSynthesisUtterance();
+    var isPaused = false;
+    var audioElement = document.getElementById("audioElement");
+    var lang = 'en-US'; // Default language is English
+
+    function speakText(text) {
+      var additionalText = '';
+
+      if (lang === 'fr-FR') {
+        additionalText = document.getElementById("frenchContent").innerText;
+      } else {
+        additionalText = document.getElementById("englishContent").innerText;
+      }
+
+      document.getElementById("textToRead").innerText = text + ' ' + additionalText;
+
+      speech.text = text;
+      speech.lang = lang;
+
+      if (isPaused) {
+        window.speechSynthesis.resume();
+        isPaused = false;
+      } else {
+        window.speechSynthesis.speak(speech);
+      }
+
+      audioElement.play();
+    }
+
+    function pauseSpeech() {
+      if (window.speechSynthesis.speaking) {
+        window.speechSynthesis.pause();
+        isPaused = true;
+      }
+
+      audioElement.pause();
+    }
+
+    function stopSpeech() {
+      window.speechSynthesis.cancel();
+      audioElement.pause();
+      audioElement.currentTime = 0;
+      isPaused = false;
+    }
+
+    function toggleLanguage() {
+      if (lang === 'en-US') {
+        lang = 'fr-FR';
+        document.getElementById("switchButton").innerHTML = "Switch to English";
+        speakText("le bouton de commutation"+"<h1>john et a badet guy</h1>");
+      } else {
+        lang = 'en-US';
+        document.getElementById("switchButton").innerHTML = "Switch to French";
+        speakText("the switch button"+"[h1]john is a bad guy[/h1]");
+      }
+    }
+  </script>
+</body>
+</html>
+
+<!-- Second Snippet -->
+<div id="textToDisplay" style="padding: 20px; text-align: center;">
+    David aime jouer au football. Il gagnera un jour.
+</div>
+
+<div id="textToRead">
+    <p>Our fathers can go but we won't go today.</p>
+</div>
+
+<audio id="audioPlayer">
+    <source src="path/to/your/audio-file.mp3" type="audio/mp3">
+</audio>
+
+<script>
+    var audio = document.getElementById("audioPlayer");
+    var isPaused = false;
+    var isFrench = true;  // Initially set to French
+
+    function toggleLanguage() {
+        var textToDisplay = document.getElementById("textToDisplay");
+        var textToRead = document.getElementById("textToRead").innerText;
+
+        if (isFrench) {
+            textToDisplay.innerHTML = "David likes playing football. He will win one day.";
+            readText("David likes playing football. He will win one day.");
+            isFrench = false;
+        } else {
+            textToDisplay.innerHTML = "<h1>David aime jouer au football. Il gagnera un jour.</h1>";
+            readText("David can not be here. he must go to where he comes from jour.");
+            isFrench = true;
+        }
+    }
+
+    function readText(text) {
+        // Strip HTML tags and framework characters
+        var cleanText = text.replace(/<\/?[^>]+(>|$)/g, "");
+        
+        var speech = new SpeechSynthesisUtterance();
+        speech.text = cleanText;
+        speech.lang = isFrench ? 'fr-FR' : 'en-US';
+        speech.volume = 1;
+        speech.rate = 1;
+        speech.pitch = 1;
+        window.speechSynthesis.speak(speech);
+    }
+
+    function playAudio() {
+        if (isPaused) {
+            audio.play();
+            isPaused = false;
+        } else {
+            audio.currentTime = 0;
+            audio.play();
+        }
+    }
+
+    function pauseAudio() {
+        audio.pause();
+        isPaused = true;
+    }
+
+    function stopAudio() {
+        audio.pause();
+        audio.currentTime = 0;
+        isPaused = false;
+    }
+</script>
+
+</body>
+</html>
