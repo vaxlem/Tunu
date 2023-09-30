@@ -9,6 +9,7 @@
     <button onclick="pause()">Pause</button>
     <button onclick="stop()">Stop</button>
     <button id="switchButton" onclick="toggleLanguage()">Switch to French</button>
+    <button onclick="continuePlay()">Continue Play</button> <!-- New button -->
   </div>
   <div>
     <div id="textToRead">
@@ -22,6 +23,7 @@
   <script>
     let utterance;
     let isFrench = false;
+    let isPaused = false;
 
     function speak(word) {
         if (utterance) {
@@ -36,22 +38,27 @@
     function playResume() {
         if (utterance && speechSynthesis.speaking && !speechSynthesis.paused) {
             speechSynthesis.pause();
+            isPaused = true;
         } else if (utterance && speechSynthesis.paused) {
             speechSynthesis.resume();
+            isPaused = false;
         } else {
             speak('Tunu. According to the narratives, the name Tunu is an appellation that is coined by these men. Prehku and Lakleh Tay, over centuries ago...');
+            isPaused = false;
         }
     }
 
     function pause() {
         if (utterance && speechSynthesis.speaking && !speechSynthesis.paused) {
             speechSynthesis.pause();
+            isPaused = true;
         }
     }
 
     function stop() {
         if (utterance) {
             speechSynthesis.cancel();
+            isPaused = false;
         }
     }
 
@@ -65,6 +72,13 @@
         const displayedText = isFrench ? "David aime jouer au football. Il gagnera un jour." : "John Doe is a boy. He played table tennis always at noon time.";
         document.getElementById('textToDisplay').innerText = displayedText;
         speak(displayedText);
+    }
+
+    function continuePlay() {
+        if (isPaused) {
+            speechSynthesis.resume();
+            isPaused = false;
+        }
     }
 
     // Initially display the content in English
