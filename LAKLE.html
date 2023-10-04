@@ -137,44 +137,7 @@
  
   }
 </style>
-<!-- original scpt  txt to read not word4m-->
- <script>
-  var speech = new SpeechSynthesisUtterance();
-  var isPaused = false;
-  var audioElement = document.getElementById("audioElement");
 
-  function speakText() {
-    var text = document.getElementById("textToRead").innerText;
-    speech.text = text;
-    speech.lang = 'fr-FR';
-
-    if (isPaused) {
-      window.speechSynthesis.resume();
-      isPaused = false;
-    } else {
-      window.speechSynthesis.speak(speech);
-    }
-
-    audioElement.play();
-  }
-
-  function pauseSpeech() {
-    if (window.speechSynthesis.speaking) {
-      window.speechSynthesis.pause();
-      isPaused = true;
-    }
-
-    audioElement.pause();
-  }
-
-  function stopSpeech() {
-    window.speechSynthesis.cancel();
-    audioElement.pause();
-    audioElement.currentTime = 0;
-    isPaused = false;
-  }
-</script> 
-<!-- end of original scpt -->
 </head>
 <body>
   <a class="navbar-brand" href="./images/tunuLogo.PNG"><img src="./images/tunuLogo.PNG" alt="" class="logo"></a>
@@ -836,5 +799,44 @@
     frenchButtonElement.addEventListener('click', changeFrenchButton1HTML);
 </script>
 
+
+<!-- original scpt  txt to read not word4m-->
+<script>
+  var speech = new SpeechSynthesisUtterance();
+  var isPaused = false;
+  var audioElement = document.getElementById("audioElement");
+
+  function speakText() {
+    var text = document.getElementById("textToRead").innerText;
+    speech.text = text;
+    speech.lang = 'fr-FR';
+
+    if (isPaused) {
+      window.speechSynthesis.resume();
+      isPaused = false;
+    } else {
+      window.speechSynthesis.speak(speech);
+    }
+
+    audioElement.play();
+  }
+
+  function pauseSpeech() {
+    if (window.speechSynthesis.speaking) {
+      window.speechSynthesis.pause();
+      isPaused = true;
+    }
+
+    audioElement.pause();
+  }
+
+  function stopSpeech() {
+    window.speechSynthesis.cancel();
+    audioElement.pause();
+    audioElement.currentTime = 0;
+    isPaused = false;
+  }
+</script> 
+<!-- end of original scpt -->
 </body>
 </html>
