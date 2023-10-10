@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TTS Toggle Buttons</title>
+  <style>
+    /* Add your CSS styling for the buttons here */
+    /* For demonstration, we'll add simple styling */
+    .button {
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="text-to-speech-content">
+    <!-- Lorem ipsum text (approximately 1000 characters) -->
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      <!-- ... Repeat lorem ipsum text to reach approximately 1000 characters ... -->
+    </p>
+  </div>
+
+  <button class="button" id="play-button">Play</button>
+  <button class="button" id="pause-button">Pause</button>
+  <button class="button" id="stop-button">Stop</button>
+
+  <script>
+    // JavaScript for controlling TTS (to be implemented)
+    // Replace with your TTS implementation using appropriate APIs
+    function playTTS() {
+      console.log('Play TTS');
+      // Add your TTS play functionality here
+    }
+
+    function pauseTTS() {
+      console.log('Pause TTS');
+      // Add your TTS pause functionality here
+    }
+
+    function stopTTS() {
+      console.log('Stop TTS');
+      // Add your TTS stop functionality here
+    }
+
+    // Event listeners for the buttons
+    document.getElementById('play-button').addEventListener('click', playTTS);
+    document.getElementById('pause-button').addEventListener('click', pauseTTS);
+    document.getElementById('stop-button').addEventListener('click', stopTTS);
+  </script>
+</body>
+</html>
